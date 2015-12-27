@@ -11,7 +11,7 @@
         <!--Splash-->
         <scene sceneID="ePP-gj-aJX">
             <objects>
-                <viewController id="fbe-va-PVV" userLabel="Splash" customClass="splashViewController" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fbe-va-PVV" userLabel="Splash" customClass="SplashVC" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ukn-t5-9I8"/>
                         <viewControllerLayoutGuide type="bottom" id="BNP-g8-0bK"/>
@@ -75,7 +75,7 @@
         <!--Meditate-->
         <scene sceneID="Z5h-h4-Ebf">
             <objects>
-                <viewController id="NnC-xJ-5uC" userLabel="Meditate" customClass="MapViewController" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NnC-xJ-5uC" userLabel="Meditate" customClass="MeditateVC" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AXq-ig-hsv"/>
                         <viewControllerLayoutGuide type="bottom" id="1oI-md-XaB"/>
@@ -130,12 +130,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fr5-fb-RUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="1764"/>
+            <point key="canvasLocation" x="340" y="1796"/>
         </scene>
         <!--Journal-->
         <scene sceneID="fqq-ZZ-OHd">
             <objects>
-                <viewController id="l2O-RY-9uO" userLabel="Journal" customClass="journalViewController" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="l2O-RY-9uO" userLabel="Journal" customClass="JournalVC" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yqd-Ol-q2b"/>
                         <viewControllerLayoutGuide type="bottom" id="1pb-Ds-Ncb"/>
@@ -148,7 +148,7 @@
                                 <rect key="frame" x="-4" y="28" width="328" height="491"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RadioButtonQuestion" id="C8p-Xe-lMv" customClass="RadioButtonTableViewCell" customModule="TheFeelz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RadioButtonQuestion" id="C8p-Xe-lMv" customClass="RadioButtonwCell" customModule="TheFeelz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="328" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C8p-Xe-lMv" id="c75-jA-nKo">
@@ -188,7 +188,7 @@
                                             <outlet property="radioButtons" destination="XPk-A6-iPS" id="aWK-Sq-ce0"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextFieldQuestion" id="IPJ-1f-af2" customClass="TextFieldTableViewCell" customModule="TheFeelz" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TextFieldQuestion" id="IPJ-1f-af2" customClass="TextFieldCell" customModule="TheFeelz" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="104" width="328" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IPJ-1f-af2" id="zBd-e7-SOt">
@@ -249,7 +249,7 @@
         <!--Mantra-->
         <scene sceneID="yJt-QL-Zeh">
             <objects>
-                <viewController id="QYI-TR-nkc" userLabel="Mantra" customClass="MantrasCVC" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QYI-TR-nkc" userLabel="Mantra" customClass="MantrasVC" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ijk-h1-3Ai"/>
                         <viewControllerLayoutGuide type="bottom" id="9Zr-Qk-Beb"/>
@@ -267,7 +267,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" reuseIdentifier="cell" id="6yo-uz-QTS" customClass="MantraCollectionViewCell" customModule="TheFeelz" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" reuseIdentifier="cell" id="6yo-uz-QTS" customClass="MantraImageCell" customModule="TheFeelz" customModuleProvider="target">
                                         <rect key="frame" x="14" y="0.0" width="300" height="300"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -318,7 +318,7 @@
         <!--Settings-->
         <scene sceneID="GVH-pZ-wKd">
             <objects>
-                <viewController id="yJB-l6-pwA" customClass="settingsViewController" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yJB-l6-pwA" customClass="SettingsVC" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wfi-Yq-1Jl"/>
                         <viewControllerLayoutGuide type="bottom" id="Xj7-L5-aOd"/>
@@ -395,7 +395,7 @@
         <!--Emotions-->
         <scene sceneID="dAE-FE-gG9">
             <objects>
-                <viewController id="6eE-ED-gc2" customClass="mainViewController" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6eE-ED-gc2" customClass="EmotionVC" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SjX-0v-92z"/>
                         <viewControllerLayoutGuide type="bottom" id="R1p-6e-8Yk"/>
@@ -452,10 +452,10 @@
             </objects>
             <point key="canvasLocation" x="2126" y="733"/>
         </scene>
-        <!--Selection View Controller-->
+        <!--Selection SubVC-->
         <scene sceneID="UEZ-j9-iTW">
             <objects>
-                <viewController id="NtT-Fu-ebV" customClass="selectionViewController" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NtT-Fu-ebV" customClass="SelectionSubVC" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zhc-To-zWe"/>
                         <viewControllerLayoutGuide type="bottom" id="4oG-CV-NW0"/>
@@ -536,10 +536,10 @@
             </objects>
             <point key="canvasLocation" x="1097" y="733"/>
         </scene>
-        <!--Carousel View Controller-->
+        <!--Carousel SubVC-->
         <scene sceneID="GGc-62-g6c">
             <objects>
-                <viewController id="xxL-4l-I3t" customClass="carouselViewController" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xxL-4l-I3t" customClass="CarouselSubVC" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yT4-aO-z4b"/>
                         <viewControllerLayoutGuide type="bottom" id="3Iq-FZ-T7R"/>

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0126993C1C249509009E538D /* journalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126993B1C249509009E538D /* journalViewController.swift */; };
+		0126993C1C249509009E538D /* JournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126993B1C249509009E538D /* JournalVC.swift */; };
 		0126993E1C2496EB009E538D /* Meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0126993D1C2496EB009E538D /* Meditation.mp3 */; };
 		0174E83D1C23382000589507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E83C1C23382000589507 /* AppDelegate.swift */; };
 		0174E8421C23382000589507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0174E8401C23382000589507 /* Main.storyboard */; };
@@ -16,19 +16,19 @@
 		0174E8551C23382000589507 /* TheFeelzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8541C23382000589507 /* TheFeelzTests.swift */; };
 		0174E8601C23382000589507 /* TheFeelzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E85F1C23382000589507 /* TheFeelzUITests.swift */; };
 		0174E86E1C23407900589507 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E86D1C23407900589507 /* SplashVC.swift */; };
-		0174E8741C2342AF00589507 /* selectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8731C2342AE00589507 /* selectionViewController.swift */; };
+		0174E8741C2342AF00589507 /* SelectionSubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8731C2342AE00589507 /* SelectionSubVC.swift */; };
 		0174E8761C2342E200589507 /* Feelz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8751C2342E200589507 /* Feelz.swift */; };
-		0174E8781C2342F500589507 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8771C2342F500589507 /* mainViewController.swift */; };
+		0174E8781C2342F500589507 /* EmotionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8771C2342F500589507 /* EmotionVC.swift */; };
 		0174E87C1C234A7700589507 /* DictionaryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E87B1C234A7700589507 /* DictionaryAPI.swift */; };
-		0174E8BB1C23557E00589507 /* MantrasCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8BA1C23557E00589507 /* MantrasCVC.swift */; };
-		0174E8BD1C2356B300589507 /* MantraCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8BC1C2356B300589507 /* MantraCollectionViewCell.swift */; };
-		019837931C28906100BBB614 /* CarouseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019837921C28906100BBB614 /* CarouseVC.swift */; };
+		0174E8BB1C23557E00589507 /* MantrasVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8BA1C23557E00589507 /* MantrasVC.swift */; };
+		0174E8BD1C2356B300589507 /* MantraImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8BC1C2356B300589507 /* MantraImageCell.swift */; };
+		019837931C28906100BBB614 /* CarouselSubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019837921C28906100BBB614 /* CarouselSubVC.swift */; };
 		0199C64C1C2361A400BD94B0 /* MeditateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199C64B1C2361A400BD94B0 /* MeditateVC.swift */; };
-		0199C6541C236BE400BD94B0 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199C6531C236BE400BD94B0 /* settingsViewController.swift */; };
-		01A75F581C2F030A00BF928A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F571C2F030A00BF928A /* UserModel.swift */; };
-		01A75F5C1C2F1BAF00BF928A /* RadioButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F5B1C2F1BAF00BF928A /* RadioButtonTableViewCell.swift */; };
-		01A75F5E1C2F1BC500BF928A /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F5D1C2F1BC500BF928A /* TextFieldTableViewCell.swift */; };
-		01A75F601C2F308F00BF928A /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F5F1C2F308F00BF928A /* QuestionModel.swift */; };
+		0199C6541C236BE400BD94B0 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199C6531C236BE400BD94B0 /* SettingsVC.swift */; };
+		01A75F581C2F030A00BF928A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F571C2F030A00BF928A /* User.swift */; };
+		01A75F5C1C2F1BAF00BF928A /* RadioButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F5B1C2F1BAF00BF928A /* RadioButtonCell.swift */; };
+		01A75F5E1C2F1BC500BF928A /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F5D1C2F1BC500BF928A /* TextFieldCell.swift */; };
+		01A75F601C2F308F00BF928A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F5F1C2F308F00BF928A /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0126993B1C249509009E538D /* journalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = journalViewController.swift; sourceTree = "<group>"; };
+		0126993B1C249509009E538D /* JournalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalVC.swift; sourceTree = "<group>"; };
 		0126993D1C2496EB009E538D /* Meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Meditation.mp3; sourceTree = "<group>"; };
 		0174E8391C23382000589507 /* TheFeelz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFeelz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0174E83C1C23382000589507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,19 +64,19 @@
 		0174E85F1C23382000589507 /* TheFeelzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheFeelzUITests.swift; sourceTree = "<group>"; };
 		0174E8611C23382000589507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0174E86D1C23407900589507 /* SplashVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashVC.swift; path = ../SplashVC.swift; sourceTree = "<group>"; };
-		0174E8731C2342AE00589507 /* selectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectionViewController.swift; sourceTree = "<group>"; };
+		0174E8731C2342AE00589507 /* SelectionSubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionSubVC.swift; sourceTree = "<group>"; };
 		0174E8751C2342E200589507 /* Feelz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feelz.swift; sourceTree = "<group>"; };
-		0174E8771C2342F500589507 /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		0174E8771C2342F500589507 /* EmotionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionVC.swift; sourceTree = "<group>"; };
 		0174E87B1C234A7700589507 /* DictionaryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryAPI.swift; sourceTree = "<group>"; };
-		0174E8BA1C23557E00589507 /* MantrasCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MantrasCVC.swift; sourceTree = "<group>"; };
-		0174E8BC1C2356B300589507 /* MantraCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MantraCollectionViewCell.swift; sourceTree = "<group>"; };
-		019837921C28906100BBB614 /* CarouseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouseVC.swift; sourceTree = "<group>"; };
+		0174E8BA1C23557E00589507 /* MantrasVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MantrasVC.swift; sourceTree = "<group>"; };
+		0174E8BC1C2356B300589507 /* MantraImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MantraImageCell.swift; sourceTree = "<group>"; };
+		019837921C28906100BBB614 /* CarouselSubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselSubVC.swift; sourceTree = "<group>"; };
 		0199C64B1C2361A400BD94B0 /* MeditateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditateVC.swift; sourceTree = "<group>"; };
-		0199C6531C236BE400BD94B0 /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
-		01A75F571C2F030A00BF928A /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		01A75F5B1C2F1BAF00BF928A /* RadioButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioButtonTableViewCell.swift; path = ../RadioButtonTableViewCell.swift; sourceTree = "<group>"; };
-		01A75F5D1C2F1BC500BF928A /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldTableViewCell.swift; path = ../TextFieldTableViewCell.swift; sourceTree = "<group>"; };
-		01A75F5F1C2F308F00BF928A /* QuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		0199C6531C236BE400BD94B0 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		01A75F571C2F030A00BF928A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		01A75F5B1C2F1BAF00BF928A /* RadioButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioButtonCell.swift; path = ../RadioButtonCell.swift; sourceTree = "<group>"; };
+		01A75F5D1C2F1BC500BF928A /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldCell.swift; path = ../TextFieldCell.swift; sourceTree = "<group>"; };
+		01A75F5F1C2F308F00BF928A /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,10 +107,10 @@
 		0165684E1C278B5F008D36F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				01A75F571C2F030A00BF928A /* UserModel.swift */,
+				01A75F571C2F030A00BF928A /* User.swift */,
 				0174E8751C2342E200589507 /* Feelz.swift */,
 				0174E87B1C234A7700589507 /* DictionaryAPI.swift */,
-				01A75F5F1C2F308F00BF928A /* QuestionModel.swift */,
+				01A75F5F1C2F308F00BF928A /* Question.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -129,16 +129,16 @@
 			children = (
 				0174E83C1C23382000589507 /* AppDelegate.swift */,
 				0174E86D1C23407900589507 /* SplashVC.swift */,
-				019837921C28906100BBB614 /* CarouseVC.swift */,
-				0174E8771C2342F500589507 /* mainViewController.swift */,
-				0126993B1C249509009E538D /* journalViewController.swift */,
-				0199C6531C236BE400BD94B0 /* settingsViewController.swift */,
+				0174E8771C2342F500589507 /* EmotionVC.swift */,
+				0126993B1C249509009E538D /* JournalVC.swift */,
+				0174E8BA1C23557E00589507 /* MantrasVC.swift */,
 				0199C64B1C2361A400BD94B0 /* MeditateVC.swift */,
-				0174E8BA1C23557E00589507 /* MantrasCVC.swift */,
-				0174E8BC1C2356B300589507 /* MantraCollectionViewCell.swift */,
-				01A75F5D1C2F1BC500BF928A /* TextFieldTableViewCell.swift */,
-				01A75F5B1C2F1BAF00BF928A /* RadioButtonTableViewCell.swift */,
-				0174E8731C2342AE00589507 /* selectionViewController.swift */,
+				0199C6531C236BE400BD94B0 /* SettingsVC.swift */,
+				019837921C28906100BBB614 /* CarouselSubVC.swift */,
+				0174E8731C2342AE00589507 /* SelectionSubVC.swift */,
+				0174E8BC1C2356B300589507 /* MantraImageCell.swift */,
+				01A75F5D1C2F1BC500BF928A /* TextFieldCell.swift */,
+				01A75F5B1C2F1BAF00BF928A /* RadioButtonCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -334,20 +334,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0174E8BB1C23557E00589507 /* MantrasCVC.swift in Sources */,
-				0126993C1C249509009E538D /* journalViewController.swift in Sources */,
-				0174E8781C2342F500589507 /* mainViewController.swift in Sources */,
-				01A75F5C1C2F1BAF00BF928A /* RadioButtonTableViewCell.swift in Sources */,
+				0174E8BB1C23557E00589507 /* MantrasVC.swift in Sources */,
+				0126993C1C249509009E538D /* JournalVC.swift in Sources */,
+				0174E8781C2342F500589507 /* EmotionVC.swift in Sources */,
+				01A75F5C1C2F1BAF00BF928A /* RadioButtonCell.swift in Sources */,
 				0199C64C1C2361A400BD94B0 /* MeditateVC.swift in Sources */,
-				0199C6541C236BE400BD94B0 /* settingsViewController.swift in Sources */,
-				01A75F581C2F030A00BF928A /* UserModel.swift in Sources */,
-				01A75F601C2F308F00BF928A /* QuestionModel.swift in Sources */,
-				0174E8741C2342AF00589507 /* selectionViewController.swift in Sources */,
-				0174E8BD1C2356B300589507 /* MantraCollectionViewCell.swift in Sources */,
+				0199C6541C236BE400BD94B0 /* SettingsVC.swift in Sources */,
+				01A75F581C2F030A00BF928A /* User.swift in Sources */,
+				01A75F601C2F308F00BF928A /* Question.swift in Sources */,
+				0174E8741C2342AF00589507 /* SelectionSubVC.swift in Sources */,
+				0174E8BD1C2356B300589507 /* MantraImageCell.swift in Sources */,
 				0174E8761C2342E200589507 /* Feelz.swift in Sources */,
-				019837931C28906100BBB614 /* CarouseVC.swift in Sources */,
+				019837931C28906100BBB614 /* CarouselSubVC.swift in Sources */,
 				0174E86E1C23407900589507 /* SplashVC.swift in Sources */,
-				01A75F5E1C2F1BC500BF928A /* TextFieldTableViewCell.swift in Sources */,
+				01A75F5E1C2F1BC500BF928A /* TextFieldCell.swift in Sources */,
 				0174E83D1C23382000589507 /* AppDelegate.swift in Sources */,
 				0174E87C1C234A7700589507 /* DictionaryAPI.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class journalViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
+class JournalVC: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var myTableView: UITableView!
     
@@ -51,12 +51,12 @@ class journalViewController: UIViewController, UITextFieldDelegate, UITableViewD
         guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
         
         if arrayOfQuestions[indexPath.row].type == QuestionTypes.RadioButton {
-            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("RadioButtonQuestion", forIndexPath: indexPath) as? RadioButtonTableViewCell {
+            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("RadioButtonQuestion", forIndexPath: indexPath) as? RadioButtonwCell {
                 tempCell.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
                 tempCell.radioButtons.tintColor = myAppDelegate.myFeelz.getDarkColour()
             }
         } else if arrayOfQuestions[indexPath.row].type == QuestionTypes.TextField {
-            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("TextFieldQuestion", forIndexPath: indexPath) as? TextFieldTableViewCell {
+            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("TextFieldQuestion", forIndexPath: indexPath) as? TextFieldCell {
                 tempCell.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
             }
         }
@@ -67,13 +67,13 @@ class journalViewController: UIViewController, UITextFieldDelegate, UITableViewD
         
         var returnCell = UITableViewCell()
         if arrayOfQuestions[indexPath.row].type == .RadioButton {
-            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("RadioButtonQuestion", forIndexPath: indexPath) as? RadioButtonTableViewCell {
+            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("RadioButtonQuestion", forIndexPath: indexPath) as? RadioButtonwCell {
                 tempCell.questionLabel?.text = arrayOfQuestions[indexPath.row].statement
                 tempCell.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
                 returnCell = tempCell
             }
         } else if arrayOfQuestions[indexPath.row].type == .TextField {
-            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("TextFieldQuestion", forIndexPath: indexPath) as? TextFieldTableViewCell {
+            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("TextFieldQuestion", forIndexPath: indexPath) as? TextFieldCell {
                 tempCell.questionLabel?.text = arrayOfQuestions[indexPath.row].statement
                 tempCell.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
                 returnCell = tempCell

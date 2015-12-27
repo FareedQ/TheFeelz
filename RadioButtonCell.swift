@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RadioButtonTableViewCell: UITableViewCell {
+class RadioButtonwCell: UITableViewCell {
 
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var radioButtons: UISegmentedControl!

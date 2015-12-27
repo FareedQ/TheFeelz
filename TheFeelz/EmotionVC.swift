@@ -8,10 +8,7 @@
 
 import UIKit
 
-class mainViewController: UIViewController, UIGestureRecognizerDelegate, UITextFieldDelegate {
-
-    
-    weak var mySplashViewController:splashViewController!
+class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var lblDictionaryOutput: UILabel!
     
@@ -20,7 +17,7 @@ class mainViewController: UIViewController, UIGestureRecognizerDelegate, UITextF
     
     let SELECTIONVIEWMOVEIN:CGFloat = -108
     
-    weak var mySelectionVC:selectionViewController!
+    weak var mySelectionSubVC:SelectionSubVC!
     var originalMainImageFrame = CGRect()
     var originalFirstImageFrame = CGRect()
     var originalSecondImageFrame = CGRect()
@@ -33,10 +30,10 @@ class mainViewController: UIViewController, UIGestureRecognizerDelegate, UITextF
         super.viewDidLoad()
         
         originalMainImageFrame = mainImage.frame
-        originalFirstImageFrame = mySelectionVC.img1.frame
-        originalSecondImageFrame = mySelectionVC.img2.frame
-        originalThirdImageFrame = mySelectionVC.img3.frame
-        originalFourthImageFrame = mySelectionVC.img4.frame
+        originalFirstImageFrame = mySelectionSubVC.img1.frame
+        originalSecondImageFrame = mySelectionSubVC.img2.frame
+        originalThirdImageFrame = mySelectionSubVC.img3.frame
+        originalFourthImageFrame = mySelectionSubVC.img4.frame
         
         loadImages()
         
@@ -60,8 +57,8 @@ class mainViewController: UIViewController, UIGestureRecognizerDelegate, UITextF
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "selectionSegue" {
-            guard let tempVC = segue.destinationViewController as? selectionViewController else {return}
-            mySelectionVC = tempVC
+            guard let tempVC = segue.destinationViewController as? SelectionSubVC else {return}
+            mySelectionSubVC = tempVC
         }
     }
     
@@ -69,10 +66,10 @@ class mainViewController: UIViewController, UIGestureRecognizerDelegate, UITextF
         guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
         let myFeelz = myAppDelegate.myFeelz
         mainImage.image = UIImage(named: myFeelz.getSelectedEmotion())
-        mySelectionVC.img1.image = UIImage(named: myFeelz.getEmotionAt(1))
-        mySelectionVC.img2.image = UIImage(named: myFeelz.getEmotionAt(2))
-        mySelectionVC.img3.image = UIImage(named: myFeelz.getEmotionAt(3))
-        mySelectionVC.img4.image = UIImage(named: myFeelz.getEmotionAt(4))
+        mySelectionSubVC.img1.image = UIImage(named: myFeelz.getEmotionAt(1))
+        mySelectionSubVC.img2.image = UIImage(named: myFeelz.getEmotionAt(2))
+        mySelectionSubVC.img3.image = UIImage(named: myFeelz.getEmotionAt(3))
+        mySelectionSubVC.img4.image = UIImage(named: myFeelz.getEmotionAt(4))
         
         for x in myFeelz.index ... (myFeelz.index+4) {
             selectionArrayInCurrentView.append(x%5)
@@ -112,13 +109,13 @@ class mainViewController: UIViewController, UIGestureRecognizerDelegate, UITextF
     func animateToSelectedOption(touchPosition:CGPoint){
         
         if(originalFirstImageFrame.contains(touchPosition)){
-            animateOptionSelected(self.mySelectionVC.img1)
+            animateOptionSelected(self.mySelectionSubVC.img1)
         } else if(originalSecondImageFrame.contains(touchPosition)){
-            animateOptionSelected(self.mySelectionVC.img2)
+            animateOptionSelected(self.mySelectionSubVC.img2)
         } else if(originalThirdImageFrame.contains(touchPosition)){
-            animateOptionSelected(self.mySelectionVC.img3)
+            animateOptionSelected(self.mySelectionSubVC.img3)
         } else if(originalFourthImageFrame.contains(touchPosition)){
-            animateOptionSelected(self.mySelectionVC.img4)
+            animateOptionSelected(self.mySelectionSubVC.img4)
         } else {
             UIView.animateWithDuration(0.2, animations: { () -> Void in
                 self.returnSelectableImagesToScale()
@@ -152,7 +149,7 @@ class mainViewController: UIViewController, UIGestureRecognizerDelegate, UITextF
         UIView.animateWithDuration(0.2, animations: { () -> Void in
             self.returnSelectableImagesToScale()
             selectedImage.frame = self.originalMainImageFrame
-            self.mySelectionVC.view.bringSubviewToFront(selectedImage)
+            self.mySelectionSubVC.view.bringSubviewToFront(selectedImage)
         })
     }
     
@@ -189,15 +186,15 @@ class mainViewController: UIViewController, UIGestureRecognizerDelegate, UITextF
         guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
         let myFeelz = myAppDelegate.myFeelz
         mainImage.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[0]].Name)
-        mySelectionVC.img1.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[1]].Name)
-        mySelectionVC.img2.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[2]].Name)
-        mySelectionVC.img3.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[3]].Name)
-        mySelectionVC.img4.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[4]].Name)
+        mySelectionSubVC.img1.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[1]].Name)
+        mySelectionSubVC.img2.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[2]].Name)
+        mySelectionSubVC.img3.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[3]].Name)
+        mySelectionSubVC.img4.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[4]].Name)
         
-        mySelectionVC.img1.frame = self.originalFirstImageFrame
-        mySelectionVC.img2.frame = self.originalSecondImageFrame
-        mySelectionVC.img3.frame = self.originalThirdImageFrame
-        mySelectionVC.img4.frame = self.originalFourthImageFrame
+        mySelectionSubVC.img1.frame = self.originalFirstImageFrame
+        mySelectionSubVC.img2.frame = self.originalSecondImageFrame
+        mySelectionSubVC.img3.frame = self.originalThirdImageFrame
+        mySelectionSubVC.img4.frame = self.originalFourthImageFrame
         
         mainImage.transform = CGAffineTransformMakeScale(1, 1)
         mainImage.frame = self.originalMainImageFrame
@@ -212,10 +209,10 @@ class mainViewController: UIViewController, UIGestureRecognizerDelegate, UITextF
     }
 
     func returnSelectableImagesToScale(){
-        mySelectionVC.img1.frame = originalFirstImageFrame
-        mySelectionVC.img2.frame = originalSecondImageFrame
-        mySelectionVC.img3.frame = originalThirdImageFrame
-        mySelectionVC.img4.frame = originalFourthImageFrame
+        mySelectionSubVC.img1.frame = originalFirstImageFrame
+        mySelectionSubVC.img2.frame = originalSecondImageFrame
+        mySelectionSubVC.img3.frame = originalThirdImageFrame
+        mySelectionSubVC.img4.frame = originalFourthImageFrame
     }
 
     func alertMessage(message:String){

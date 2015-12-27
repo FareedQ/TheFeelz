@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextFieldTableViewCell: UITableViewCell {
+class TextFieldCell: UITableViewCell {
     
     @IBOutlet weak var inputTextFeild: UITextField!
     @IBOutlet weak var questionLabel: UILabel!

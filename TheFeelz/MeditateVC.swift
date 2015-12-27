@@ -11,7 +11,7 @@ import AVFoundation
 import CoreLocation
 import MapKit
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var switchOutlet: UISwitch!
     var meditationTrack: AVAudioPlayer?

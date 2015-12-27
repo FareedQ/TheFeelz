@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserModel: NSObject {
+class User: NSObject {
     
     //Setup Defaults
     let defaults = NSUserDefaults.standardUserDefaults()

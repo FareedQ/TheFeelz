@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MantraCollectionViewCell: UICollectionViewCell {
+class MantraImageCell: UICollectionViewCell {
     
     @IBOutlet weak var image: UIImageView!
 }

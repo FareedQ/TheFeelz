@@ -8,9 +8,9 @@
 
 import UIKit
 
-class splashViewController: UIViewController {
+class SplashVC: UIViewController {
     
-    weak var myCarouselViewController:carouselViewController!
+    weak var myCarouselSubVC:CarouselSubVC!
     
     @IBOutlet weak var rightSideBar: UIView!
     @IBOutlet weak var leftSideBar: UIView!
@@ -21,9 +21,9 @@ class splashViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //wire the two view controllers together
         if segue.identifier == "SplashToCarousel" {
-            guard let tempVC = segue.destinationViewController as? carouselViewController else {return}
-            myCarouselViewController = tempVC
-            myCarouselViewController.mySplashViewController = self
+            guard let tempVC = segue.destinationViewController as? CarouselSubVC else {return}
+            myCarouselSubVC = tempVC
+            myCarouselSubVC.mySplashVC = self
         }
     }
     

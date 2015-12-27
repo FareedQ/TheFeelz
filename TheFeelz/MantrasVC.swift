@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MantrasCVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MantrasVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -24,7 +24,7 @@ class MantrasCVC: UIViewController, UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        guard let myCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as? MantraCollectionViewCell else {return UICollectionViewCell()}
+        guard let myCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as? MantraImageCell else {return UICollectionViewCell()}
         myCell.image?.image = UIImage(named: manatraMemes[indexPath.row])
         return myCell
     }

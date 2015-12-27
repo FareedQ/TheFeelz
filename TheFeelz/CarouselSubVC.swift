@@ -8,9 +8,9 @@
 
 import UIKit
 
-class carouselViewController: UIViewController {
+class CarouselSubVC: UIViewController {
     
-    weak var mySplashViewController:splashViewController!
+    weak var mySplashVC:SplashVC!
     
     var imageViews = [UIImageView]()
     var horizontalConstraints = [NSLayoutConstraint]()
@@ -33,7 +33,7 @@ class carouselViewController: UIViewController {
         setupSelectorImageViewsWithConstraints()
         spaceOutSelectorsThroughConstraints()
         loadImagesToSelectors()
-        mySplashViewController.checkBackground()
+        mySplashVC.checkBackground()
         
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "doPanGesture:")
         self.view.addGestureRecognizer(panGestureRecognizer)
@@ -43,7 +43,7 @@ class carouselViewController: UIViewController {
     }
     
     func doTapGesture(sender: UITapGestureRecognizer){
-        mySplashViewController.performSegueWithIdentifier("SplashToMain", sender: mySplashViewController)
+        mySplashVC.performSegueWithIdentifier("SplashToMain", sender: mySplashVC)
     }
     
     func doPanGesture(sender: UIPanGestureRecognizer){
@@ -61,7 +61,7 @@ class carouselViewController: UIViewController {
             
         case .Ended:
             adjustSelectionImagesBasedOnPosition(currentPosition, width: view.bounds.width)
-            mySplashViewController.checkBackground()
+            mySplashVC.checkBackground()
             break
             
         default:

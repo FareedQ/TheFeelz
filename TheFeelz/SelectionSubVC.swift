@@ -8,7 +8,7 @@
 
 import UIKit
 
-class selectionViewController: UIViewController {
+class SelectionSubVC: UIViewController {
 
     @IBOutlet weak var img1: UIImageView!
     @IBOutlet weak var img2: UIImageView!
