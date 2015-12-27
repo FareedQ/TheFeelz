@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0126993C1C249509009E538D /* journalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126993B1C249509009E538D /* journalViewController.swift */; };
+		0126993E1C2496EB009E538D /* Meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0126993D1C2496EB009E538D /* Meditation.mp3 */; };
+		0174E83D1C23382000589507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E83C1C23382000589507 /* AppDelegate.swift */; };
+		0174E8421C23382000589507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0174E8401C23382000589507 /* Main.storyboard */; };
+		0174E8471C23382000589507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0174E8461C23382000589507 /* Assets.xcassets */; };
+		0174E84A1C23382000589507 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0174E8481C23382000589507 /* LaunchScreen.storyboard */; };
+		0174E8551C23382000589507 /* TheFeelzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8541C23382000589507 /* TheFeelzTests.swift */; };
+		0174E8601C23382000589507 /* TheFeelzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E85F1C23382000589507 /* TheFeelzUITests.swift */; };
+		0174E86E1C23407900589507 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E86D1C23407900589507 /* SplashVC.swift */; };
+		0174E8741C2342AF00589507 /* selectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8731C2342AE00589507 /* selectionViewController.swift */; };
+		0174E8761C2342E200589507 /* Feelz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8751C2342E200589507 /* Feelz.swift */; };
+		0174E8781C2342F500589507 /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8771C2342F500589507 /* mainViewController.swift */; };
+		0174E87C1C234A7700589507 /* DictionaryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E87B1C234A7700589507 /* DictionaryAPI.swift */; };
+		0174E8BB1C23557E00589507 /* MantrasCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8BA1C23557E00589507 /* MantrasCVC.swift */; };
+		0174E8BD1C2356B300589507 /* MantraCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E8BC1C2356B300589507 /* MantraCollectionViewCell.swift */; };
+		019837931C28906100BBB614 /* CarouseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019837921C28906100BBB614 /* CarouseVC.swift */; };
+		0199C64C1C2361A400BD94B0 /* MeditateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199C64B1C2361A400BD94B0 /* MeditateVC.swift */; };
+		0199C6541C236BE400BD94B0 /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199C6531C236BE400BD94B0 /* settingsViewController.swift */; };
+		01A75F581C2F030A00BF928A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F571C2F030A00BF928A /* UserModel.swift */; };
+		01A75F5C1C2F1BAF00BF928A /* RadioButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F5B1C2F1BAF00BF928A /* RadioButtonTableViewCell.swift */; };
+		01A75F5E1C2F1BC500BF928A /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F5D1C2F1BC500BF928A /* TextFieldTableViewCell.swift */; };
+		01A75F601C2F308F00BF928A /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F5F1C2F308F00BF928A /* QuestionModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0174E8511C23382000589507 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0174E8311C23381F00589507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0174E8381C23382000589507;
+			remoteInfo = TheFeelz;
+		};
+		0174E85C1C23382000589507 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0174E8311C23381F00589507 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0174E8381C23382000589507;
+			remoteInfo = TheFeelz;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0126993B1C249509009E538D /* journalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = journalViewController.swift; sourceTree = "<group>"; };
+		0126993D1C2496EB009E538D /* Meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Meditation.mp3; sourceTree = "<group>"; };
+		0174E8391C23382000589507 /* TheFeelz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFeelz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0174E83C1C23382000589507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0174E8411C23382000589507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0174E8461C23382000589507 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0174E8491C23382000589507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0174E84B1C23382000589507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0174E8501C23382000589507 /* TheFeelzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheFeelzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0174E8541C23382000589507 /* TheFeelzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheFeelzTests.swift; sourceTree = "<group>"; };
+		0174E8561C23382000589507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0174E85B1C23382000589507 /* TheFeelzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheFeelzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0174E85F1C23382000589507 /* TheFeelzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheFeelzUITests.swift; sourceTree = "<group>"; };
+		0174E8611C23382000589507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0174E86D1C23407900589507 /* SplashVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashVC.swift; path = ../SplashVC.swift; sourceTree = "<group>"; };
+		0174E8731C2342AE00589507 /* selectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = selectionViewController.swift; sourceTree = "<group>"; };
+		0174E8751C2342E200589507 /* Feelz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feelz.swift; sourceTree = "<group>"; };
+		0174E8771C2342F500589507 /* mainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
+		0174E87B1C234A7700589507 /* DictionaryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryAPI.swift; sourceTree = "<group>"; };
+		0174E8BA1C23557E00589507 /* MantrasCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MantrasCVC.swift; sourceTree = "<group>"; };
+		0174E8BC1C2356B300589507 /* MantraCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MantraCollectionViewCell.swift; sourceTree = "<group>"; };
+		019837921C28906100BBB614 /* CarouseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouseVC.swift; sourceTree = "<group>"; };
+		0199C64B1C2361A400BD94B0 /* MeditateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditateVC.swift; sourceTree = "<group>"; };
+		0199C6531C236BE400BD94B0 /* settingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
+		01A75F571C2F030A00BF928A /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		01A75F5B1C2F1BAF00BF928A /* RadioButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioButtonTableViewCell.swift; path = ../RadioButtonTableViewCell.swift; sourceTree = "<group>"; };
+		01A75F5D1C2F1BC500BF928A /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldTableViewCell.swift; path = ../TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		01A75F5F1C2F308F00BF928A /* QuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0174E8361C23382000589507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0174E84D1C23382000589507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0174E8581C23382000589507 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0165684E1C278B5F008D36F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				01A75F571C2F030A00BF928A /* UserModel.swift */,
+				0174E8751C2342E200589507 /* Feelz.swift */,
+				0174E87B1C234A7700589507 /* DictionaryAPI.swift */,
+				01A75F5F1C2F308F00BF928A /* QuestionModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0165684F1C278B71008D36F8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0174E8401C23382000589507 /* Main.storyboard */,
+				0174E8481C23382000589507 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		016568501C278B7B008D36F8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0174E83C1C23382000589507 /* AppDelegate.swift */,
+				0174E86D1C23407900589507 /* SplashVC.swift */,
+				019837921C28906100BBB614 /* CarouseVC.swift */,
+				0174E8771C2342F500589507 /* mainViewController.swift */,
+				0126993B1C249509009E538D /* journalViewController.swift */,
+				0199C6531C236BE400BD94B0 /* settingsViewController.swift */,
+				0199C64B1C2361A400BD94B0 /* MeditateVC.swift */,
+				0174E8BA1C23557E00589507 /* MantrasCVC.swift */,
+				0174E8BC1C2356B300589507 /* MantraCollectionViewCell.swift */,
+				01A75F5D1C2F1BC500BF928A /* TextFieldTableViewCell.swift */,
+				01A75F5B1C2F1BAF00BF928A /* RadioButtonTableViewCell.swift */,
+				0174E8731C2342AE00589507 /* selectionViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		016568511C278B8C008D36F8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0174E8461C23382000589507 /* Assets.xcassets */,
+				0174E84B1C23382000589507 /* Info.plist */,
+				0126993D1C2496EB009E538D /* Meditation.mp3 */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0174E8301C23381F00589507 = {
+			isa = PBXGroup;
+			children = (
+				0174E83B1C23382000589507 /* TheFeelz */,
+				0174E8531C23382000589507 /* TheFeelzTests */,
+				0174E85E1C23382000589507 /* TheFeelzUITests */,
+				0174E83A1C23382000589507 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0174E83A1C23382000589507 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0174E8391C23382000589507 /* TheFeelz.app */,
+				0174E8501C23382000589507 /* TheFeelzTests.xctest */,
+				0174E85B1C23382000589507 /* TheFeelzUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0174E83B1C23382000589507 /* TheFeelz */ = {
+			isa = PBXGroup;
+			children = (
+				016568511C278B8C008D36F8 /* Resources */,
+				016568501C278B7B008D36F8 /* Controllers */,
+				0165684F1C278B71008D36F8 /* Views */,
+				0165684E1C278B5F008D36F8 /* Models */,
+			);
+			path = TheFeelz;
+			sourceTree = "<group>";
+		};
+		0174E8531C23382000589507 /* TheFeelzTests */ = {
+			isa = PBXGroup;
+			children = (
+				0174E8541C23382000589507 /* TheFeelzTests.swift */,
+				0174E8561C23382000589507 /* Info.plist */,
+			);
+			path = TheFeelzTests;
+			sourceTree = "<group>";
+		};
+		0174E85E1C23382000589507 /* TheFeelzUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0174E85F1C23382000589507 /* TheFeelzUITests.swift */,
+				0174E8611C23382000589507 /* Info.plist */,
+			);
+			path = TheFeelzUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0174E8381C23382000589507 /* TheFeelz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0174E8641C23382000589507 /* Build configuration list for PBXNativeTarget "TheFeelz" */;
+			buildPhases = (
+				0174E8351C23382000589507 /* Sources */,
+				0174E8361C23382000589507 /* Frameworks */,
+				0174E8371C23382000589507 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TheFeelz;
+			productName = TheFeelz;
+			productReference = 0174E8391C23382000589507 /* TheFeelz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0174E84F1C23382000589507 /* TheFeelzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0174E8671C23382000589507 /* Build configuration list for PBXNativeTarget "TheFeelzTests" */;
+			buildPhases = (
+				0174E84C1C23382000589507 /* Sources */,
+				0174E84D1C23382000589507 /* Frameworks */,
+				0174E84E1C23382000589507 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0174E8521C23382000589507 /* PBXTargetDependency */,
+			);
+			name = TheFeelzTests;
+			productName = TheFeelzTests;
+			productReference = 0174E8501C23382000589507 /* TheFeelzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0174E85A1C23382000589507 /* TheFeelzUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0174E86A1C23382000589507 /* Build configuration list for PBXNativeTarget "TheFeelzUITests" */;
+			buildPhases = (
+				0174E8571C23382000589507 /* Sources */,
+				0174E8581C23382000589507 /* Frameworks */,
+				0174E8591C23382000589507 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0174E85D1C23382000589507 /* PBXTargetDependency */,
+			);
+			name = TheFeelzUITests;
+			productName = TheFeelzUITests;
+			productReference = 0174E85B1C23382000589507 /* TheFeelzUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0174E8311C23381F00589507 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = FareedQ;
+				TargetAttributes = {
+					0174E8381C23382000589507 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					0174E84F1C23382000589507 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 0174E8381C23382000589507;
+					};
+					0174E85A1C23382000589507 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 0174E8381C23382000589507;
+					};
+				};
+			};
+			buildConfigurationList = 0174E8341C23381F00589507 /* Build configuration list for PBXProject "TheFeelz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0174E8301C23381F00589507;
+			productRefGroup = 0174E83A1C23382000589507 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0174E8381C23382000589507 /* TheFeelz */,
+				0174E84F1C23382000589507 /* TheFeelzTests */,
+				0174E85A1C23382000589507 /* TheFeelzUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0174E8371C23382000589507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0174E84A1C23382000589507 /* LaunchScreen.storyboard in Resources */,
+				0174E8471C23382000589507 /* Assets.xcassets in Resources */,
+				0126993E1C2496EB009E538D /* Meditation.mp3 in Resources */,
+				0174E8421C23382000589507 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0174E84E1C23382000589507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0174E8591C23382000589507 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0174E8351C23382000589507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0174E8BB1C23557E00589507 /* MantrasCVC.swift in Sources */,
+				0126993C1C249509009E538D /* journalViewController.swift in Sources */,
+				0174E8781C2342F500589507 /* mainViewController.swift in Sources */,
+				01A75F5C1C2F1BAF00BF928A /* RadioButtonTableViewCell.swift in Sources */,
+				0199C64C1C2361A400BD94B0 /* MeditateVC.swift in Sources */,
+				0199C6541C236BE400BD94B0 /* settingsViewController.swift in Sources */,
+				01A75F581C2F030A00BF928A /* UserModel.swift in Sources */,
+				01A75F601C2F308F00BF928A /* QuestionModel.swift in Sources */,
+				0174E8741C2342AF00589507 /* selectionViewController.swift in Sources */,
+				0174E8BD1C2356B300589507 /* MantraCollectionViewCell.swift in Sources */,
+				0174E8761C2342E200589507 /* Feelz.swift in Sources */,
+				019837931C28906100BBB614 /* CarouseVC.swift in Sources */,
+				0174E86E1C23407900589507 /* SplashVC.swift in Sources */,
+				01A75F5E1C2F1BC500BF928A /* TextFieldTableViewCell.swift in Sources */,
+				0174E83D1C23382000589507 /* AppDelegate.swift in Sources */,
+				0174E87C1C234A7700589507 /* DictionaryAPI.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0174E84C1C23382000589507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0174E8551C23382000589507 /* TheFeelzTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0174E8571C23382000589507 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0174E8601C23382000589507 /* TheFeelzUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0174E8521C23382000589507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0174E8381C23382000589507 /* TheFeelz */;
+			targetProxy = 0174E8511C23382000589507 /* PBXContainerItemProxy */;
+		};
+		0174E85D1C23382000589507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0174E8381C23382000589507 /* TheFeelz */;
+			targetProxy = 0174E85C1C23382000589507 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0174E8401C23382000589507 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0174E8411C23382000589507 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0174E8481C23382000589507 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0174E8491C23382000589507 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0174E8621C23382000589507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0174E8631C23382000589507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0174E8651C23382000589507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TheFeelz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FareedQ.TheFeelz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0174E8661C23382000589507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = TheFeelz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FareedQ.TheFeelz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0174E8681C23382000589507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TheFeelzTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FareedQ.TheFeelzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheFeelz.app/TheFeelz";
+			};
+			name = Debug;
+		};
+		0174E8691C23382000589507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TheFeelzTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FareedQ.TheFeelzTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheFeelz.app/TheFeelz";
+			};
+			name = Release;
+		};
+		0174E86B1C23382000589507 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TheFeelzUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FareedQ.TheFeelzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TheFeelz;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		0174E86C1C23382000589507 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TheFeelzUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FareedQ.TheFeelzUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TheFeelz;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0174E8341C23381F00589507 /* Build configuration list for PBXProject "TheFeelz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0174E8621C23382000589507 /* Debug */,
+				0174E8631C23382000589507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0174E8641C23382000589507 /* Build configuration list for PBXNativeTarget "TheFeelz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0174E8651C23382000589507 /* Debug */,
+				0174E8661C23382000589507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0174E8671C23382000589507 /* Build configuration list for PBXNativeTarget "TheFeelzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0174E8681C23382000589507 /* Debug */,
+				0174E8691C23382000589507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0174E86A1C23382000589507 /* Build configuration list for PBXNativeTarget "TheFeelzUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0174E86B1C23382000589507 /* Debug */,
+				0174E86C1C23382000589507 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0174E8311C23381F00589507 /* Project object */;
+}

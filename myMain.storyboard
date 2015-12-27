@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--My View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="myViewController" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIv-Ra-oXB" userLabel="Selected View">
+                                <rect key="frame" x="102" y="194" width="396" height="211"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Anger" translatesAutoresizingMaskIntoConstraints="NO" id="rhC-3d-EWp" userLabel="image1">
+                                        <rect key="frame" x="128" y="35" width="141" height="141"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rhC-3d-EWp" secondAttribute="height" id="lmg-yJ-hgf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sadness" translatesAutoresizingMaskIntoConstraints="NO" id="zal-2k-MTa" userLabel="image2">
+                                        <rect key="frame" x="127" y="35" width="141" height="141"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zal-2k-MTa" secondAttribute="height" multiplier="1:1" id="1iz-GC-d9G"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Joy" translatesAutoresizingMaskIntoConstraints="NO" id="RKp-9d-N3h" userLabel="image3">
+                                        <rect key="frame" x="127" y="35" width="141" height="141"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RKp-9d-N3h" secondAttribute="height" multiplier="1:1" id="QgJ-zm-enc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Joy" translatesAutoresizingMaskIntoConstraints="NO" id="oHd-s3-m78" userLabel="image4">
+                                        <rect key="frame" x="128" y="36" width="140" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="oHd-s3-m78" secondAttribute="height" id="Eqy-7q-9B1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lk3-Ni-lsA" userLabel="image5">
+                                        <rect key="frame" x="128" y="36" width="140" height="140"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lk3-Ni-lsA" secondAttribute="height" id="5AM-SI-vo0"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="lk3-Ni-lsA" firstAttribute="centerX" secondItem="WIv-Ra-oXB" secondAttribute="centerX" id="3OG-cW-4Yx"/>
+                                    <constraint firstItem="rhC-3d-EWp" firstAttribute="centerY" secondItem="WIv-Ra-oXB" secondAttribute="centerY" id="3RL-u7-A0v"/>
+                                    <constraint firstItem="RKp-9d-N3h" firstAttribute="height" secondItem="WIv-Ra-oXB" secondAttribute="height" multiplier="2:3" id="5DL-jZ-bGu"/>
+                                    <constraint firstItem="RKp-9d-N3h" firstAttribute="centerY" secondItem="WIv-Ra-oXB" secondAttribute="centerY" id="Ba8-OK-9aZ"/>
+                                    <constraint firstItem="zal-2k-MTa" firstAttribute="centerX" secondItem="WIv-Ra-oXB" secondAttribute="centerX" id="H8a-TT-tBY"/>
+                                    <constraint firstItem="oHd-s3-m78" firstAttribute="centerY" secondItem="WIv-Ra-oXB" secondAttribute="centerY" id="KNj-j2-aki"/>
+                                    <constraint firstItem="RKp-9d-N3h" firstAttribute="centerX" secondItem="WIv-Ra-oXB" secondAttribute="centerX" id="Mw2-OE-16H"/>
+                                    <constraint firstItem="rhC-3d-EWp" firstAttribute="height" secondItem="WIv-Ra-oXB" secondAttribute="height" multiplier="2:3" id="QrF-dn-ewk"/>
+                                    <constraint firstItem="oHd-s3-m78" firstAttribute="centerX" secondItem="WIv-Ra-oXB" secondAttribute="centerX" id="Qwr-y0-Tlu"/>
+                                    <constraint firstItem="lk3-Ni-lsA" firstAttribute="height" secondItem="WIv-Ra-oXB" secondAttribute="height" multiplier="2:3" id="RpQ-S2-XKB"/>
+                                    <constraint firstItem="zal-2k-MTa" firstAttribute="centerY" secondItem="WIv-Ra-oXB" secondAttribute="centerY" id="YQO-Th-VPs"/>
+                                    <constraint firstAttribute="height" constant="211" id="dBD-aj-HBy"/>
+                                    <constraint firstItem="oHd-s3-m78" firstAttribute="height" secondItem="WIv-Ra-oXB" secondAttribute="height" multiplier="2:3" id="fpr-3t-dHW"/>
+                                    <constraint firstItem="zal-2k-MTa" firstAttribute="height" secondItem="WIv-Ra-oXB" secondAttribute="height" multiplier="2:3" id="h03-Rs-TD9"/>
+                                    <constraint firstAttribute="width" constant="396" id="kze-5V-fnX"/>
+                                    <constraint firstItem="rhC-3d-EWp" firstAttribute="centerX" secondItem="WIv-Ra-oXB" secondAttribute="centerX" id="lhc-6V-djQ"/>
+                                    <constraint firstItem="lk3-Ni-lsA" firstAttribute="centerY" secondItem="WIv-Ra-oXB" secondAttribute="centerY" id="smv-UV-jkg"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yjC-GM-vUZ" appends="YES" id="pDF-OW-Kgt"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bC-eA-Qvi" userLabel="rightBorder">
+                                <rect key="frame" x="497" y="194" width="103" height="211"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysC-la-8Bu" userLabel="leftBorder">
+                                <rect key="frame" x="0.0" y="194" width="103" height="211"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How Do You Feel?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oG-0A-BAL">
+                                <rect key="frame" x="125" y="70" width="350" height="72"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="45"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94306734169999995" green="0.64533019400000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="4bC-eA-Qvi" secondAttribute="trailing" constant="-20" id="6Gv-a6-RIn"/>
+                            <constraint firstItem="5oG-0A-BAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7FV-CA-r3O"/>
+                            <constraint firstItem="WIv-Ra-oXB" firstAttribute="top" secondItem="5oG-0A-BAL" secondAttribute="bottom" constant="52" id="7wA-SR-ezQ"/>
+                            <constraint firstItem="ysC-la-8Bu" firstAttribute="top" secondItem="WIv-Ra-oXB" secondAttribute="top" id="9oV-50-YBl"/>
+                            <constraint firstItem="4bC-eA-Qvi" firstAttribute="top" secondItem="WIv-Ra-oXB" secondAttribute="top" id="D2d-QK-HBn"/>
+                            <constraint firstItem="4bC-eA-Qvi" firstAttribute="height" secondItem="WIv-Ra-oXB" secondAttribute="height" id="HLI-CM-mBb"/>
+                            <constraint firstItem="4bC-eA-Qvi" firstAttribute="leading" secondItem="WIv-Ra-oXB" secondAttribute="trailing" constant="-1" id="KeU-vg-kge"/>
+                            <constraint firstItem="ysC-la-8Bu" firstAttribute="height" secondItem="WIv-Ra-oXB" secondAttribute="height" id="MMN-m2-PuX"/>
+                            <constraint firstItem="ysC-la-8Bu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="eNP-TE-t3B"/>
+                            <constraint firstItem="WIv-Ra-oXB" firstAttribute="leading" secondItem="ysC-la-8Bu" secondAttribute="trailing" constant="-1" id="lee-IB-3lQ"/>
+                            <constraint firstItem="WIv-Ra-oXB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oPd-hr-AO3"/>
+                            <constraint firstItem="WIv-Ra-oXB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pQm-rj-cZt"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="yjC-GM-vUZ" appends="YES" id="0gr-Qc-AXD"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="WIv-Ra-oXB" id="WvI-zD-P9F"/>
+                        <outlet property="image1" destination="rhC-3d-EWp" id="pOl-uC-kD0"/>
+                        <outlet property="image1HorizontalConstraint" destination="lhc-6V-djQ" id="qt8-PU-UGS"/>
+                        <outlet property="image2" destination="zal-2k-MTa" id="Plb-Ym-0e1"/>
+                        <outlet property="image2HorizontalConstraint" destination="H8a-TT-tBY" id="VKF-tf-bmy"/>
+                        <outlet property="image3" destination="RKp-9d-N3h" id="73K-VF-136"/>
+                        <outlet property="image3HorizontalConstraint" destination="Mw2-OE-16H" id="B0k-Yk-vjB"/>
+                        <outlet property="image4" destination="oHd-s3-m78" id="YeS-Fz-QuV"/>
+                        <outlet property="image4HorizontalConstraint" destination="Qwr-y0-Tlu" id="fNL-Pd-N1U"/>
+                        <outlet property="image5" destination="lk3-Ni-lsA" id="U0S-7d-iun"/>
+                        <outlet property="image5HorizontalConstraint" destination="3OG-cW-4Yx" id="20P-H4-Alu"/>
+                        <outlet property="leftBorderView" destination="ysC-la-8Bu" id="7L6-9F-wGP"/>
+                        <outlet property="panGuestureOutlet" destination="yjC-GM-vUZ" id="PzN-AN-DaO"/>
+                        <outlet property="rightBorderView" destination="4bC-eA-Qvi" id="86X-0Q-sce"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="yjC-GM-vUZ">
+                    <connections>
+                        <action selector="panGuestureAction:" destination="BYZ-38-t0r" id="Rdd-Gl-Wdg"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Anger" width="209" height="210"/>
+        <image name="Joy" width="210" height="210"/>
+        <image name="Sadness" width="213" height="209"/>
+    </resources>
+</document>
