@@ -14,19 +14,20 @@ import MapKit
 class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
+    
     var meditationTrack: AVAudioPlayer?
+    
     let locationManager = CLLocationManager()
     let zoomRadius:CLLocationDistance = 1000
-    var overlayCircle = MKCircle()
     
+    var overlayCircle = MKCircle()
     var pinPlaced = false
-    let point1 = MKPointAnnotation()
+    let meditationAlertPoint = MKPointAnnotation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupViewToLookPretty()
-        checkBackground()
         
         locationManager.delegate = self
         mapView.delegate = self
@@ -45,7 +46,7 @@ class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        checkBackground()
+        setupViewToLookPretty()
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,7 +83,7 @@ class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
         if mapView.frame.contains(touchPosition) {
             if pinPlaced {
                 //removed annotation pin and circle
-                mapView.removeAnnotation(point1)
+                mapView.removeAnnotation(meditationAlertPoint)
                 mapView.removeOverlay(overlayCircle)
                 
                 //Reset Music
@@ -96,8 +97,8 @@ class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
                 let touchConvertedToMapPosition = mapView.convertPoint(touchPosition, toCoordinateFromView: view)
                 
                 //add annotation pin
-                point1.coordinate = touchConvertedToMapPosition
-                mapView.addAnnotation(point1)
+                meditationAlertPoint.coordinate = touchConvertedToMapPosition
+                mapView.addAnnotation(meditationAlertPoint)
                 
                 //add circle
                 overlayCircle = MKCircle(centerCoordinate: touchConvertedToMapPosition, radius: 25 as CLLocationDistance)
@@ -128,29 +129,11 @@ class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
     }
     
     func setupViewToLookPretty(){
-        view.backgroundColor = UIColorFromRGB("5E7D41")
+        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
         mapView.clipsToBounds = true
         mapView.layer.cornerRadius = 10
         mapView.layer.borderWidth = 3
-        mapView.layer.borderColor = UIColorFromRGB("1A2129").CGColor
-    }
-    
-    func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor{
-        let scanner = NSScanner(string:colorCode)
-        var color:UInt32 = 0;
-        scanner.scanHexInt(&color)
-        
-        let mask = 0x000000FF
-        let r = CGFloat(Float(Int(color >> 16) & mask)/255.0)
-        let g = CGFloat(Float(Int(color >> 8) & mask)/255.0)
-        let b = CGFloat(Float(Int(color) & mask)/255.0)
-        
-        return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
-    }
-    
-    func checkBackground(){
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
-        view.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
+        view.backgroundColor = Feelz.sharedInstance.getDarkColour()
     }
 
 }

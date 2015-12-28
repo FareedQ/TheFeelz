@@ -17,6 +17,14 @@ internal struct Emotion {
 
 public class Feelz: NSObject {
     
+    struct Static {
+        static let instance = Feelz()
+    }
+    
+    class var sharedInstance: Feelz {
+        return Static.instance
+    }
+    
     var index:Int = 0
     
     var emotionsArray = [Emotion]()
