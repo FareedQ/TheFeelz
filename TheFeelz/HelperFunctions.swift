@@ -6,6 +6,9 @@
 //  Copyright © 2015 FareedQ. All rights reserved.
 //
 
+
+//This file is used to store globally used helper funcitons through out the project. So that these function can be used anywhere.
+
 import UIKit
 
 func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor{
