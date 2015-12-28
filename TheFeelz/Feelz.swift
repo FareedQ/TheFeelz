@@ -8,6 +8,13 @@
 
 import UIKit
 
+internal struct Emotion {
+    var Name = String()
+    var BrightColour = UIColor()
+    var DarkColour = UIColor()
+    var TextColour = UIColor()
+}
+
 public class Feelz: NSObject {
     
     var index:Int = 0
@@ -80,17 +87,55 @@ public class Feelz: NSObject {
             index = emotionsArray.count - 1
         }
     }
+    
+    // This code snippit was taken from http://jamesonquave.com/blog/making-a-post-request-in-swift/
+    // In order to allow the Feelz object to post it's data to an API using JSON
+    // The work I've done here is to make it modern for Swift 2.0
+    
+    func post(params : Dictionary<String, String>, url : String) {
+        
+        do{
+            guard let actualURL = NSURL(string: url) else { return }
+            let request = NSMutableURLRequest(URL: actualURL)
+            let session = NSURLSession.sharedSession()
+            request.HTTPMethod = "POST"
+            
+            request.HTTPBody = try NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions())
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.addValue("application/json", forHTTPHeaderField: "Accept")
+            
+            let task = session.dataTaskWithRequest(request, completionHandler: {data, response, error -> Void in
+                
+                guard let actualData = data else { return }
+                print("Response: \(response)")
+                let strData = NSString(data: actualData, encoding: NSUTF8StringEncoding)
+                print("Body: \(strData)")
+                
+                do {
+                    let json = try NSJSONSerialization.JSONObjectWithData(actualData, options: .MutableLeaves) as? NSDictionary
+                    
+                    if let parseJSON = json {
+                        let success = parseJSON["success"] as? Int
+                        print("Succes: \(success)")
+                    }
+                    else {
+                        print("Error could not parse JSON, maybe server isn't running")
+                    }
+                } catch  {
+                    print("Error could not parse JSON")
+                }
+            })
+        
+            task.resume()
+            
+        } catch {
+            print("Error could not parse JSON")
+        }
+        
+    }
 }
 
-internal struct Emotion {
-    var Name = String()
-    var BrightColour = UIColor()
-    var DarkColour = UIColor()
-    var TextColour = UIColor()
-}
-
-
-func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor{
+internal func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor{
     let scanner = NSScanner(string:colorCode)
     var color:UInt32 = 0;
     scanner.scanHexInt(&color)
