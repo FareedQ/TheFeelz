@@ -34,8 +34,7 @@ class MantrasVC: UIViewController, UICollectionViewDataSource, UICollectionViewD
     }
     
     func checkBackground(){
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
-        view.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
-        collectionView.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
+        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
+        collectionView.backgroundColor = Feelz.sharedInstance.getBrightColour()
     }
 }

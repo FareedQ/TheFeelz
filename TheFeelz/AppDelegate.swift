@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Declaring a singleton
     // There is probably better practice, this is how we learned in class
-    let myFeelz = Feelz()
+    //let myFeelz = Feelz()
     let myUser = User()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {

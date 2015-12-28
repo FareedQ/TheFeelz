@@ -48,34 +48,32 @@ class JournalVC: UIViewController, UITextFieldDelegate, UITableViewDataSource, U
     }
     
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
         
         if arrayOfQuestions[indexPath.row].type == QuestionTypes.RadioButton {
             if let tempCell = myTableView.dequeueReusableCellWithIdentifier("RadioButtonQuestion", forIndexPath: indexPath) as? RadioButtonwCell {
-                tempCell.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
-                tempCell.radioButtons.tintColor = myAppDelegate.myFeelz.getDarkColour()
+                tempCell.backgroundColor = Feelz.sharedInstance.getBrightColour()
+                tempCell.radioButtons.tintColor = Feelz.sharedInstance.getDarkColour()
             }
         } else if arrayOfQuestions[indexPath.row].type == QuestionTypes.TextField {
             if let tempCell = myTableView.dequeueReusableCellWithIdentifier("TextFieldQuestion", forIndexPath: indexPath) as? TextFieldCell {
-                tempCell.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
+                tempCell.backgroundColor = Feelz.sharedInstance.getBrightColour()
             }
         }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return UITableViewCell()}
         
         var returnCell = UITableViewCell()
         if arrayOfQuestions[indexPath.row].type == .RadioButton {
             if let tempCell = myTableView.dequeueReusableCellWithIdentifier("RadioButtonQuestion", forIndexPath: indexPath) as? RadioButtonwCell {
                 tempCell.questionLabel?.text = arrayOfQuestions[indexPath.row].statement
-                tempCell.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
+                tempCell.backgroundColor = Feelz.sharedInstance.getBrightColour()
                 returnCell = tempCell
             }
         } else if arrayOfQuestions[indexPath.row].type == .TextField {
             if let tempCell = myTableView.dequeueReusableCellWithIdentifier("TextFieldQuestion", forIndexPath: indexPath) as? TextFieldCell {
                 tempCell.questionLabel?.text = arrayOfQuestions[indexPath.row].statement
-                tempCell.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
+                tempCell.backgroundColor = Feelz.sharedInstance.getBrightColour()
                 returnCell = tempCell
             }
         }
@@ -102,9 +100,8 @@ class JournalVC: UIViewController, UITextFieldDelegate, UITableViewDataSource, U
     }
     
     func checkBackground(){
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
-        view.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
-        myTableView.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
+        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
+        myTableView.backgroundColor = Feelz.sharedInstance.getBrightColour()
     }
 
 }

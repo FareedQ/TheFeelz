@@ -28,9 +28,8 @@ class SplashVC: UIViewController {
     }
     
     func checkBackground(){
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
-        view.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
-        leftSideBar.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
-        rightSideBar.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
+        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
+        leftSideBar.backgroundColor = Feelz.sharedInstance.getBrightColour()
+        rightSideBar.backgroundColor = Feelz.sharedInstance.getBrightColour()
     }
 }

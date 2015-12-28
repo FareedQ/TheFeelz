@@ -23,3 +23,12 @@ func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor{
     
     return UIColor(red: r, green: g, blue: b, alpha: CGFloat(alpha))
 }
+
+
+func alertMessage(message:String, thisViewController:UIViewController){
+    let alert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
+    let okay = UIAlertAction(title: "Okay", style: .Default) { (UIAlertAction) -> Void in
+    }
+    alert.addAction(okay)
+    thisViewController.presentViewController(alert, animated: true, completion: nil)
+}

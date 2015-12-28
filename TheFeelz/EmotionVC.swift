@@ -43,9 +43,8 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
         gestureRecognizer.minimumPressDuration = 0.2
         self.view.addGestureRecognizer(gestureRecognizer)
         
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
         let myDictionary = DictionaryAPI()
-        lblDictionaryOutput.text = myDictionary.execute(myAppDelegate.myFeelz.getSelectedEmotion())
+        lblDictionaryOutput.text = myDictionary.execute(Feelz.sharedInstance.getSelectedEmotion())
         
         checkBackground()
         
@@ -63,15 +62,13 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     }
     
     func loadImages(){
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
-        let myFeelz = myAppDelegate.myFeelz
-        mainImage.image = UIImage(named: myFeelz.getSelectedEmotion())
-        mySelectionSubVC.img1.image = UIImage(named: myFeelz.getEmotionAt(1))
-        mySelectionSubVC.img2.image = UIImage(named: myFeelz.getEmotionAt(2))
-        mySelectionSubVC.img3.image = UIImage(named: myFeelz.getEmotionAt(3))
-        mySelectionSubVC.img4.image = UIImage(named: myFeelz.getEmotionAt(4))
+        mainImage.image = UIImage(named: Feelz.sharedInstance.getSelectedEmotion())
+        mySelectionSubVC.img1.image = UIImage(named: Feelz.sharedInstance.getEmotionAt(1))
+        mySelectionSubVC.img2.image = UIImage(named: Feelz.sharedInstance.getEmotionAt(2))
+        mySelectionSubVC.img3.image = UIImage(named: Feelz.sharedInstance.getEmotionAt(3))
+        mySelectionSubVC.img4.image = UIImage(named: Feelz.sharedInstance.getEmotionAt(4))
         
-        for x in myFeelz.index ... (myFeelz.index+4) {
+        for x in Feelz.sharedInstance.index ... (Feelz.sharedInstance.index+4) {
             selectionArrayInCurrentView.append(x%5)
         }
     }
@@ -94,9 +91,8 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
             switchToTheSelectedOption()
             animatePuttingThingsBackInTheirPlaces()
             
-            guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
             let myDictionary = DictionaryAPI()
-            lblDictionaryOutput.text = myDictionary.execute(myAppDelegate.myFeelz.getSelectedEmotion())
+            lblDictionaryOutput.text = myDictionary.execute(Feelz.sharedInstance.getSelectedEmotion())
             
             checkBackground()
             break
@@ -138,8 +134,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     }
     
     func swapValuesInSelectionArray(inout currentEmotion:Int, inout selectedEmotion:Int){
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
-        myAppDelegate.myFeelz.index = selectedEmotion
+        Feelz.sharedInstance.index = selectedEmotion
         let tempSelection = selectedEmotion
         selectedEmotion = currentEmotion
         currentEmotion = tempSelection
@@ -183,13 +178,11 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     
     func switchToTheSelectedOption(){
         
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
-        let myFeelz = myAppDelegate.myFeelz
-        mainImage.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[0]].Name)
-        mySelectionSubVC.img1.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[1]].Name)
-        mySelectionSubVC.img2.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[2]].Name)
-        mySelectionSubVC.img3.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[3]].Name)
-        mySelectionSubVC.img4.image = UIImage(named: myFeelz.emotionsArray[selectionArrayInCurrentView[4]].Name)
+        mainImage.image = UIImage(named: Feelz.sharedInstance.emotionsArray[selectionArrayInCurrentView[0]].Name)
+        mySelectionSubVC.img1.image = UIImage(named: Feelz.sharedInstance.emotionsArray[selectionArrayInCurrentView[1]].Name)
+        mySelectionSubVC.img2.image = UIImage(named: Feelz.sharedInstance.emotionsArray[selectionArrayInCurrentView[2]].Name)
+        mySelectionSubVC.img3.image = UIImage(named: Feelz.sharedInstance.emotionsArray[selectionArrayInCurrentView[3]].Name)
+        mySelectionSubVC.img4.image = UIImage(named: Feelz.sharedInstance.emotionsArray[selectionArrayInCurrentView[4]].Name)
         
         mySelectionSubVC.img1.frame = self.originalFirstImageFrame
         mySelectionSubVC.img2.frame = self.originalSecondImageFrame
@@ -226,8 +219,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     
     
     func checkBackground(){
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
-        view.backgroundColor = myAppDelegate.myFeelz.getBrightColour()
+        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
     }
     
 }

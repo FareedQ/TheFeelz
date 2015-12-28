@@ -114,16 +114,14 @@ class CarouselSubVC: UIViewController {
     }
     
     func toIncrement(){
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
-        myAppDelegate.myFeelz.incrementIndex()
+        Feelz.sharedInstance.incrementIndex()
         
         incrementCurrentSelectorConstraintsAndImage()
         loadImagesToSelectors()
     }
     
     func toDecrement(){
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
-        myAppDelegate.myFeelz.decrementIndex()
+        Feelz.sharedInstance.decrementIndex()
         
         decrementCurrentSelectorConstraintsAndImage()
         loadImagesToSelectors()
@@ -185,14 +183,13 @@ class CarouselSubVC: UIViewController {
     }
     
     func loadImagesToSelectors(){
-        guard let myAppDelegate = UIApplication.sharedApplication().delegate as? AppDelegate else {return}
         let amountOfImagesFromTheLeftUntilTheMiddle = Int(floor(CGFloat(amountOfSelectors)/2)) * -1
-        var currentSelector = myAppDelegate.myFeelz.index + amountOfImagesFromTheLeftUntilTheMiddle
-        if currentSelector < 0 { currentSelector += myAppDelegate.myFeelz.emotionsArray.count }
+        var currentSelector = Feelz.sharedInstance.index + amountOfImagesFromTheLeftUntilTheMiddle
+        if currentSelector < 0 { currentSelector += Feelz.sharedInstance.emotionsArray.count }
         for imageView in imageViews {
-            imageView.image = UIImage(named:myAppDelegate.myFeelz.emotionsArray[currentSelector%myAppDelegate.myFeelz.emotionsArray.count].Name)
+            imageView.image = UIImage(named:Feelz.sharedInstance.emotionsArray[currentSelector%Feelz.sharedInstance.emotionsArray.count].Name)
             currentSelector += 1
-            if currentSelector == myAppDelegate.myFeelz.emotionsArray.count { currentSelector = 0 }
+            if currentSelector == Feelz.sharedInstance.emotionsArray.count { currentSelector = 0 }
         }
     }
     
