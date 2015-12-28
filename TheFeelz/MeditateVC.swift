@@ -44,6 +44,10 @@ class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
         mapView.setRegion(coordinateRegion, animated: true)
     }
     
+    func mapViewDidFailLoadingMap(mapView: MKMapView, withError error: NSError) {
+        alertMessage("The map did not properly load. You may not be connected to the internet. The app will still function but not at full capacity.", thisViewController: self)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         setupViewToLookPretty()
