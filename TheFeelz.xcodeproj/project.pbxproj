@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		012470111C318E1E001DAC33 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012470101C318E1E001DAC33 /* HelperFunctions.swift */; };
+		012470131C319AD3001DAC33 /* waltographUI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 012470121C3197B4001DAC33 /* waltographUI.ttf */; };
 		0126993C1C249509009E538D /* JournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126993B1C249509009E538D /* JournalVC.swift */; };
 		0126993E1C2496EB009E538D /* Meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0126993D1C2496EB009E538D /* Meditation.mp3 */; };
 		0174E83D1C23382000589507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E83C1C23382000589507 /* AppDelegate.swift */; };
@@ -51,6 +52,7 @@
 
 /* Begin PBXFileReference section */
 		012470101C318E1E001DAC33 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
+		012470121C3197B4001DAC33 /* waltographUI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = waltographUI.ttf; sourceTree = "<group>"; };
 		0126993B1C249509009E538D /* JournalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalVC.swift; sourceTree = "<group>"; };
 		0126993D1C2496EB009E538D /* Meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Meditation.mp3; sourceTree = "<group>"; };
 		0174E8391C23382000589507 /* TheFeelz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFeelz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 				0174E84B1C23382000589507 /* Info.plist */,
 				0126993D1C2496EB009E538D /* Meditation.mp3 */,
 				012470101C318E1E001DAC33 /* HelperFunctions.swift */,
+				012470121C3197B4001DAC33 /* waltographUI.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				012470131C319AD3001DAC33 /* waltographUI.ttf in Resources */,
 				0174E84A1C23382000589507 /* LaunchScreen.storyboard in Resources */,
 				0174E8471C23382000589507 /* Assets.xcassets in Resources */,
 				0126993E1C2496EB009E538D /* Meditation.mp3 in Resources */,

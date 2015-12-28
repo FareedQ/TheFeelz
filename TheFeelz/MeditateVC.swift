@@ -13,9 +13,8 @@ import MapKit
 
 class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    @IBOutlet weak var switchOutlet: UISwitch!
+    @IBOutlet weak var mapView: MKMapView!
     var meditationTrack: AVAudioPlayer?
-    @IBOutlet weak var mapKitView: MKMapView!
     let locationManager = CLLocationManager()
     let zoomRadius:CLLocationDistance = 1000
     var overlayCircle = MKCircle()
@@ -28,11 +27,9 @@ class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
         
         setupViewToLookPretty()
         checkBackground()
-        switchOutlet.onImage = UIImage(named: "Anger")
-        switchOutlet.offImage = UIImage(named: "Sadness")
         
         locationManager.delegate = self
-        mapKitView.delegate = self
+        mapView.delegate = self
         locationManager.requestAlwaysAuthorization()
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: "handleTap:")
@@ -43,7 +40,7 @@ class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
         
         let initialLocation = CLLocation(latitude: 43.6472850, longitude: -79.3870760)
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(initialLocation.coordinate, zoomRadius, zoomRadius)
-        mapKitView.setRegion(coordinateRegion, animated: true)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -56,10 +53,11 @@ class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
     }
 
     @IBAction func meditationTypeSwitch(sender: AnyObject) {
+        guard let switchOutlet = sender as? UISwitch else { return }
         if (switchOutlet.on) {
-            mapKitView.hidden = true
+            mapView.hidden = true
         } else {
-            mapKitView.hidden = false
+            mapView.hidden = false
         }
         
     }
@@ -81,11 +79,11 @@ class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
     func handleTap(sender: UITapGestureRecognizer){
         let touchPosition = sender.locationInView(view)
         
-        if mapKitView.frame.contains(touchPosition) {
+        if mapView.frame.contains(touchPosition) {
             if pinPlaced {
                 //removed annotation pin and circle
-                mapKitView.removeAnnotation(point1)
-                mapKitView.removeOverlay(overlayCircle)
+                mapView.removeAnnotation(point1)
+                mapView.removeOverlay(overlayCircle)
                 
                 //Reset Music
                 meditationTrack?.pause()
@@ -95,15 +93,15 @@ class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
                 //set flag
                 pinPlaced = false
             } else {
-                let touchConvertedToMapPosition = mapKitView.convertPoint(touchPosition, toCoordinateFromView: view)
+                let touchConvertedToMapPosition = mapView.convertPoint(touchPosition, toCoordinateFromView: view)
                 
                 //add annotation pin
                 point1.coordinate = touchConvertedToMapPosition
-                mapKitView.addAnnotation(point1)
+                mapView.addAnnotation(point1)
                 
                 //add circle
                 overlayCircle = MKCircle(centerCoordinate: touchConvertedToMapPosition, radius: 25 as CLLocationDistance)
-                mapKitView.addOverlay(overlayCircle)
+                mapView.addOverlay(overlayCircle)
                 
                 //Begin meditation music
                 meditationTrack?.play()
@@ -126,15 +124,15 @@ class MeditateVC: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        mapKitView.showsUserLocation = (status == .AuthorizedAlways)
+        mapView.showsUserLocation = (status == .AuthorizedAlways)
     }
     
     func setupViewToLookPretty(){
         view.backgroundColor = UIColorFromRGB("5E7D41")
-        mapKitView.clipsToBounds = true
-        mapKitView.layer.cornerRadius = 10
-        mapKitView.layer.borderWidth = 3
-        mapKitView.layer.borderColor = UIColorFromRGB("1A2129").CGColor
+        mapView.clipsToBounds = true
+        mapView.layer.cornerRadius = 10
+        mapView.layer.borderWidth = 3
+        mapView.layer.borderColor = UIColorFromRGB("1A2129").CGColor
     }
     
     func UIColorFromRGB(colorCode: String, alpha: Float = 1.0) -> UIColor{

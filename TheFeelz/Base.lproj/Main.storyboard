@@ -7,6 +7,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="waltographUI.ttf">
+            <string>WaltographUI-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Splash-->
         <scene sceneID="ePP-gj-aJX">
@@ -48,7 +53,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THE FEELZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvt-Un-Si3">
                                 <rect key="frame" x="32" y="28" width="272" height="75"/>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="53"/>
+                                <fontDescription key="fontDescription" name="WaltographUI-Bold" family="Waltograph UI" pointSize="49"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -115,17 +120,12 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ubc-3j-Ldg">
                                 <rect key="frame" x="16" y="161" width="288" height="246"/>
                             </mapView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4dy-1n-BAV">
-                                <rect key="frame" x="128" y="83" width="66" height="36"/>
-                                <color key="backgroundColor" red="0.4455410635" green="0.69793778569999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Meditate" image="tab-meditate" id="lJo-If-2ra"/>
                     <connections>
-                        <outlet property="mapKitView" destination="ubc-3j-Ldg" id="U32-3B-8eR"/>
-                        <outlet property="switchOutlet" destination="cDt-3P-yfz" id="ufC-Do-cGc"/>
+                        <outlet property="mapView" destination="ubc-3j-Ldg" id="i8y-ol-eE5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fr5-fb-RUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
