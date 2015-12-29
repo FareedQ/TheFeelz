@@ -28,11 +28,4 @@ extension MeditateVC: CLLocationManagerDelegate {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(usersLocation.coordinate, zoomRadius, zoomRadius)
         mapView.setRegion(coordinateRegion, animated: true)
     }
-    
-    func setupViewToLookPretty(){
-        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
-        mapView.clipsToBounds = true
-        mapView.layer.cornerRadius = 10
-        mapView.layer.borderWidth = 3
-    }
 }

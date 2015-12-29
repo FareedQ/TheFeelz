@@ -15,11 +15,7 @@ class MeditateVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
     
-    enum meditationType {
-        case Time
-        case Location
-    }
-    
+    //Variables for associated data model
     var meditationSelection:meditationType = .Time
     
     //Variables for Sounds Extention
@@ -70,8 +66,13 @@ class MeditateVC: UIViewController {
         adjustVolume(sender.value)
     }
     
-
     
-
+    
+    func setupViewToLookPretty(){
+        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
+        mapView.clipsToBounds = true
+        mapView.layer.cornerRadius = 10
+        mapView.layer.borderWidth = 3
+    }
 
 }
