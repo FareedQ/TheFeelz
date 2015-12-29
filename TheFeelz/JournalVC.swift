@@ -22,6 +22,7 @@ class JournalVC: UIViewController, UITextFieldDelegate, UITableViewDataSource, U
         myTableView.estimatedRowHeight = 44
         myTableView.rowHeight = UITableViewAutomaticDimension
         myTableView.separatorStyle = UITableViewCellSeparatorStyle.None
+        myTableView.allowsSelection = false
     }
 
     func setupQuestions(){
