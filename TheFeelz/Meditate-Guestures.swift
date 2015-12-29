@@ -19,7 +19,7 @@ extension MeditateVC {
     func handleTap(sender: UITapGestureRecognizer){
         let touchPosition = sender.locationInView(view)
         
-        if mapView.frame.contains(touchPosition) {
+        if mapView.frame.contains(touchPosition) && meditationSelection == .Location {
             if pinPlaced {
                 //removed annotation pin and circle
                 mapView.removeAnnotation(meditationAlertPoint)
@@ -49,6 +49,19 @@ extension MeditateVC {
                 //set flag
                 pinPlaced = true
             }
+        }
+    }
+    
+    func meditationSelectionAnimationSwitch(){
+        switch meditationSelection {
+        case .Location:
+            mapView.hidden = false
+            tableView.hidden = true
+            break
+        case .Time:
+            mapView.hidden = true
+            tableView.hidden = false
+            break
         }
     }
     

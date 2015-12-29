@@ -29,5 +29,9 @@ extension MeditateVC {
         
         return audioPlayer
     }
+    
+    func adjustVolume(value:Float){
+        meditationTrack?.volume = value
+    }
 
 }

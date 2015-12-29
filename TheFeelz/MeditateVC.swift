@@ -14,7 +14,13 @@ class MeditateVC: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var switchOutlet: UISwitch!
+    
+    enum meditationType {
+        case Time
+        case Location
+    }
+    
+    var meditationSelection:meditationType = .Location
     
     //Variables for Sounds Extention
     var meditationTrack: AVAudioPlayer?
@@ -37,7 +43,7 @@ class MeditateVC: UIViewController {
         setupGestureRecongizers()
         setupSoundFiles()
         
-        meditationTypeSwitch(switchOutlet)
+        meditationSelectionAnimationSwitch()
         
     }
     
@@ -50,18 +56,19 @@ class MeditateVC: UIViewController {
 
     @IBAction func meditationTypeSwitch(sender: AnyObject) {
         guard let switchOutlet = sender as? UISwitch else { return }
-        
-        if (switchOutlet.on) {
-            mapView.hidden = true
-            tableView.hidden = false
+        if switchOutlet.on {
+            meditationSelection = .Location
         } else {
-            mapView.hidden = false
-            tableView.hidden = true
+            meditationSelection = .Time
         }
-        
+        meditationSelectionAnimationSwitch()
     }
     
+
     
+    @IBAction func VolumeSilder(sender: UISlider) {
+        adjustVolume(sender.value)
+    }
     
 
     
