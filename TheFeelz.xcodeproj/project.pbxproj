@@ -32,6 +32,10 @@
 		019837931C28906100BBB614 /* CarouselSubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019837921C28906100BBB614 /* CarouselSubVC.swift */; };
 		0199C64C1C2361A400BD94B0 /* MeditateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199C64B1C2361A400BD94B0 /* MeditateVC.swift */; };
 		0199C6541C236BE400BD94B0 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0199C6531C236BE400BD94B0 /* SettingsVC.swift */; };
+		01A2AC5E1C32E01E0086FFBF /* Meditiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2AC5D1C32E01E0086FFBF /* Meditiation.swift */; };
+		01A2AC601C32E0CD0086FFBF /* Journal-Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2AC5F1C32E0CD0086FFBF /* Journal-Questions.swift */; };
+		01A2AC621C32E1120086FFBF /* Journal-TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2AC611C32E1120086FFBF /* Journal-TableView.swift */; };
+		01A2AC641C32E1A40086FFBF /* Journal-TextField&Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A2AC631C32E1A40086FFBF /* Journal-TextField&Keyboard.swift */; };
 		01A75F581C2F030A00BF928A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F571C2F030A00BF928A /* User.swift */; };
 		01A75F5C1C2F1BAF00BF928A /* RadioButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F5B1C2F1BAF00BF928A /* RadioButtonCell.swift */; };
 		01A75F5E1C2F1BC500BF928A /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A75F5D1C2F1BC500BF928A /* TextFieldCell.swift */; };
@@ -87,6 +91,10 @@
 		019837921C28906100BBB614 /* CarouselSubVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselSubVC.swift; sourceTree = "<group>"; };
 		0199C64B1C2361A400BD94B0 /* MeditateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeditateVC.swift; sourceTree = "<group>"; };
 		0199C6531C236BE400BD94B0 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		01A2AC5D1C32E01E0086FFBF /* Meditiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meditiation.swift; sourceTree = "<group>"; };
+		01A2AC5F1C32E0CD0086FFBF /* Journal-Questions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Journal-Questions.swift"; sourceTree = "<group>"; };
+		01A2AC611C32E1120086FFBF /* Journal-TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Journal-TableView.swift"; sourceTree = "<group>"; };
+		01A2AC631C32E1A40086FFBF /* Journal-TextField&Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Journal-TextField&Keyboard.swift"; sourceTree = "<group>"; };
 		01A75F571C2F030A00BF928A /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		01A75F5B1C2F1BAF00BF928A /* RadioButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioButtonCell.swift; path = ../RadioButtonCell.swift; sourceTree = "<group>"; };
 		01A75F5D1C2F1BC500BF928A /* TextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextFieldCell.swift; path = ../TextFieldCell.swift; sourceTree = "<group>"; };
@@ -121,6 +129,7 @@
 		0165684E1C278B5F008D36F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				01A2AC5D1C32E01E0086FFBF /* Meditiation.swift */,
 				01A75F571C2F030A00BF928A /* User.swift */,
 				0174E8751C2342E200589507 /* Feelz.swift */,
 				0174E87B1C234A7700589507 /* DictionaryAPI.swift */,
@@ -145,6 +154,9 @@
 				0174E86D1C23407900589507 /* SplashVC.swift */,
 				0174E8771C2342F500589507 /* EmotionVC.swift */,
 				0126993B1C249509009E538D /* JournalVC.swift */,
+				01A2AC631C32E1A40086FFBF /* Journal-TextField&Keyboard.swift */,
+				01A2AC611C32E1120086FFBF /* Journal-TableView.swift */,
+				01A2AC5F1C32E0CD0086FFBF /* Journal-Questions.swift */,
 				0174E8BA1C23557E00589507 /* MantrasVC.swift */,
 				0199C64B1C2361A400BD94B0 /* MeditateVC.swift */,
 				0174A70C1C321C6B00066EB3 /* Meditate-Guestures.swift */,
@@ -362,7 +374,9 @@
 				0174E8781C2342F500589507 /* EmotionVC.swift in Sources */,
 				01A75F5C1C2F1BAF00BF928A /* RadioButtonCell.swift in Sources */,
 				0199C64C1C2361A400BD94B0 /* MeditateVC.swift in Sources */,
+				01A2AC621C32E1120086FFBF /* Journal-TableView.swift in Sources */,
 				0199C6541C236BE400BD94B0 /* SettingsVC.swift in Sources */,
+				01A2AC641C32E1A40086FFBF /* Journal-TextField&Keyboard.swift in Sources */,
 				01A75F581C2F030A00BF928A /* User.swift in Sources */,
 				01A75F601C2F308F00BF928A /* Question.swift in Sources */,
 				0174E8741C2342AF00589507 /* SelectionSubVC.swift in Sources */,
@@ -370,9 +384,11 @@
 				0174E8761C2342E200589507 /* Feelz.swift in Sources */,
 				0174A70B1C321C2000066EB3 /* Meditate-Sounds.swift in Sources */,
 				0174A70D1C321C6B00066EB3 /* Meditate-Guestures.swift in Sources */,
+				01A2AC5E1C32E01E0086FFBF /* Meditiation.swift in Sources */,
 				0174A7091C321A9700066EB3 /* Mediate-MapView.swift in Sources */,
 				019837931C28906100BBB614 /* CarouselSubVC.swift in Sources */,
 				0174E86E1C23407900589507 /* SplashVC.swift in Sources */,
+				01A2AC601C32E0CD0086FFBF /* Journal-Questions.swift in Sources */,
 				0174A70F1C321CCC00066EB3 /* Meditate-Locations.swift in Sources */,
 				012470111C318E1E001DAC33 /* HelperFunctions.swift in Sources */,
 				01A75F5E1C2F1BC500BF928A /* TextFieldCell.swift in Sources */,
