@@ -11,6 +11,10 @@
 		012470131C319AD3001DAC33 /* waltographUI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 012470121C3197B4001DAC33 /* waltographUI.ttf */; };
 		0126993C1C249509009E538D /* JournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126993B1C249509009E538D /* JournalVC.swift */; };
 		0126993E1C2496EB009E538D /* Meditation.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0126993D1C2496EB009E538D /* Meditation.mp3 */; };
+		0174A7091C321A9700066EB3 /* Mediate-MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174A7081C321A9700066EB3 /* Mediate-MapView.swift */; };
+		0174A70B1C321C2000066EB3 /* Meditate-Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174A70A1C321C2000066EB3 /* Meditate-Sounds.swift */; };
+		0174A70D1C321C6B00066EB3 /* Meditate-Guestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174A70C1C321C6B00066EB3 /* Meditate-Guestures.swift */; };
+		0174A70F1C321CCC00066EB3 /* Meditate-Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174A70E1C321CCC00066EB3 /* Meditate-Locations.swift */; };
 		0174E83D1C23382000589507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E83C1C23382000589507 /* AppDelegate.swift */; };
 		0174E8421C23382000589507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0174E8401C23382000589507 /* Main.storyboard */; };
 		0174E8471C23382000589507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0174E8461C23382000589507 /* Assets.xcassets */; };
@@ -55,6 +59,10 @@
 		012470121C3197B4001DAC33 /* waltographUI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = waltographUI.ttf; sourceTree = "<group>"; };
 		0126993B1C249509009E538D /* JournalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalVC.swift; sourceTree = "<group>"; };
 		0126993D1C2496EB009E538D /* Meditation.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Meditation.mp3; sourceTree = "<group>"; };
+		0174A7081C321A9700066EB3 /* Mediate-MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mediate-MapView.swift"; sourceTree = "<group>"; };
+		0174A70A1C321C2000066EB3 /* Meditate-Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meditate-Sounds.swift"; sourceTree = "<group>"; };
+		0174A70C1C321C6B00066EB3 /* Meditate-Guestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meditate-Guestures.swift"; sourceTree = "<group>"; };
+		0174A70E1C321CCC00066EB3 /* Meditate-Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meditate-Locations.swift"; sourceTree = "<group>"; };
 		0174E8391C23382000589507 /* TheFeelz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFeelz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0174E83C1C23382000589507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0174E8411C23382000589507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,6 +145,10 @@
 				0126993B1C249509009E538D /* JournalVC.swift */,
 				0174E8BA1C23557E00589507 /* MantrasVC.swift */,
 				0199C64B1C2361A400BD94B0 /* MeditateVC.swift */,
+				0174A70C1C321C6B00066EB3 /* Meditate-Guestures.swift */,
+				0174A70E1C321CCC00066EB3 /* Meditate-Locations.swift */,
+				0174A70A1C321C2000066EB3 /* Meditate-Sounds.swift */,
+				0174A7081C321A9700066EB3 /* Mediate-MapView.swift */,
 				0199C6531C236BE400BD94B0 /* SettingsVC.swift */,
 				019837921C28906100BBB614 /* CarouselSubVC.swift */,
 				0174E8731C2342AE00589507 /* SelectionSubVC.swift */,
@@ -352,8 +364,12 @@
 				0174E8741C2342AF00589507 /* SelectionSubVC.swift in Sources */,
 				0174E8BD1C2356B300589507 /* MantraImageCell.swift in Sources */,
 				0174E8761C2342E200589507 /* Feelz.swift in Sources */,
+				0174A70B1C321C2000066EB3 /* Meditate-Sounds.swift in Sources */,
+				0174A70D1C321C6B00066EB3 /* Meditate-Guestures.swift in Sources */,
+				0174A7091C321A9700066EB3 /* Mediate-MapView.swift in Sources */,
 				019837931C28906100BBB614 /* CarouselSubVC.swift in Sources */,
 				0174E86E1C23407900589507 /* SplashVC.swift in Sources */,
+				0174A70F1C321CCC00066EB3 /* Meditate-Locations.swift in Sources */,
 				012470111C318E1E001DAC33 /* HelperFunctions.swift in Sources */,
 				01A75F5E1C2F1BC500BF928A /* TextFieldCell.swift in Sources */,
 				0174E83D1C23382000589507 /* AppDelegate.swift in Sources */,
