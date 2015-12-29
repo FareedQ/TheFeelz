@@ -13,6 +13,8 @@ import MapKit
 class MeditateVC: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var switchOutlet: UISwitch!
     
     //Variables for Sounds Extention
     var meditationTrack: AVAudioPlayer?
@@ -35,6 +37,8 @@ class MeditateVC: UIViewController {
         setupGestureRecongizers()
         setupSoundFiles()
         
+        meditationTypeSwitch(switchOutlet)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -49,8 +53,10 @@ class MeditateVC: UIViewController {
         
         if (switchOutlet.on) {
             mapView.hidden = true
+            tableView.hidden = false
         } else {
             mapView.hidden = false
+            tableView.hidden = true
         }
         
     }
