@@ -15,6 +15,7 @@
 		0174A70B1C321C2000066EB3 /* Meditate-Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174A70A1C321C2000066EB3 /* Meditate-Sounds.swift */; };
 		0174A70D1C321C6B00066EB3 /* Meditate-Guestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174A70C1C321C6B00066EB3 /* Meditate-Guestures.swift */; };
 		0174A70F1C321CCC00066EB3 /* Meditate-Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174A70E1C321CCC00066EB3 /* Meditate-Locations.swift */; };
+		0174A7111C3222BA00066EB3 /* waltograph42.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0174A7101C3222BA00066EB3 /* waltograph42.otf */; };
 		0174E83D1C23382000589507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174E83C1C23382000589507 /* AppDelegate.swift */; };
 		0174E8421C23382000589507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0174E8401C23382000589507 /* Main.storyboard */; };
 		0174E8471C23382000589507 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0174E8461C23382000589507 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		0174A70A1C321C2000066EB3 /* Meditate-Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meditate-Sounds.swift"; sourceTree = "<group>"; };
 		0174A70C1C321C6B00066EB3 /* Meditate-Guestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meditate-Guestures.swift"; sourceTree = "<group>"; };
 		0174A70E1C321CCC00066EB3 /* Meditate-Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meditate-Locations.swift"; sourceTree = "<group>"; };
+		0174A7101C3222BA00066EB3 /* waltograph42.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = waltograph42.otf; sourceTree = "<group>"; };
 		0174E8391C23382000589507 /* TheFeelz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheFeelz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0174E83C1C23382000589507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0174E8411C23382000589507 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				0126993D1C2496EB009E538D /* Meditation.mp3 */,
 				012470101C318E1E001DAC33 /* HelperFunctions.swift */,
 				012470121C3197B4001DAC33 /* waltographUI.ttf */,
+				0174A7101C3222BA00066EB3 /* waltograph42.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0174A7111C3222BA00066EB3 /* waltograph42.otf in Resources */,
 				012470131C319AD3001DAC33 /* waltographUI.ttf in Resources */,
 				0174E84A1C23382000589507 /* LaunchScreen.storyboard in Resources */,
 				0174E8471C23382000589507 /* Assets.xcassets in Resources */,

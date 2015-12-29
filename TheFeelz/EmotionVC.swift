@@ -12,6 +12,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     
     @IBOutlet weak var lblDictionaryOutput: UILabel!
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mainImage: UIImageView!
     @IBOutlet weak var SelectionViewTopContraint: NSLayoutConstraint!
     
@@ -87,8 +88,8 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
             animateToSelectedOption(touchPosition)
             break
         case .Ended:
-            changeToSelectedOption(touchPosition)
-            switchToTheSelectedOption()
+            swapSelectionToSelectedOption(touchPosition)
+            animateSwitchOfSelectedOption()
             animatePuttingThingsBackInTheirPlaces()
             
             let myDictionary = DictionaryAPI()
@@ -119,7 +120,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
         }
     }
     
-    func changeToSelectedOption(touchPosition:CGPoint){
+    func swapSelectionToSelectedOption(touchPosition:CGPoint){
         
         if(originalFirstImageFrame.contains(touchPosition)){
             swapValuesInSelectionArray(&selectionArrayInCurrentView[0], selectedEmotion: &selectionArrayInCurrentView[1])
@@ -135,6 +136,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     
     func swapValuesInSelectionArray(inout currentEmotion:Int, inout selectedEmotion:Int){
         Feelz.sharedInstance.index = selectedEmotion
+        
         let tempSelection = selectedEmotion
         selectedEmotion = currentEmotion
         currentEmotion = tempSelection
@@ -158,12 +160,14 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
                     self.mainImage.frame = self.originalMainImageFrame
                     self.view.bringSubviewToFront(self.mainImage)
                     self.mainImage.alpha = 1
+                    self.titleLabel.alpha = 1
                 })
         })
     }
     
     func animateLoweringTheSelectionView(touchPosition:CGPoint){
         UIView.animateWithDuration(0.3, animations: { () -> Void in
+            self.titleLabel.alpha = 0
             self.mainImage.transform = CGAffineTransformMakeScale(0.3, 0.3)
             self.mainImage.alpha = 0.3
             self.mainImage.center = touchPosition
@@ -176,7 +180,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
         })
     }
     
-    func switchToTheSelectedOption(){
+    func animateSwitchOfSelectedOption(){
         
         mainImage.image = UIImage(named: Feelz.sharedInstance.emotionsArray[selectionArrayInCurrentView[0]].Name)
         mySelectionSubVC.img1.image = UIImage(named: Feelz.sharedInstance.emotionsArray[selectionArrayInCurrentView[1]].Name)
