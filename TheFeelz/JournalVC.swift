@@ -11,6 +11,8 @@ import UIKit
 class JournalVC: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var myTableView: UITableView!
+    @IBOutlet weak var bottomMapLayoutConstraint: NSLayoutConstraint!
+    let bottomPadding:CGFloat = 8
     
     var arrayOfQuestions = [Question]()
     
@@ -23,6 +25,22 @@ class JournalVC: UIViewController, UITextFieldDelegate, UITableViewDataSource, U
         myTableView.rowHeight = UITableViewAutomaticDimension
         myTableView.separatorStyle = UITableViewCellSeparatorStyle.None
         myTableView.allowsSelection = false
+        
+        
+        registerForKeyboardNotifications()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        degregisterForKeyboardNotifications()
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
     }
 
     func setupQuestions(){
@@ -75,22 +93,11 @@ class JournalVC: UIViewController, UITextFieldDelegate, UITableViewDataSource, U
             if let tempCell = myTableView.dequeueReusableCellWithIdentifier("TextFieldQuestion", forIndexPath: indexPath) as? TextFieldCell {
                 tempCell.questionLabel?.text = arrayOfQuestions[indexPath.row].statement
                 tempCell.backgroundColor = Feelz.sharedInstance.getBrightColour()
+                tempCell.inputTextFeild.delegate = self
                 returnCell = tempCell
             }
         }
         return returnCell
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let _ = touches.first {
-            self.view.endEditing(true)
-        }
-        super.touchesBegan(touches, withEvent: event)
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -104,5 +111,39 @@ class JournalVC: UIViewController, UITextFieldDelegate, UITableViewDataSource, U
         view.backgroundColor = Feelz.sharedInstance.getBrightColour()
         myTableView.backgroundColor = Feelz.sharedInstance.getBrightColour()
     }
-
+    
+    func registerForKeyboardNotifications(){
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    func degregisterForKeyboardNotifications(){
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    func keyboardWillShow(notification: NSNotification){
+        guard let
+            kbSizeValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue,
+            kbDurationNumber = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber
+        else {return}
+        let kbHeight = kbSizeValue.CGRectValue().height
+        animateToKeyboardHeight(kbHeight, duration: kbDurationNumber.doubleValue)
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification){
+        guard let
+            kbDurationNumber = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber
+            else {return}
+        animateToKeyboardHeight(0, duration: kbDurationNumber.doubleValue)
+    }
+    
+    func animateToKeyboardHeight(kbHeight: CGFloat, duration: Double){
+        UIView.animateWithDuration(duration, animations: { () -> Void in
+            self.bottomMapLayoutConstraint.constant = kbHeight + self.bottomPadding - 40 //extra -40 is to counter the tab bar that comes up
+            self.view.layoutIfNeeded()
+        }) { (complete) -> Void in
+            
+        }
+    }
 }

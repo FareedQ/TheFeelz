@@ -20,7 +20,7 @@ class MeditateVC: UIViewController {
         case Location
     }
     
-    var meditationSelection:meditationType = .Location
+    var meditationSelection:meditationType = .Time
     
     //Variables for Sounds Extention
     var meditationTrack: AVAudioPlayer?

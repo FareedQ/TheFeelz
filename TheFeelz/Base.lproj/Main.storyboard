@@ -106,7 +106,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" onImage="tab-meditate" offImage="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="cDt-3P-yfz">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" onImage="tab-meditate" offImage="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="cDt-3P-yfz">
                                 <rect key="frame" x="136" y="82" width="51" height="31"/>
                                 <connections>
                                     <action selector="meditationTypeSwitch:" destination="NnC-xJ-5uC" eventType="valueChanged" id="FKH-av-OkS"/>
@@ -139,7 +139,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ubc-3j-Ldg">
                                 <rect key="frame" x="16" y="133" width="288" height="299"/>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6i-l5-9hJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6i-l5-9hJ">
                                 <rect key="frame" x="16" y="133" width="288" height="299"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -201,8 +201,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FL2-d2-J4Z">
-                                <rect key="frame" x="-4" y="82" width="328" height="437"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FL2-d2-J4Z">
+                                <rect key="frame" x="-4" y="82" width="328" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RadioButtonQuestion" id="C8p-Xe-lMv" customClass="RadioButtonwCell" customModule="TheFeelz" customModuleProvider="target">
@@ -292,13 +292,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ne0-Lj-uxS" secondAttribute="trailing" constant="16" id="D6e-yc-QPt"/>
                             <constraint firstItem="FL2-d2-J4Z" firstAttribute="leading" secondItem="4lN-sj-JIs" secondAttribute="leadingMargin" constant="-20" id="M32-i3-5Ue"/>
                             <constraint firstItem="ne0-Lj-uxS" firstAttribute="leading" secondItem="4lN-sj-JIs" secondAttribute="leadingMargin" constant="16" id="bpt-PX-aS0"/>
-                            <constraint firstItem="1pb-Ds-Ncb" firstAttribute="top" secondItem="FL2-d2-J4Z" secondAttribute="bottom" id="fmR-gg-vU5"/>
+                            <constraint firstItem="1pb-Ds-Ncb" firstAttribute="top" secondItem="FL2-d2-J4Z" secondAttribute="bottom" constant="8" id="fmR-gg-vU5"/>
                             <constraint firstItem="ne0-Lj-uxS" firstAttribute="top" secondItem="yqd-Ol-q2b" secondAttribute="bottom" constant="8" id="tFD-nG-tgB"/>
                             <constraint firstItem="FL2-d2-J4Z" firstAttribute="top" secondItem="ne0-Lj-uxS" secondAttribute="bottom" constant="8" id="wDC-20-7UD"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Journal" image="tab-journal" id="XoG-hP-ydF"/>
                     <connections>
+                        <outlet property="bottomMapLayoutConstraint" destination="fmR-gg-vU5" id="dAs-v6-HPl"/>
                         <outlet property="myTableView" destination="FL2-d2-J4Z" id="8ie-81-2MI"/>
                     </connections>
                 </viewController>
@@ -327,8 +328,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Blf-7F-Ca1">
-                                <rect key="frame" x="-4" y="82" width="328" height="437"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Blf-7F-Ca1">
+                                <rect key="frame" x="-4" y="82" width="328" height="429"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mO3-gK-o3Y">
                                     <size key="itemSize" width="300" height="300"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -375,7 +376,7 @@
                             <constraint firstItem="4QP-7H-ksf" firstAttribute="top" secondItem="Ijk-h1-3Ai" secondAttribute="bottom" constant="8" id="iqA-JU-JQo"/>
                             <constraint firstItem="Blf-7F-Ca1" firstAttribute="top" secondItem="4QP-7H-ksf" secondAttribute="bottom" constant="8" id="ixc-dc-ZDg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4QP-7H-ksf" secondAttribute="trailing" constant="16" id="iy0-Lj-bEa"/>
-                            <constraint firstItem="9Zr-Qk-Beb" firstAttribute="top" secondItem="Blf-7F-Ca1" secondAttribute="bottom" id="nC2-Uu-HHy"/>
+                            <constraint firstItem="9Zr-Qk-Beb" firstAttribute="top" secondItem="Blf-7F-Ca1" secondAttribute="bottom" constant="8" id="nC2-Uu-HHy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mantras" image="tab-mantra" id="Gdw-WO-lx5"/>
