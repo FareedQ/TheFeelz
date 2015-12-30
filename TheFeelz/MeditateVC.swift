@@ -14,9 +14,14 @@ class MeditateVC: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var placeLabel: UILabel!
     
-    //Variables for associated data model
     var meditationSelection:meditationType = .Time
+    enum meditationType {
+        case Time
+        case Place
+    }
     
     //Variables for Sounds Extention
     var meditationTrack: AVAudioPlayer?
@@ -50,17 +55,15 @@ class MeditateVC: UIViewController {
         
     }
 
-    @IBAction func meditationTypeSwitch(sender: AnyObject) {
-        guard let switchOutlet = sender as? UISwitch else { return }
-        if switchOutlet.on {
-            meditationSelection = .Location
+    @IBAction func musicSwitch(sender: UISwitch){
+        if sender.on {
+            meditationTrack?.play()
         } else {
-            meditationSelection = .Time
+            meditationTrack?.pause()
         }
-        meditationSelectionAnimationSwitch()
     }
     
-
+    
     
     @IBAction func VolumeSilder(sender: UISlider) {
         adjustVolume(sender.value)
