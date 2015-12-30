@@ -26,6 +26,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     var originalFourthImageFrame = CGRect()
     
     var selectionArrayInCurrentView = [Int]()
+    var selectionDidHappen:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,6 +106,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     
     func animateToSelectedOption(touchPosition:CGPoint){
         
+        selectionDidHappen = true
         if(originalFirstImageFrame.contains(touchPosition)){
             animateOptionSelected(self.mySelectionSubVC.img1)
         } else if(originalSecondImageFrame.contains(touchPosition)){
@@ -117,6 +119,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
             UIView.animateWithDuration(0.2, animations: { () -> Void in
                 self.returnSelectableImagesToScale()
             })
+            selectionDidHappen = false
         }
     }
     
@@ -155,10 +158,10 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
             self.SelectionViewTopContraint.constant = self.SELECTIONVIEWMOVEIN
             self.view.layoutIfNeeded()
             }, completion: { (Bool) -> Void in
+                self.view.bringSubviewToFront(self.mainImage)
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
                     self.mainImage.transform = CGAffineTransformMakeScale(1, 1)
                     self.mainImage.frame = self.originalMainImageFrame
-                    self.view.bringSubviewToFront(self.mainImage)
                     self.mainImage.alpha = 1
                     self.titleLabel.alpha = 1
                 })
@@ -193,10 +196,19 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
         mySelectionSubVC.img3.frame = self.originalThirdImageFrame
         mySelectionSubVC.img4.frame = self.originalFourthImageFrame
         
-        mainImage.transform = CGAffineTransformMakeScale(1, 1)
-        mainImage.frame = self.originalMainImageFrame
-        mainImage.alpha = 1
-        view.sendSubviewToBack(mainImage)
+        if selectionDidHappen {
+            self.mainImage.transform = CGAffineTransformMakeScale(1, 1)
+            self.mainImage.frame = self.originalMainImageFrame
+            self.mainImage.alpha = 1
+            self.view.sendSubviewToBack(self.mainImage)
+        } else {
+            UIView.animateWithDuration(0.3) { () -> Void in
+                self.mainImage.transform = CGAffineTransformMakeScale(1, 1)
+                self.mainImage.frame = self.originalMainImageFrame
+                self.mainImage.alpha = 1
+                self.view.sendSubviewToBack(self.mainImage)
+            }
+        }
     }
     
     func swapImages(inout FirstImage:UIImage, inout SecondImage:UIImage){
@@ -211,16 +223,6 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
         mySelectionSubVC.img3.frame = originalThirdImageFrame
         mySelectionSubVC.img4.frame = originalFourthImageFrame
     }
-
-    func alertMessage(message:String){
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .Alert)
-        let okay = UIAlertAction(title: "Okay", style: .Default) { (UIAlertAction) -> Void in
-        }
-        alert.addAction(okay)
-        presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    
     
     func checkBackground(){
         view.backgroundColor = Feelz.sharedInstance.getBrightColour()
