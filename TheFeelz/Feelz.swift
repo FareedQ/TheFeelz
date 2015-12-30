@@ -8,14 +8,11 @@
 
 import UIKit
 
-internal struct Emotion {
-    var Name = String()
-    var BrightColour = UIColor()
-    var DarkColour = UIColor()
-    var TextColour = UIColor()
-}
-
 public class Feelz: NSObject {
+    
+    var emotionsArray = [Emotion]()
+    var index:Int = 0
+    
     
     struct Static {
         static let instance = Feelz()
@@ -25,9 +22,12 @@ public class Feelz: NSObject {
         return Static.instance
     }
     
-    var index:Int = 0
-    
-    var emotionsArray = [Emotion]()
+    struct Emotion {
+        var Name = String()
+        var BrightColour = UIColor()
+        var DarkColour = UIColor()
+        var TextColour = UIColor()
+    }
     
     let anger = Emotion(Name: "Anger", BrightColour: UIColorFromRGB("F40009"), DarkColour: UIColorFromRGB("480002"), TextColour: UIColorFromRGB("FCF0E6"))
     

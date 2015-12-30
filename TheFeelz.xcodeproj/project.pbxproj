@@ -126,6 +126,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014FE35D1C33130D00A4CFEF /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				0174E86D1C23407900589507 /* SplashVC.swift */,
+				019837921C28906100BBB614 /* CarouselSubVC.swift */,
+			);
+			name = Splash;
+			sourceTree = "<group>";
+		};
+		014FE35E1C33132C00A4CFEF /* Emotion */ = {
+			isa = PBXGroup;
+			children = (
+				0174E8771C2342F500589507 /* EmotionVC.swift */,
+				0174E8731C2342AE00589507 /* SelectionSubVC.swift */,
+			);
+			name = Emotion;
+			sourceTree = "<group>";
+		};
+		014FE35F1C33135800A4CFEF /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				0126993B1C249509009E538D /* JournalVC.swift */,
+				01A2AC631C32E1A40086FFBF /* Journal-TextField&Keyboard.swift */,
+				01A2AC611C32E1120086FFBF /* Journal-TableView.swift */,
+				01A2AC5F1C32E0CD0086FFBF /* Journal-Questions.swift */,
+				01A75F5D1C2F1BC500BF928A /* TextFieldCell.swift */,
+				01A75F5B1C2F1BAF00BF928A /* RadioButtonCell.swift */,
+			);
+			name = Journal;
+			sourceTree = "<group>";
+		};
+		014FE3601C33137300A4CFEF /* Mantras */ = {
+			isa = PBXGroup;
+			children = (
+				0174E8BA1C23557E00589507 /* MantrasVC.swift */,
+				0174E8BC1C2356B300589507 /* MantraImageCell.swift */,
+			);
+			name = Mantras;
+			sourceTree = "<group>";
+		};
+		014FE3611C33139400A4CFEF /* Meditate */ = {
+			isa = PBXGroup;
+			children = (
+				0199C64B1C2361A400BD94B0 /* MeditateVC.swift */,
+				0174A70C1C321C6B00066EB3 /* Meditate-Guestures.swift */,
+				0174A70E1C321CCC00066EB3 /* Meditate-Locations.swift */,
+				0174A70A1C321C2000066EB3 /* Meditate-Sounds.swift */,
+				0174A7081C321A9700066EB3 /* Mediate-MapView.swift */,
+			);
+			name = Meditate;
+			sourceTree = "<group>";
+		};
+		014FE3621C3313F300A4CFEF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0199C6531C236BE400BD94B0 /* SettingsVC.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		0165684E1C278B5F008D36F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,24 +211,12 @@
 			isa = PBXGroup;
 			children = (
 				0174E83C1C23382000589507 /* AppDelegate.swift */,
-				0174E86D1C23407900589507 /* SplashVC.swift */,
-				0174E8771C2342F500589507 /* EmotionVC.swift */,
-				0126993B1C249509009E538D /* JournalVC.swift */,
-				01A2AC631C32E1A40086FFBF /* Journal-TextField&Keyboard.swift */,
-				01A2AC611C32E1120086FFBF /* Journal-TableView.swift */,
-				01A2AC5F1C32E0CD0086FFBF /* Journal-Questions.swift */,
-				0174E8BA1C23557E00589507 /* MantrasVC.swift */,
-				0199C64B1C2361A400BD94B0 /* MeditateVC.swift */,
-				0174A70C1C321C6B00066EB3 /* Meditate-Guestures.swift */,
-				0174A70E1C321CCC00066EB3 /* Meditate-Locations.swift */,
-				0174A70A1C321C2000066EB3 /* Meditate-Sounds.swift */,
-				0174A7081C321A9700066EB3 /* Mediate-MapView.swift */,
-				0199C6531C236BE400BD94B0 /* SettingsVC.swift */,
-				019837921C28906100BBB614 /* CarouselSubVC.swift */,
-				0174E8731C2342AE00589507 /* SelectionSubVC.swift */,
-				0174E8BC1C2356B300589507 /* MantraImageCell.swift */,
-				01A75F5D1C2F1BC500BF928A /* TextFieldCell.swift */,
-				01A75F5B1C2F1BAF00BF928A /* RadioButtonCell.swift */,
+				014FE35D1C33130D00A4CFEF /* Splash */,
+				014FE35E1C33132C00A4CFEF /* Emotion */,
+				014FE35F1C33135800A4CFEF /* Journal */,
+				014FE3601C33137300A4CFEF /* Mantras */,
+				014FE3611C33139400A4CFEF /* Meditate */,
+				014FE3621C3313F300A4CFEF /* Settings */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
