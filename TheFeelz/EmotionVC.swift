@@ -19,18 +19,22 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     let SELECTIONVIEWMOVEIN:CGFloat = -108
     
     weak var mySelectionSubVC:SelectionSubVC!
-    var originalRects = [CGRect()]
+    var originalMainImageFrame = CGRect()
+    var originalFirstImageFrame = CGRect()
+    var originalSecondImageFrame = CGRect()
+    var originalThirdImageFrame = CGRect()
+    var originalFourthImageFrame = CGRect()
     
     var selectionArrayInCurrentView = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        originalRects.append(mainImage.frame)
-        originalRects.append(mySelectionSubVC.img1.frame)
-        originalRects.append(mySelectionSubVC.img2.frame)
-        originalRects.append(mySelectionSubVC.img3.frame)
-        originalRects.append(mySelectionSubVC.img4.frame)
+        originalMainImageFrame = mainImage.frame
+        originalFirstImageFrame = mySelectionSubVC.img1.frame
+        originalSecondImageFrame = mySelectionSubVC.img2.frame
+        originalThirdImageFrame = mySelectionSubVC.img3.frame
+        originalFourthImageFrame = mySelectionSubVC.img4.frame
         
         loadImages()
         
@@ -101,13 +105,13 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     
     func animateToSelectedOption(touchPosition:CGPoint){
         
-        if(originalRects[0].contains(touchPosition)){
+        if(originalFirstImageFrame.contains(touchPosition)){
             animateOptionSelected(self.mySelectionSubVC.img1)
-        } else if(originalRects[1].contains(touchPosition)){
+        } else if(originalSecondImageFrame.contains(touchPosition)){
             animateOptionSelected(self.mySelectionSubVC.img2)
-        } else if(originalRects[2].contains(touchPosition)){
+        } else if(originalThirdImageFrame.contains(touchPosition)){
             animateOptionSelected(self.mySelectionSubVC.img3)
-        } else if(originalRects[3].contains(touchPosition)){
+        } else if(originalFourthImageFrame.contains(touchPosition)){
             animateOptionSelected(self.mySelectionSubVC.img4)
         } else {
             UIView.animateWithDuration(0.2, animations: { () -> Void in
@@ -118,13 +122,13 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     
     func swapSelectionToSelectedOption(touchPosition:CGPoint){
         
-        if(originalRects[0].contains(touchPosition)){
+        if(originalFirstImageFrame.contains(touchPosition)){
             swapValuesInSelectionArray(&selectionArrayInCurrentView[0], selectedEmotion: &selectionArrayInCurrentView[1])
-        } else if(originalRects[1].contains(touchPosition)){
+        } else if(originalSecondImageFrame.contains(touchPosition)){
             swapValuesInSelectionArray(&selectionArrayInCurrentView[0], selectedEmotion: &selectionArrayInCurrentView[2])
-        } else if(originalRects[2].contains(touchPosition)){
+        } else if(originalThirdImageFrame.contains(touchPosition)){
             swapValuesInSelectionArray(&selectionArrayInCurrentView[0], selectedEmotion: &selectionArrayInCurrentView[3])
-        } else if(originalRects[4].contains(touchPosition)){
+        } else if(originalFourthImageFrame.contains(touchPosition)){
             swapValuesInSelectionArray(&selectionArrayInCurrentView[0], selectedEmotion: &selectionArrayInCurrentView[4])
         } else {
         }
@@ -141,7 +145,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     func animateOptionSelected(selectedImage:UIImageView){
         UIView.animateWithDuration(0.2, animations: { () -> Void in
             self.returnSelectableImagesToScale()
-            selectedImage.frame = self.originalRects[0]
+            selectedImage.frame = self.originalMainImageFrame
             self.mySelectionSubVC.view.bringSubviewToFront(selectedImage)
         })
     }
@@ -153,7 +157,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
             }, completion: { (Bool) -> Void in
                 UIView.animateWithDuration(0.3, animations: { () -> Void in
                     self.mainImage.transform = CGAffineTransformMakeScale(1, 1)
-                    self.mainImage.frame = self.originalRects[0]
+                    self.mainImage.frame = self.originalMainImageFrame
                     self.view.bringSubviewToFront(self.mainImage)
                     self.mainImage.alpha = 1
                     self.titleLabel.alpha = 1
@@ -184,13 +188,13 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
         mySelectionSubVC.img3.image = UIImage(named: Feelz.sharedInstance.emotionsArray[selectionArrayInCurrentView[3]].Name)
         mySelectionSubVC.img4.image = UIImage(named: Feelz.sharedInstance.emotionsArray[selectionArrayInCurrentView[4]].Name)
         
-        mySelectionSubVC.img1.frame = self.originalRects[1]
-        mySelectionSubVC.img2.frame = self.originalRects[2]
-        mySelectionSubVC.img3.frame = self.originalRects[3]
-        mySelectionSubVC.img4.frame = self.originalRects[4]
+        mySelectionSubVC.img1.frame = self.originalFirstImageFrame
+        mySelectionSubVC.img2.frame = self.originalSecondImageFrame
+        mySelectionSubVC.img3.frame = self.originalThirdImageFrame
+        mySelectionSubVC.img4.frame = self.originalFourthImageFrame
         
         mainImage.transform = CGAffineTransformMakeScale(1, 1)
-        mainImage.frame = self.originalRects[0]
+        mainImage.frame = self.originalMainImageFrame
         mainImage.alpha = 1
         view.sendSubviewToBack(mainImage)
     }
@@ -202,10 +206,10 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     }
 
     func returnSelectableImagesToScale(){
-        mySelectionSubVC.img1.frame = originalRects[1]
-        mySelectionSubVC.img2.frame = originalRects[2]
-        mySelectionSubVC.img3.frame = originalRects[3]
-        mySelectionSubVC.img4.frame = originalRects[4]
+        mySelectionSubVC.img1.frame = originalFirstImageFrame
+        mySelectionSubVC.img2.frame = originalSecondImageFrame
+        mySelectionSubVC.img3.frame = originalThirdImageFrame
+        mySelectionSubVC.img4.frame = originalFourthImageFrame
     }
 
     func alertMessage(message:String){
