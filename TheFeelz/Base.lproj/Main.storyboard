@@ -386,15 +386,25 @@
                                                         <constraint firstAttribute="width" secondItem="4Zd-vf-pbD" secondAttribute="height" id="oHb-gU-7E9"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="two_hearts" translatesAutoresizingMaskIntoConstraints="NO" id="Xvh-0Y-0cJ">
+                                                    <rect key="frame" x="30" y="71" width="241" height="158"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="Xvh-0Y-0cJ" secondAttribute="height" multiplier="241:158" id="OPR-vL-U09"/>
+                                                        <constraint firstAttribute="width" constant="241" id="Xvh-Vu-Ufc"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
                                             <constraint firstItem="4Zd-vf-pbD" firstAttribute="centerY" secondItem="6yo-uz-QTS" secondAttribute="centerY" id="96p-fg-BtK"/>
+                                            <constraint firstItem="Xvh-0Y-0cJ" firstAttribute="centerY" secondItem="6yo-uz-QTS" secondAttribute="centerY" id="qh1-7T-MFS"/>
                                             <constraint firstItem="4Zd-vf-pbD" firstAttribute="centerX" secondItem="6yo-uz-QTS" secondAttribute="centerX" id="rgQ-5F-GdY"/>
+                                            <constraint firstItem="Xvh-0Y-0cJ" firstAttribute="centerX" secondItem="6yo-uz-QTS" secondAttribute="centerX" id="yr2-AN-CXz"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="image" destination="4Zd-vf-pbD" id="QvP-QD-zmm"/>
+                                            <outlet property="likeImage" destination="Xvh-0Y-0cJ" id="DPa-1h-QZm"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -692,5 +702,6 @@
         <image name="tab-mantra" width="612" height="792"/>
         <image name="tab-meditate" width="612" height="792"/>
         <image name="tab-settings" width="612" height="792"/>
+        <image name="two_hearts" width="512" height="512"/>
     </resources>
 </document>
