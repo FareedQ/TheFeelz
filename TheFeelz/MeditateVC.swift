@@ -13,7 +13,7 @@ import MapKit
 class MeditateVC: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
     
@@ -76,6 +76,10 @@ class MeditateVC: UIViewController {
         mapView.clipsToBounds = true
         mapView.layer.cornerRadius = 10
         mapView.layer.borderWidth = 3
+        timeView.layer.cornerRadius = 10
+        timeView.layer.borderWidth = 3
+        placeLabel.textColor = UIColor.whiteColor()
+        timeLabel.textColor = UIColor.whiteColor()
     }
 
 }

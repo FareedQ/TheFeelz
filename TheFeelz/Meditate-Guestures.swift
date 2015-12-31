@@ -66,11 +66,11 @@ extension MeditateVC {
         switch meditationSelection {
         case .Place:
             mapView.hidden = false
-            tableView.hidden = true
+            timeView.hidden = true
             break
         case .Time:
             mapView.hidden = true
-            tableView.hidden = false
+            timeView.hidden = false
             break
         }
     }

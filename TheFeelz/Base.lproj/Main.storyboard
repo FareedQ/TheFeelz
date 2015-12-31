@@ -106,14 +106,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXI-iB-4rj">
-                                <rect key="frame" x="16" y="82" width="71" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sound:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXI-iB-4rj">
+                                <rect key="frame" x="16" y="82" width="76" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" onImage="tab-meditate" offImage="Disgust" translatesAutoresizingMaskIntoConstraints="NO" id="cDt-3P-yfz">
-                                <rect key="frame" x="105" y="80" width="51" height="31"/>
+                                <rect key="frame" x="110" y="80" width="51" height="31"/>
                                 <connections>
                                     <action selector="musicSwitch:" destination="NnC-xJ-5uC" eventType="valueChanged" id="MF9-IS-Awb"/>
                                 </connections>
@@ -165,35 +165,43 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ubc-3j-Ldg">
                                 <rect key="frame" x="16" y="196" width="288" height="303"/>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A6i-l5-9hJ">
-                                <rect key="frame" x="16" y="196" width="288" height="303"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byH-h6-4Cc">
+                                <rect key="frame" x="12" y="196" width="296" height="303"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Here I'll Provide Information About The Timed Meditation Practice" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4R-O4-EZg">
+                                        <rect key="frame" x="8" y="8" width="280" height="287"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1oI-md-XaB" firstAttribute="top" secondItem="A6i-l5-9hJ" secondAttribute="bottom" constant="20" id="BZL-jF-yAB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="A6i-l5-9hJ" secondAttribute="trailing" id="GWn-Pq-7dN"/>
+                            <constraint firstItem="Cfh-HN-NwM" firstAttribute="centerX" secondItem="byH-h6-4Cc" secondAttribute="centerX" multiplier="1:2" id="1Ir-xr-tXr"/>
+                            <constraint firstItem="byH-h6-4Cc" firstAttribute="leading" secondItem="VVg-de-mhc" secondAttribute="leadingMargin" constant="-4" id="8AY-EO-dwT"/>
                             <constraint firstItem="cDt-3P-yfz" firstAttribute="leading" secondItem="kXI-iB-4rj" secondAttribute="trailing" constant="18" id="Gan-jO-a8n"/>
-                            <constraint firstItem="A6i-l5-9hJ" firstAttribute="top" secondItem="Cfh-HN-NwM" secondAttribute="bottom" constant="8" id="Opa-dl-oBx"/>
                             <constraint firstItem="Cfh-HN-NwM" firstAttribute="top" secondItem="j0N-4r-ZJ8" secondAttribute="bottom" constant="19" id="Rdv-d2-pyZ"/>
                             <constraint firstItem="kXI-iB-4rj" firstAttribute="top" secondItem="Dp7-S1-lgg" secondAttribute="bottom" constant="8" id="Uvc-y5-yQe"/>
+                            <constraint firstItem="1oI-md-XaB" firstAttribute="top" secondItem="byH-h6-4Cc" secondAttribute="bottom" constant="20" id="Uyh-fT-dyN"/>
                             <constraint firstItem="j0N-4r-ZJ8" firstAttribute="top" secondItem="kXI-iB-4rj" secondAttribute="bottom" constant="8" id="XlH-28-XxH"/>
                             <constraint firstAttribute="leadingMargin" secondItem="j0N-4r-ZJ8" secondAttribute="leading" id="ZQR-Tu-hMb"/>
                             <constraint firstItem="ubc-3j-Ldg" firstAttribute="top" secondItem="Cfh-HN-NwM" secondAttribute="bottom" constant="8" id="d0Q-Q3-J2k"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ubc-3j-Ldg" secondAttribute="trailing" id="e3A-Qi-yXC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="byH-h6-4Cc" secondAttribute="trailing" constant="-4" id="fal-kU-7av"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Dp7-S1-lgg" secondAttribute="trailing" constant="16" id="foQ-i0-WLp"/>
                             <constraint firstItem="ubc-3j-Ldg" firstAttribute="leading" secondItem="VVg-de-mhc" secondAttribute="leadingMargin" id="gpV-aB-R2K"/>
-                            <constraint firstItem="ise-N9-O8A" firstAttribute="centerX" secondItem="A6i-l5-9hJ" secondAttribute="centerX" multiplier="3:2" id="iym-3a-AfQ"/>
+                            <constraint firstItem="byH-h6-4Cc" firstAttribute="top" secondItem="Cfh-HN-NwM" secondAttribute="bottom" constant="8" id="kiK-xs-OZJ"/>
                             <constraint firstItem="Hjg-Kz-2J5" firstAttribute="top" secondItem="cDt-3P-yfz" secondAttribute="bottom" constant="8" id="lBm-Rf-xS3"/>
                             <constraint firstItem="kXI-iB-4rj" firstAttribute="leading" secondItem="VVg-de-mhc" secondAttribute="leadingMargin" id="mz1-KX-gbO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hjg-Kz-2J5" secondAttribute="trailing" id="nso-sR-Slk"/>
                             <constraint firstItem="cDt-3P-yfz" firstAttribute="top" secondItem="kXI-iB-4rj" secondAttribute="bottom" constant="-31" id="oBq-iB-omY"/>
-                            <constraint firstItem="A6i-l5-9hJ" firstAttribute="leading" secondItem="VVg-de-mhc" secondAttribute="leadingMargin" id="qY9-js-vAg"/>
                             <constraint firstItem="ise-N9-O8A" firstAttribute="top" secondItem="Hjg-Kz-2J5" secondAttribute="bottom" constant="18" id="rlQ-mz-2YQ"/>
+                            <constraint firstItem="ise-N9-O8A" firstAttribute="centerX" secondItem="byH-h6-4Cc" secondAttribute="centerX" multiplier="3:2" id="sN4-0G-8ZV"/>
                             <constraint firstItem="1oI-md-XaB" firstAttribute="top" secondItem="ubc-3j-Ldg" secondAttribute="bottom" constant="20" id="sXg-V8-Ndz"/>
                             <constraint firstItem="Dp7-S1-lgg" firstAttribute="leading" secondItem="VVg-de-mhc" secondAttribute="leadingMargin" constant="16" id="vXF-sl-2d8"/>
-                            <constraint firstItem="Cfh-HN-NwM" firstAttribute="centerX" secondItem="A6i-l5-9hJ" secondAttribute="centerX" multiplier="1:2" id="wfF-mi-V7F"/>
                             <constraint firstItem="Dp7-S1-lgg" firstAttribute="top" secondItem="AXq-ig-hsv" secondAttribute="bottom" constant="8" id="x5U-Jf-uu0"/>
                             <constraint firstItem="Hjg-Kz-2J5" firstAttribute="leading" secondItem="j0N-4r-ZJ8" secondAttribute="trailing" constant="8" id="yeP-Y6-Eon"/>
                         </constraints>
@@ -202,8 +210,8 @@
                     <connections>
                         <outlet property="mapView" destination="ubc-3j-Ldg" id="i8y-ol-eE5"/>
                         <outlet property="placeLabel" destination="ise-N9-O8A" id="EMU-18-RZH"/>
-                        <outlet property="tableView" destination="A6i-l5-9hJ" id="gJ7-qr-gKn"/>
                         <outlet property="timeLabel" destination="Cfh-HN-NwM" id="Nw5-Rm-bfU"/>
+                        <outlet property="timeView" destination="byH-h6-4Cc" id="Eqk-A5-FSm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fr5-fb-RUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
