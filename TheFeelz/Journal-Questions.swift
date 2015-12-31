@@ -11,21 +11,21 @@ import UIKit
 extension JournalVC {
     
     func setupQuestions(){
-        let question1 = Question(statement: "How intense are these emotions?", type:  .RadioButton)
+        let question1 = Question(statement: "How intense are these emotions?", type:  .RadioButton, segements: ["mild","fair","decent","strong","intense"])
         arrayOfQuestions.append(question1)
-        let question2 = Question(statement: "Where are you?", type:  .TextField)
+        let question2 = Question(statement: "Where are you?", type:  .TextField, segements: [])
         arrayOfQuestions.append(question2)
-        let question3 = Question(statement: "What are things you can see, touch, or smell?", type:  .TextField)
+        let question3 = Question(statement: "What are things you can see, touch, or smell?", type:  .TextField, segements: [])
         arrayOfQuestions.append(question3)
-        let question4 = Question(statement: "What were you doing before you began this session of emotional training?", type:  .TextField)
+        let question4 = Question(statement: "How would you classify what you are doing?", type:  .RadioButton, segements: ["Work","Leisure","Chores","Travel","Other"])
         arrayOfQuestions.append(question4)
-        let question5 = Question(statement: "Describe the people in your environment?", type:  .TextField)
+        let question5 = Question(statement: "Describe the people in your environment?", type:  .TextField, segements: [])
         arrayOfQuestions.append(question5)
-        let question6 = Question(statement: "Are you around loved one, acquaintance, strangers?", type:  .TextField)
+        let question6 = Question(statement: "Who are you with?", type:  .RadioButton, segements: ["Alone","Loved one", "Strangers"])
         arrayOfQuestions.append(question6)
-        let question7 = Question(statement: "How are the people in your world affected by your emotional state?", type:  .TextField)
+        let question7 = Question(statement: "How are the people in your world affected by your emotional state?", type:  .TextField, segements: [])
         arrayOfQuestions.append(question7)
-        let question8 = Question(statement: "Tell me a win today.", type:  .TextField)
+        let question8 = Question(statement: "Tell me a win today.", type:  .TextField, segements: [])
         arrayOfQuestions.append(question8)
     }
     

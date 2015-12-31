@@ -42,6 +42,9 @@ extension JournalVC: UITableViewDataSource, UITableViewDelegate  {
             if let tempCell = myTableView.dequeueReusableCellWithIdentifier("RadioButtonQuestion", forIndexPath: indexPath) as? RadioButtonwCell {
                 tempCell.questionLabel?.text = arrayOfQuestions[indexPath.row].statement
                 tempCell.backgroundColor = Feelz.sharedInstance.getBrightColour()
+                
+                tempCell.loadSelections(arrayOfQuestions[indexPath.row].segements)
+                
                 returnCell = tempCell
             }
         } else if arrayOfQuestions[indexPath.row].type == .TextField {

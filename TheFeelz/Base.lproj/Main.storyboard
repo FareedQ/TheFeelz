@@ -255,9 +255,6 @@
                                                     <segments>
                                                         <segment title="Mild"/>
                                                         <segment title="Fair"/>
-                                                        <segment title="Decent"/>
-                                                        <segment title="Strong"/>
-                                                        <segment title="Intense"/>
                                                     </segments>
                                                     <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </segmentedControl>

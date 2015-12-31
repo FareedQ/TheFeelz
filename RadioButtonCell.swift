@@ -20,5 +20,14 @@ class RadioButtonwCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    func loadSelections(selectionArray:[String]){
+        if selectionArray.count == radioButtons.numberOfSegments { return }
+    
+        radioButtons.removeAllSegments()
+        for selection in selectionArray.reverse() {
+            radioButtons.insertSegmentWithTitle(selection, atIndex: 0, animated: false)
+        }
+    }
 
 }

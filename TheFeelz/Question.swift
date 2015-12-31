@@ -17,4 +17,5 @@ struct Question {
 
     var statement = ""
     var type:QuestionTypes
+    var segements = [String]()
 }
