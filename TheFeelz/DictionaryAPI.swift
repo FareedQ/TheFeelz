@@ -17,10 +17,16 @@ class DictionaryAPI: NSObject, NSXMLParserDelegate {
     var globaleParser = NSXMLParser()
     var globalResponseString = String()
     var responseCounter = 1
-    var responseStringBuilder = String()
-    var shouldRecord = false
+    var definitionStringBuilder = String()
+    var synonymStringBuilder = String()
+    var shouldRecordDefinition = false
+    var shouldRecordSynonyms = false
+    var synonymArray = [String]()
     
     func execute(wordToSearch:String) -> String {
+        
+        checkIfWordIsPreloaded(wordToSearch)
+        print(apiURL + wordToSearch + "&key=" + apiKey)
         guard let actualURL = NSURL(string: apiURL + wordToSearch + "&key=" + apiKey) else {return ""}
         guard let parser = NSXMLParser(contentsOfURL:actualURL) else {return ""}
         globaleParser = parser
@@ -28,43 +34,79 @@ class DictionaryAPI: NSObject, NSXMLParserDelegate {
         globaleParser.parse()
         return globalResponseString
     }
+    
+    func checkIfWordIsPreloaded(wordToSearch:String){
+        
+    }
 
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         if elementName == "dt" {
-            shouldRecord = true
+            shouldRecordDefinition = true
         }
-        if elementName == "sx" || elementName == "vi" {
-            shouldRecord = false
+        if elementName == "sx" {
+            shouldRecordDefinition = false
+            shouldRecordSynonyms = true
+        }
+        if elementName == "vi" {
+            shouldRecordDefinition = false
+        }
+        if elementName == "sxn" {
+            shouldRecordSynonyms = false
         }
     }
     
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "dt" {
-            shouldRecord = false
-            addToResponse()
+            shouldRecordDefinition = false
+            addToDefinition()
         }
-        if elementName == "sx" || elementName == "vi" {
-            shouldRecord = true
+        if elementName == "sx" {
+            shouldRecordDefinition = true
+            shouldRecordSynonyms = false
+            addToSynonyms()
+        }
+        if elementName == "vi" {
+            shouldRecordDefinition = true
+        }
+        if elementName == "sxn" {
+            shouldRecordSynonyms = true
         }
     }
     
     func parser(parser: NSXMLParser, foundCharacters string: String) {
-        if shouldRecord {
-            responseStringBuilder += string
+        if shouldRecordDefinition {
+            definitionStringBuilder += string
+        }
+        if shouldRecordSynonyms {
+            synonymStringBuilder += string
         }
     }
     
-    func addToResponse(){
-        responseStringBuilder = responseStringBuilder.stringByReplacingOccurrencesOfString(":", withString: "")
-        if responseStringBuilder != "" {
-            responseStringBuilder = "\(responseCounter). " + responseStringBuilder + "\n"
-            globalResponseString += responseStringBuilder
-            responseStringBuilder = ""
+    func addToDefinition(){
+        definitionStringBuilder = definitionStringBuilder.stringByReplacingOccurrencesOfString(":", withString: "")
+        
+        if definitionStringBuilder.stringByReplacingOccurrencesOfString(" ", withString: "") == "" {
+            definitionStringBuilder = ""
+            return
+        }
+        
+        if definitionStringBuilder != "" {
+            definitionStringBuilder = "\(responseCounter). " + definitionStringBuilder + "\n"
+            globalResponseString += definitionStringBuilder
+            definitionStringBuilder = ""
             responseCounter++
             if responseCounter > maxNumberOfResponse {
                 globaleParser.abortParsing()
             }
         }
+    }
+    
+    func addToSynonyms(){
+        if synonymArray.count < 3 {
+            synonymStringBuilder = synonymStringBuilder.stringByReplacingOccurrencesOfString(" ", withString: "")
+            synonymArray.append(synonymStringBuilder)
+        }
+        synonymStringBuilder = ""
     }
     
 }

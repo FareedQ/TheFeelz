@@ -10,6 +10,7 @@
     <customFonts key="customFonts">
         <mutableArray key="waltograph42.otf">
             <string>Waltograph</string>
+            <string>Waltograph</string>
         </mutableArray>
         <mutableArray key="waltographUI.ttf">
             <string>WaltographUI-Bold</string>
@@ -551,36 +552,96 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iN-ci-13p">
-                                <rect key="frame" x="36" y="370" width="248" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Angry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcZ-Fh-XqL">
+                                <rect key="frame" x="12" y="370" width="296" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="HaI-5g-gcg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Waltograph" family="Waltograph" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1iN-ci-13p">
+                                <rect key="frame" x="36" y="405" width="248" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="Ed5-4f-z53"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZZ-1Y-tGO">
+                                <rect key="frame" x="36" y="481" width="80" height="30"/>
+                                <state key="normal" title="Synonym1">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="synonymButton1:" destination="6eE-ED-gc2" eventType="touchUpInside" id="0nU-0N-2Kt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1P-GD-HmE">
+                                <rect key="frame" x="124" y="481" width="73" height="30"/>
+                                <state key="normal" title="Synonym2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="synonymButton2:" destination="6eE-ED-gc2" eventType="touchUpInside" id="Zq9-hV-4qK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fst-EE-Mo1">
+                                <rect key="frame" x="205" y="481" width="79" height="30"/>
+                                <state key="normal" title="Synonym3">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="synonymButton3:" destination="6eE-ED-gc2" eventType="touchUpInside" id="g2i-eg-h6x"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.73340718360000001" blue="0.64769111369999999" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Ran-J1-yfR" firstAttribute="top" secondItem="SjX-0v-92z" secondAttribute="bottom" constant="8" id="2Fd-Gc-WfB"/>
                             <constraint firstItem="I19-Kk-ur9" firstAttribute="centerX" secondItem="npG-rH-Z3X" secondAttribute="centerX" id="5ex-1e-2Ak"/>
                             <constraint firstItem="I19-Kk-ur9" firstAttribute="width" secondItem="npG-rH-Z3X" secondAttribute="width" multiplier="7:8" id="8JN-vZ-QYz"/>
+                            <constraint firstItem="R1p-6e-8Yk" firstAttribute="top" secondItem="fst-EE-Mo1" secondAttribute="bottom" constant="8" id="Akd-m6-3am"/>
                             <constraint firstItem="Ran-J1-yfR" firstAttribute="leading" secondItem="npG-rH-Z3X" secondAttribute="leadingMargin" constant="20" id="B55-5s-j0J"/>
                             <constraint firstItem="FdN-NW-wNJ" firstAttribute="top" secondItem="SjX-0v-92z" secondAttribute="bottom" constant="-20" id="KKT-If-NbV"/>
+                            <constraint firstItem="PcZ-Fh-XqL" firstAttribute="leading" secondItem="npG-rH-Z3X" secondAttribute="leadingMargin" constant="-4" id="KTZ-nW-pWM"/>
+                            <constraint firstItem="1iN-ci-13p" firstAttribute="top" secondItem="PcZ-Fh-XqL" secondAttribute="bottom" id="KcK-Df-naD"/>
+                            <constraint firstItem="R1p-6e-8Yk" firstAttribute="top" secondItem="E1P-GD-HmE" secondAttribute="bottom" constant="8" id="LJ6-BE-R1U"/>
                             <constraint firstItem="FdN-NW-wNJ" firstAttribute="width" secondItem="npG-rH-Z3X" secondAttribute="width" id="QSI-IY-U5M"/>
+                            <constraint firstItem="E1P-GD-HmE" firstAttribute="leading" secondItem="HZZ-1Y-tGO" secondAttribute="trailing" constant="8" id="Rz1-eI-DeM"/>
+                            <constraint firstItem="fst-EE-Mo1" firstAttribute="leading" secondItem="E1P-GD-HmE" secondAttribute="trailing" constant="8" id="SyT-qq-YX2"/>
+                            <constraint firstItem="fst-EE-Mo1" firstAttribute="centerX" secondItem="npG-rH-Z3X" secondAttribute="centerX" id="Tcy-rp-eRF"/>
                             <constraint firstItem="I19-Kk-ur9" firstAttribute="top" secondItem="Ran-J1-yfR" secondAttribute="bottom" constant="8" id="YOX-NS-bPN"/>
-                            <constraint firstItem="1iN-ci-13p" firstAttribute="top" secondItem="I19-Kk-ur9" secondAttribute="bottom" constant="8" id="b8S-HV-keW"/>
+                            <constraint firstItem="R1p-6e-8Yk" firstAttribute="top" secondItem="HZZ-1Y-tGO" secondAttribute="bottom" constant="8" id="d1y-AB-Hz8"/>
                             <constraint firstItem="1iN-ci-13p" firstAttribute="leading" secondItem="npG-rH-Z3X" secondAttribute="leadingMargin" constant="20" id="eZf-KN-SeR"/>
+                            <constraint firstItem="HZZ-1Y-tGO" firstAttribute="leading" secondItem="npG-rH-Z3X" secondAttribute="leadingMargin" constant="20" id="gLA-t1-TLV"/>
+                            <constraint firstItem="E1P-GD-HmE" firstAttribute="centerX" secondItem="npG-rH-Z3X" secondAttribute="centerX" id="hOf-a5-1YY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PcZ-Fh-XqL" secondAttribute="trailing" constant="-4" id="jSc-Vh-egP"/>
+                            <constraint firstItem="PcZ-Fh-XqL" firstAttribute="top" secondItem="I19-Kk-ur9" secondAttribute="bottom" constant="8" id="kwA-FH-Vc4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1iN-ci-13p" secondAttribute="trailing" constant="20" id="lX8-Ak-5a2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ran-J1-yfR" secondAttribute="trailing" constant="20" id="lkn-Ad-s76"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fst-EE-Mo1" secondAttribute="trailing" constant="20" id="lrj-sl-Y7T"/>
                             <constraint firstItem="FdN-NW-wNJ" firstAttribute="centerX" secondItem="npG-rH-Z3X" secondAttribute="centerX" id="spk-Xw-Ild"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Tcy-rp-eRF"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Emotions" image="tab-emotion" id="yrJ-9h-JrC"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="SelectionViewTopContraint" destination="KKT-If-NbV" id="SHL-Dm-sLY"/>
-                        <outlet property="lblDictionaryOutput" destination="1iN-ci-13p" id="nJC-rc-Sh7"/>
+                        <outlet property="dictionaryOutputLabel" destination="1iN-ci-13p" id="tYj-DT-zRq"/>
+                        <outlet property="emotionTitleLabel" destination="PcZ-Fh-XqL" id="ZMr-lP-vj8"/>
                         <outlet property="mainImage" destination="I19-Kk-ur9" id="g4W-Bp-tBM"/>
+                        <outlet property="synonym1" destination="HZZ-1Y-tGO" id="sch-On-yeu"/>
+                        <outlet property="synonym2" destination="E1P-GD-HmE" id="7RI-q5-LMs"/>
+                        <outlet property="synonym3" destination="fst-EE-Mo1" id="la8-qs-6K9"/>
                         <outlet property="titleLabel" destination="Ran-J1-yfR" id="1ij-RA-0Cd"/>
                     </connections>
                 </viewController>

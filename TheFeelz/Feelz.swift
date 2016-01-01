@@ -23,30 +23,31 @@ public class Feelz: NSObject {
     }
     
     struct Emotion {
-        var Name = String()
-        var BrightColour = UIColor()
-        var DarkColour = UIColor()
-        var TextColour = UIColor()
+        var title = String()
+        var imageTitle = String()
+        var brightColour = UIColor()
+        var darkColour = UIColor()
+        var textColour = UIColor()
     }
     
-    let anger = Emotion(Name: "Anger", BrightColour: UIColorFromRGB("F40009"), DarkColour: UIColorFromRGB("480002"), TextColour: UIColorFromRGB("FCF0E6"))
+    let anger = Emotion(title: "Angry", imageTitle: "Anger", brightColour: UIColorFromRGB("F40009"), darkColour: UIColorFromRGB("480002"), textColour: UIColorFromRGB("FCF0E6"))
     
-    let disgust = Emotion(Name: "Disgust", BrightColour: UIColorFromRGB("23F307"), DarkColour: UIColorFromRGB("0F2D07"), TextColour: UIColorFromRGB("70B451"))
+    let disgust = Emotion(title: "Disgust", imageTitle: "Disgust", brightColour: UIColorFromRGB("23F307"), darkColour: UIColorFromRGB("0F2D07"), textColour: UIColorFromRGB("70B451"))
     //Disgust Bright 23F307
     //Disgust Dark 0F2D07
     //Disgust Text 70B451
     
-    let fear = Emotion(Name: "Fear", BrightColour: UIColorFromRGB("C472FC"), DarkColour: UIColorFromRGB("20023E"), TextColour: UIColorFromRGB("DCBADC"))
+    let fear = Emotion(title: "Fear", imageTitle: "Fear", brightColour: UIColorFromRGB("C472FC"), darkColour: UIColorFromRGB("20023E"), textColour: UIColorFromRGB("DCBADC"))
     //Fear Bright C472FC
     //Fear Dark 20023E
     //Fear Text DCBADC
     
-    let joy = Emotion(Name: "Joy", BrightColour: UIColorFromRGB("F6DC49"), DarkColour: UIColorFromRGB("D9890E"), TextColour: UIColorFromRGB("0F70F2"))
+    let joy = Emotion(title: "Happy", imageTitle: "Joy", brightColour: UIColorFromRGB("F6DC49"), darkColour: UIColorFromRGB("D9890E"), textColour: UIColorFromRGB("0F70F2"))
     //Joy Bright F6DC49
     //Joy Dark D9890E
     //Joy Text 0F70F2
     
-    let sadness = Emotion(Name: "Sadness", BrightColour: UIColorFromRGB("49C2F7"), DarkColour: UIColorFromRGB("0A2363"), TextColour: UIColorFromRGB("B7D1E0"))
+    let sadness = Emotion(title: "Sad", imageTitle: "Sadness", brightColour: UIColorFromRGB("49C2F7"), darkColour: UIColorFromRGB("0A2363"), textColour: UIColorFromRGB("B7D1E0"))
     //Sadness Dark 0A2363
     //Sadness Bright 49C2F7
     //Sadness text B7D1E0
@@ -63,23 +64,35 @@ public class Feelz: NSObject {
     }
     
     func getSelectedEmotion() -> String {
-        return emotionsArray[index].Name
+        return emotionsArray[index].title
     }
     
-    func getEmotionAt(increment:Int) -> String {
-        return emotionsArray[(index+increment)%emotionsArray.count].Name
+    func getEmotionWith(increment:Int) -> String {
+        return emotionsArray[(index+increment)%emotionsArray.count].title
+    }
+    
+    func getEmotionImageTitleWith(increment:Int) -> String {
+        return emotionsArray[(index+increment)%emotionsArray.count].imageTitle
+    }
+    
+    func getSelectedEmotionImageTitle() -> String {
+        return emotionsArray[index].imageTitle
+    }
+    
+    func getEmotionImageTitleAt(index:Int) -> String {
+        return emotionsArray[index].imageTitle
     }
     
     func getBrightColour() -> UIColor {
-        return emotionsArray[index].BrightColour
+        return emotionsArray[index].brightColour
     }
     
     func getDarkColour() -> UIColor {
-        return emotionsArray[index].DarkColour
+        return emotionsArray[index].darkColour
     }
     
     func getTextColour() -> UIColor {
-        return emotionsArray[index].TextColour
+        return emotionsArray[index].textColour
     }
     
     func incrementIndex(){

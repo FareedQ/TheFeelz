@@ -187,7 +187,7 @@ class CarouselSubVC: UIViewController {
         var currentSelector = Feelz.sharedInstance.index + amountOfImagesFromTheLeftUntilTheMiddle
         if currentSelector < 0 { currentSelector += Feelz.sharedInstance.emotionsArray.count }
         for imageView in imageViews {
-            imageView.image = UIImage(named:Feelz.sharedInstance.emotionsArray[currentSelector%Feelz.sharedInstance.emotionsArray.count].Name)
+            imageView.image = UIImage(named: Feelz.sharedInstance.getEmotionImageTitleAt(currentSelector%Feelz.sharedInstance.emotionsArray.count))
             currentSelector += 1
             if currentSelector == Feelz.sharedInstance.emotionsArray.count { currentSelector = 0 }
         }
