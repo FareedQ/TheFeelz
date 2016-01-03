@@ -103,7 +103,30 @@ class SettingsVC: UIViewController {
 //        
 //        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
+    
     @IBAction func sleepDatePickerAction(sender: UIDatePicker) {
-        sleepTitleLabel.text = "I go to sleep at \(sender.date)"
+        sleepTitleLabel.text = displayTime(sender.date)
+    }
+    
+    @IBAction func wakeDatePickerAction(sender: UIDatePicker) {
+        wakeTitleLabel.text = displayTime(sender.date)
+    }
+    
+    func displayTime(date :NSDate) -> String {
+        var returnString = String()
+        
+        let calendar = NSCalendar.currentCalendar()
+        let comp = calendar.components([.Hour, .Minute], fromDate: date)
+        let beforeNoon = comp.hour < 12
+        let hour = comp.hour%12
+        let minute = comp.minute
+        returnString = "I go to sleep at \(hour):"
+        if minute == 0 { returnString += "00" }
+        else { returnString += "\(minute)" }
+        if beforeNoon { returnString += " am" }
+        else { returnString += " pm" }
+        
+        return returnString
+        
     }
 }

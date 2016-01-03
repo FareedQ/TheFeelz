@@ -466,6 +466,9 @@
                                         <date key="date" timeIntervalSinceReferenceDate="472083503.39941001">
                                             <!--2015-12-17 22:18:23 +0000-->
                                         </date>
+                                        <connections>
+                                            <action selector="wakeDatePickerAction:" destination="yJB-l6-pwA" eventType="valueChanged" id="oiX-3O-dv1"/>
+                                        </connections>
                                     </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
