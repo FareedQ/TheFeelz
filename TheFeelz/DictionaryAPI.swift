@@ -26,7 +26,6 @@ class DictionaryAPI: NSObject, NSXMLParserDelegate {
     func execute(wordToSearch:String) -> String {
         
         checkIfWordIsPreloaded(wordToSearch)
-        print(apiURL + wordToSearch + "&key=" + apiKey)
         guard let actualURL = NSURL(string: apiURL + wordToSearch + "&key=" + apiKey) else {return ""}
         guard let parser = NSXMLParser(contentsOfURL:actualURL) else {return ""}
         globaleParser = parser
