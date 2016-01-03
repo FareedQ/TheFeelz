@@ -28,9 +28,21 @@ class SettingsVC: UIViewController {
         hideSleepDP()
         hideWakeDP()
         
+        if let wakeTime = User.sharedInstance.wakeTime {
+            wakeTitleLabel.text = "I wake up at " + displayTime(wakeTime)
+        }
+        if let sleepTime = User.sharedInstance.sleepTime {
+            sleepTitleLabel.text = "I go to sleep at " + displayTime(sleepTime)
+        }
+        
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: "tapGesture:")
         self.view.addGestureRecognizer(gestureRecognizer)
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        hideSleepDP()
+        hideWakeDP()
     }
     
     func tapGesture(sender: UITapGestureRecognizer){
@@ -105,11 +117,13 @@ class SettingsVC: UIViewController {
     }
     
     @IBAction func sleepDatePickerAction(sender: UIDatePicker) {
-        sleepTitleLabel.text = displayTime(sender.date)
+        sleepTitleLabel.text = "I go to sleep at " + displayTime(sender.date)
+        User.sharedInstance.sleepTime = sender.date
     }
     
     @IBAction func wakeDatePickerAction(sender: UIDatePicker) {
-        wakeTitleLabel.text = displayTime(sender.date)
+        wakeTitleLabel.text = "I wake up at " + displayTime(sender.date)
+        User.sharedInstance.wakeTime = sender.date
     }
     
     func displayTime(date :NSDate) -> String {
@@ -120,7 +134,7 @@ class SettingsVC: UIViewController {
         let beforeNoon = comp.hour < 12
         let hour = comp.hour%12
         let minute = comp.minute
-        returnString = "I go to sleep at \(hour):"
+        returnString = "\(hour):"
         if minute == 0 { returnString += "00" }
         else { returnString += "\(minute)" }
         if beforeNoon { returnString += " am" }

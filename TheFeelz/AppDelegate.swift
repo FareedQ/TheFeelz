@@ -13,10 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    let myUser = User()
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        myUser.load()
+        User.sharedInstance.load()
         return true
         
     }
@@ -25,6 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loadFromLocalNotification()
     }
     
+    
+    func applicationWillTerminate(application: UIApplication) {
+        User.sharedInstance.save()
+    }
     
     func loadFromLocalNotification(){
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)

@@ -10,25 +10,31 @@ import UIKit
 
 class User: NSObject {
     
+    struct Static {
+        static let instance = User()
+    }
+
+    class var sharedInstance: User {
+        return Static.instance
+    }
+
     //Setup Defaults
     let defaults = NSUserDefaults.standardUserDefaults()
     
-    
-    //Accessable Variables
-    var introJournalScreenGiven = false
-    
-    //Internal Datatypes
-    internal var introJournalScreenGivenDataType:Bool?
+    //User settings
+    var sleepTime:NSDate?
+    var wakeTime:NSDate?
     
     func save(){
-        defaults.setValue(introJournalScreenGiven, forKey: "introJournalScreenGiven")
+        defaults.setValue(sleepTime, forKey: "sleepTime")
+        defaults.setValue(wakeTime, forKey: "wakeTime")
         defaults.synchronize()
     }
     
     func load() {
-        if let object = defaults.objectForKey("introJournalScreenGiven") as? Bool {
-            introJournalScreenGiven = object
-        }
+        if let object = defaults.objectForKey("sleepTime") as? NSDate { sleepTime = object }
+        if let object = defaults.objectForKey("wakeTime") as? NSDate { wakeTime = object }
+        
     }
 
     
