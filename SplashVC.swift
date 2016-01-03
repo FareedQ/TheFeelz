@@ -18,6 +18,14 @@ class SplashVC: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if(!UIApplication.sharedApplication().isRegisteredForRemoteNotifications()){
+            alertMessage("This app requires to send notifications to work. You currently have it set off. Please log into your setting and turn it on to recive full capabilites.", thisViewController: self)
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         //wire the two view controllers together
         if segue.identifier == "SplashToCarousel" {
