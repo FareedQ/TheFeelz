@@ -24,7 +24,8 @@ class MeditateVC: UIViewController {
     }
     
     //Variables for Sounds Extention
-    var meditationTrack: AVAudioPlayer?
+    var meditatePin: AVAudioPlayer?
+    var meditatePlayer: AVAudioPlayer?
     
     //Variables for Locations Extention
     let locationManager = CLLocationManager()
@@ -57,9 +58,9 @@ class MeditateVC: UIViewController {
 
     @IBAction func musicSwitch(sender: UISwitch){
         if sender.on {
-            meditationTrack?.play()
+            meditatePlayer?.play()
         } else {
-            meditationTrack?.pause()
+            meditatePlayer?.pause()
         }
     }
     

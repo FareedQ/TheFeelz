@@ -36,9 +36,9 @@ extension MeditateVC {
                 mapView.removeOverlay(overlayCircle)
                 
                 //Reset Music
-                meditationTrack?.pause()
-                meditationTrack?.stop()
-                meditationTrack?.currentTime = 0
+                meditatePin?.pause()
+                meditatePin?.stop()
+                meditatePin?.currentTime = 0
                 
                 //set flag
                 pinPlaced = false
@@ -54,7 +54,7 @@ extension MeditateVC {
                 mapView.addOverlay(overlayCircle)
                 
                 //Begin meditation music
-                meditationTrack?.play()
+                meditatePin?.play()
                 
                 //set flag
                 pinPlaced = true

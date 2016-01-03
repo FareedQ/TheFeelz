@@ -10,7 +10,7 @@
 		012470111C318E1E001DAC33 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012470101C318E1E001DAC33 /* HelperFunctions.swift */; };
 		012470131C319AD3001DAC33 /* waltographUI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 012470121C3197B4001DAC33 /* waltographUI.ttf */; };
 		0126993C1C249509009E538D /* JournalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126993B1C249509009E538D /* JournalVC.swift */; };
-		0126993E1C2496EB009E538D /* Meditatie-Pin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0126993D1C2496EB009E538D /* Meditatie-Pin.mp3 */; };
+		0126993E1C2496EB009E538D /* Meditate-Pin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0126993D1C2496EB009E538D /* Meditate-Pin.mp3 */; };
 		0174A7091C321A9700066EB3 /* Mediate-MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174A7081C321A9700066EB3 /* Mediate-MapView.swift */; };
 		0174A70B1C321C2000066EB3 /* Meditate-Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174A70A1C321C2000066EB3 /* Meditate-Sounds.swift */; };
 		0174A70D1C321C6B00066EB3 /* Meditate-Guestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0174A70C1C321C6B00066EB3 /* Meditate-Guestures.swift */; };
@@ -64,7 +64,7 @@
 		012470101C318E1E001DAC33 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		012470121C3197B4001DAC33 /* waltographUI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = waltographUI.ttf; sourceTree = "<group>"; };
 		0126993B1C249509009E538D /* JournalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalVC.swift; sourceTree = "<group>"; };
-		0126993D1C2496EB009E538D /* Meditatie-Pin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Meditatie-Pin.mp3"; sourceTree = "<group>"; };
+		0126993D1C2496EB009E538D /* Meditate-Pin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Meditate-Pin.mp3"; sourceTree = "<group>"; };
 		0174A7081C321A9700066EB3 /* Mediate-MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Mediate-MapView.swift"; sourceTree = "<group>"; };
 		0174A70A1C321C2000066EB3 /* Meditate-Sounds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meditate-Sounds.swift"; sourceTree = "<group>"; };
 		0174A70C1C321C6B00066EB3 /* Meditate-Guestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Meditate-Guestures.swift"; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 			children = (
 				0174E8461C23382000589507 /* Assets.xcassets */,
 				0174E84B1C23382000589507 /* Info.plist */,
-				0126993D1C2496EB009E538D /* Meditatie-Pin.mp3 */,
+				0126993D1C2496EB009E538D /* Meditate-Pin.mp3 */,
 				018420011C3640AF004FE484 /* Meditate-Player.wav */,
 				012470101C318E1E001DAC33 /* HelperFunctions.swift */,
 				012470121C3197B4001DAC33 /* waltographUI.ttf */,
@@ -395,7 +395,7 @@
 				0174E84A1C23382000589507 /* LaunchScreen.storyboard in Resources */,
 				0174E8471C23382000589507 /* Assets.xcassets in Resources */,
 				018420021C3640AF004FE484 /* Meditate-Player.wav in Resources */,
-				0126993E1C2496EB009E538D /* Meditatie-Pin.mp3 in Resources */,
+				0126993E1C2496EB009E538D /* Meditate-Pin.mp3 in Resources */,
 				0174E8421C23382000589507 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

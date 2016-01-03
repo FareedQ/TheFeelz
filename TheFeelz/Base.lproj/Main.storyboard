@@ -447,70 +447,95 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Occ-zV-Cmu">
-                                <rect key="frame" x="32" y="28" width="256" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="lng-JW-bNc"/>
-                                </constraints>
+                                <rect key="frame" x="28" y="28" width="264" height="41"/>
                                 <fontDescription key="fontDescription" name="WaltographUI-Bold" family="Waltograph UI" pointSize="37"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="wdW-2z-fbG">
-                                <rect key="frame" x="-4" y="123" width="328" height="85"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="Uch-He-EfC"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="472083503.39941001">
-                                    <!--2015-12-17 22:18:23 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="And" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNN-GE-jDF">
-                                <rect key="frame" x="16" y="216" width="31" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I wake up at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0d-nh-x4n">
+                                <rect key="frame" x="12" y="89" width="296" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1B4-Yl-bdT">
-                                <rect key="frame" x="-4" y="245" width="328" height="85"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyi-vh-B28" userLabel="WakeView">
+                                <rect key="frame" x="-8" y="118" width="336" height="185"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="wdW-2z-fbG">
+                                        <rect key="frame" x="0.0" y="0.0" width="336" height="185"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="472083503.39941001">
+                                            <!--2015-12-17 22:18:23 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="Nzc-ku-ydb"/>
+                                    <constraint firstItem="wdW-2z-fbG" firstAttribute="centerX" secondItem="tyi-vh-B28" secondAttribute="centerX" id="KeY-eI-ZWF"/>
+                                    <constraint firstItem="wdW-2z-fbG" firstAttribute="width" secondItem="tyi-vh-B28" secondAttribute="width" id="Mqb-fC-MKx"/>
+                                    <constraint firstAttribute="height" constant="185" id="i3F-5y-CaB"/>
+                                    <constraint firstItem="wdW-2z-fbG" firstAttribute="height" secondItem="tyi-vh-B28" secondAttribute="height" id="lni-0z-k5c"/>
+                                    <constraint firstItem="wdW-2z-fbG" firstAttribute="centerY" secondItem="tyi-vh-B28" secondAttribute="centerY" id="xtA-N1-gZY"/>
                                 </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="472161994.67215198">
-                                    <!--2015-12-18 20:06:34 +0000-->
-                                </date>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wva-Cg-Hr8">
-                                <rect key="frame" x="77" y="390" width="166" height="30"/>
-                                <state key="normal" title="Setup Notification Block"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't Notify me between" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0d-nh-x4n">
-                                <rect key="frame" x="16" y="94" width="288" height="21"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I go to bed at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNN-GE-jDF">
+                                <rect key="frame" x="16" y="323" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqa-mX-co1" userLabel="SleepView">
+                                <rect key="frame" x="-4" y="352" width="328" height="185"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="1B4-Yl-bdT">
+                                        <rect key="frame" x="0.0" y="0.0" width="328" height="185"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="472161994.67215198">
+                                            <!--2015-12-18 20:06:34 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="sleepDatePickerAction:" destination="yJB-l6-pwA" eventType="valueChanged" id="imk-GL-TrN"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="1B4-Yl-bdT" firstAttribute="height" secondItem="eqa-mX-co1" secondAttribute="height" id="230-dc-2st"/>
+                                    <constraint firstItem="1B4-Yl-bdT" firstAttribute="width" secondItem="eqa-mX-co1" secondAttribute="width" id="4bP-2D-pUn"/>
+                                    <constraint firstItem="1B4-Yl-bdT" firstAttribute="centerX" secondItem="eqa-mX-co1" secondAttribute="centerX" id="Nto-JF-ehh"/>
+                                    <constraint firstItem="1B4-Yl-bdT" firstAttribute="centerY" secondItem="eqa-mX-co1" secondAttribute="centerY" id="c4E-NR-pbz"/>
+                                    <constraint firstAttribute="height" constant="185" id="yDz-7c-hy9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="wdW-2z-fbG" secondAttribute="trailing" constant="-20" id="1G2-2z-ZJF"/>
-                            <constraint firstItem="Occ-zV-Cmu" firstAttribute="top" secondItem="wfi-Yq-1Jl" secondAttribute="bottom" constant="8" id="9y8-vv-2zi"/>
-                            <constraint firstItem="wdW-2z-fbG" firstAttribute="leading" secondItem="AV6-wp-0Ec" secondAttribute="leadingMargin" constant="-20" id="BNM-sb-fua"/>
-                            <constraint firstItem="Wva-Cg-Hr8" firstAttribute="top" secondItem="1B4-Yl-bdT" secondAttribute="bottom" constant="60" id="CgY-ck-ScS"/>
-                            <constraint firstItem="yNN-GE-jDF" firstAttribute="top" secondItem="wdW-2z-fbG" secondAttribute="bottom" constant="8" symbolic="YES" id="TQ8-jb-baU"/>
-                            <constraint firstItem="1B4-Yl-bdT" firstAttribute="top" secondItem="yNN-GE-jDF" secondAttribute="bottom" constant="8" id="Y8Z-pH-azf"/>
-                            <constraint firstItem="1B4-Yl-bdT" firstAttribute="leading" secondItem="AV6-wp-0Ec" secondAttribute="leadingMargin" constant="-20" id="cN4-NV-j6Q"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Occ-zV-Cmu" secondAttribute="trailing" constant="16" id="f72-wL-wIv"/>
-                            <constraint firstItem="wdW-2z-fbG" firstAttribute="top" secondItem="s0d-nh-x4n" secondAttribute="bottom" constant="8" id="gKc-9r-Yvp"/>
-                            <constraint firstItem="s0d-nh-x4n" firstAttribute="top" secondItem="Occ-zV-Cmu" secondAttribute="bottom" constant="20" id="h6o-ef-wek"/>
-                            <constraint firstItem="Occ-zV-Cmu" firstAttribute="leading" secondItem="AV6-wp-0Ec" secondAttribute="leadingMargin" constant="16" id="l9x-mD-lWZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="s0d-nh-x4n" secondAttribute="trailing" id="prT-Y7-y5H"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1B4-Yl-bdT" secondAttribute="trailing" constant="-20" id="q08-fd-tsh"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="yNN-GE-jDF" secondAttribute="leading" id="vtS-gq-jHy"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="s0d-nh-x4n" secondAttribute="leading" id="xdQ-35-Ef4"/>
-                            <constraint firstItem="Wva-Cg-Hr8" firstAttribute="centerX" secondItem="AV6-wp-0Ec" secondAttribute="centerX" id="zcp-so-a2L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Occ-zV-Cmu" secondAttribute="trailing" constant="12" id="5QM-f6-tYn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eqa-mX-co1" secondAttribute="trailing" constant="-20" id="7rn-cf-7ok"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yNN-GE-jDF" secondAttribute="trailing" id="9yw-Lc-vX1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tyi-vh-B28" secondAttribute="trailing" constant="-24" id="JHg-cV-5jH"/>
+                            <constraint firstItem="Occ-zV-Cmu" firstAttribute="leading" secondItem="AV6-wp-0Ec" secondAttribute="leadingMargin" constant="12" id="SvH-4l-llb"/>
+                            <constraint firstItem="tyi-vh-B28" firstAttribute="top" secondItem="s0d-nh-x4n" secondAttribute="bottom" constant="8" id="a81-5B-QsW"/>
+                            <constraint firstItem="s0d-nh-x4n" firstAttribute="leading" secondItem="AV6-wp-0Ec" secondAttribute="leadingMargin" constant="-4" id="alf-P6-Kfb"/>
+                            <constraint firstItem="yNN-GE-jDF" firstAttribute="top" secondItem="tyi-vh-B28" secondAttribute="bottom" constant="20" id="bac-C5-ejl"/>
+                            <constraint firstItem="yNN-GE-jDF" firstAttribute="leading" secondItem="AV6-wp-0Ec" secondAttribute="leadingMargin" id="c90-S5-f6A"/>
+                            <constraint firstItem="eqa-mX-co1" firstAttribute="top" secondItem="yNN-GE-jDF" secondAttribute="bottom" constant="8" id="dZe-eV-idY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s0d-nh-x4n" secondAttribute="trailing" constant="-4" id="eIS-eB-9uF"/>
+                            <constraint firstItem="tyi-vh-B28" firstAttribute="leading" secondItem="AV6-wp-0Ec" secondAttribute="leadingMargin" constant="-24" id="fTU-Le-kD8"/>
+                            <constraint firstItem="eqa-mX-co1" firstAttribute="leading" secondItem="AV6-wp-0Ec" secondAttribute="leadingMargin" constant="-20" id="fYM-Df-hED"/>
+                            <constraint firstItem="s0d-nh-x4n" firstAttribute="top" secondItem="Occ-zV-Cmu" secondAttribute="bottom" constant="20" id="gIY-dT-ovr"/>
+                            <constraint firstItem="Occ-zV-Cmu" firstAttribute="top" secondItem="wfi-Yq-1Jl" secondAttribute="bottom" constant="8" id="mic-XB-ipg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="tab-settings" id="IRe-nX-Kzs"/>
+                    <connections>
+                        <outlet property="sleepDatePicker" destination="1B4-Yl-bdT" id="wUN-AT-4Ze"/>
+                        <outlet property="sleepTitleLabel" destination="yNN-GE-jDF" id="50t-KF-tyF"/>
+                        <outlet property="sleepView" destination="eqa-mX-co1" id="l3I-tk-f9y"/>
+                        <outlet property="sleepViewHeightConstraint" destination="yDz-7c-hy9" id="Ma9-ma-dhh"/>
+                        <outlet property="wakeDatePicker" destination="wdW-2z-fbG" id="m5w-vp-UGN"/>
+                        <outlet property="wakeTitleLabel" destination="s0d-nh-x4n" id="sNf-ze-cMZ"/>
+                        <outlet property="wakeView" destination="tyi-vh-B28" id="1T5-aQ-hAv"/>
+                        <outlet property="wakeViewHeightConstraint" destination="i3F-5y-CaB" id="0zP-sM-YYk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4M-dE-sJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

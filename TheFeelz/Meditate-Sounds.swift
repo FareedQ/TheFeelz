@@ -11,8 +11,11 @@ import AVFoundation
 extension MeditateVC {
     
     func setupSoundFiles(){
-        if let tempSound = self.setupAudioPlayerWithFile("Meditation", type:"mp3") {
-            self.meditationTrack = tempSound
+        if let tempSound = self.setupAudioPlayerWithFile("Meditate-Pin", type:"mp3") {
+            self.meditatePin = tempSound
+        }
+        if let tempSound = self.setupAudioPlayerWithFile("Meditate-Player", type:"wav") {
+            self.meditatePlayer = tempSound
         }
     }
     
@@ -31,7 +34,7 @@ extension MeditateVC {
     }
     
     func adjustVolume(value:Float){
-        meditationTrack?.volume = value
+        meditatePlayer?.volume = value
     }
 
 }
