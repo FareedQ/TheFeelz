@@ -21,8 +21,8 @@ class SplashVC: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if(!UIApplication.sharedApplication().isRegisteredForRemoteNotifications()){
-            alertMessage("This app requires to send notifications to work. You currently have it set off. Please log into your setting and turn it on to recive full capabilites.", thisViewController: self)
+        if(UIApplication.sharedApplication().currentUserNotificationSettings()?.types.rawValue == 0){
+            alertMessage("This app requires notifications to be allowed to fully function properly. Please log into your setting and turn on notification for this app to recive its full capabilites.", thisViewController: self)
         }
     }
     
