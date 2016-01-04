@@ -30,14 +30,42 @@ class SettingsVC: UIViewController {
         
         if let wakeTime = User.sharedInstance.wakeTime {
             wakeTitleLabel.text = "I wake up at " + displayTime(wakeTime)
+        } else {
+            User.sharedInstance.wakeTime = returnAnNSDateForTodayAt8am()
+            guard let wakeTime = User.sharedInstance.wakeTime else { return }
+            wakeTitleLabel.text = "I wake up at " + displayTime(wakeTime)
         }
+        
         if let sleepTime = User.sharedInstance.sleepTime {
+            sleepTitleLabel.text = "I go to sleep at " + displayTime(sleepTime)
+        } else {
+            User.sharedInstance.sleepTime = returnAnNSDateForTodayAt10pm()
+            guard let sleepTime = User.sharedInstance.sleepTime else { return }
             sleepTitleLabel.text = "I go to sleep at " + displayTime(sleepTime)
         }
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: "tapGesture:")
         self.view.addGestureRecognizer(gestureRecognizer)
-        
+    }
+    
+    func returnAnNSDateForTodayAt10pm() -> NSDate {
+        let date = NSDate()
+        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        let components = calendar.components([.Hour , .Minute], fromDate: date)
+        components.hour = 22
+        components.minute = 0
+        guard let newDate = calendar.dateFromComponents(components) else { return NSDate() }
+        return newDate
+    }
+    
+    func returnAnNSDateForTodayAt8am() -> NSDate {
+        let date = NSDate()
+        let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+        let components = calendar.components([.Hour , .Minute], fromDate: date)
+        components.hour = 8
+        components.minute = 0
+        guard let newDate = calendar.dateFromComponents(components) else { return NSDate() }
+        return newDate
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -130,11 +158,12 @@ class SettingsVC: UIViewController {
         var returnString = String()
         
         let calendar = NSCalendar.currentCalendar()
-        let comp = calendar.components([.Hour, .Minute], fromDate: date)
-        let beforeNoon = comp.hour < 12
-        let hour = comp.hour%12
-        let minute = comp.minute
-        returnString = "\(hour):"
+        let component = calendar.components([.Hour, .Minute], fromDate: date)
+        let beforeNoon = component.hour < 12
+        let hour = component.hour%12
+        let minute = component.minute
+        if hour == 0 { returnString = "12:" }
+        else { returnString = "\(hour):" }
         if minute == 0 { returnString += "00" }
         else { returnString += "\(minute)" }
         if beforeNoon { returnString += " am" }
