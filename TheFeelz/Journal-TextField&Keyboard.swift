@@ -42,14 +42,12 @@ extension JournalVC: UITextFieldDelegate {
         guard let
             kbDurationNumber = notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber
             else {return}
-        animateToKeyboardHeight(0, duration: kbDurationNumber.doubleValue)
+        animateToKeyboardHeight(tabBarPadding - bottomPadding, duration: kbDurationNumber.doubleValue)
     }
     
     func animateToKeyboardHeight(kbHeight: CGFloat, duration: Double){
         UIView.animateWithDuration(duration, animations: { () -> Void in
-            let bottomPadding:CGFloat = 8
-            let tabBarPadding:CGFloat = 40
-            self.bottomMapLayoutConstraint.constant = kbHeight + bottomPadding - tabBarPadding
+            self.bottomMapLayoutConstraint.constant = kbHeight + self.bottomPadding - self.tabBarPadding
             self.view.layoutIfNeeded()
             }) { (complete) -> Void in
                 

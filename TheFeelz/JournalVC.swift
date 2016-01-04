@@ -14,6 +14,9 @@ class JournalVC: UIViewController {
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var bottomMapLayoutConstraint: NSLayoutConstraint!
     
+    let bottomPadding:CGFloat = 8
+    let tabBarPadding:CGFloat = 40
+    
     var arrayOfQuestions = [Question]()
     
     override func viewDidLoad() {
