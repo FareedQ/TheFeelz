@@ -12,22 +12,22 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
     
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var mainImage: UIImageView!
-    @IBOutlet weak var emotionTitleLabel: UILabel!
-    @IBOutlet weak var dictionaryOutputLabel: UILabel!
-    @IBOutlet weak var SelectionViewTopContraint: NSLayoutConstraint!
-    
-    let SELECTIONVIEWMOVEIN:CGFloat = -108
     
     weak var mySelectionSubVC:SelectionSubVC!
+    @IBOutlet weak var mainImage: UIImageView!
+    @IBOutlet weak var SelectionViewTopContraint: NSLayoutConstraint!
+    let SELECTIONVIEWMOVEIN:CGFloat = -108
     var originalFrameArray = [CGRect]()
+    var selectionArrayInCurrentView = [Int]()
+    var selectionDidHappen:Bool = false
     
+    @IBOutlet weak var emotionTitleLabel: UILabel!
+    @IBOutlet weak var dictionaryOutputLabel: UILabel!
     @IBOutlet weak var synonym1: UIButton!
     @IBOutlet weak var synonym2: UIButton!
     @IBOutlet weak var synonym3: UIButton!
     var synonymButtonArray = [UIButton]()
-    var selectionArrayInCurrentView = [Int]()
-    var selectionDidHappen:Bool = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
