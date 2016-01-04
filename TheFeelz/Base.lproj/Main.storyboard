@@ -57,7 +57,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="THE FEELZ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvt-Un-Si3">
                                 <rect key="frame" x="20" y="20" width="280" height="119"/>
                                 <fontDescription key="fontDescription" name="WaltographUI-Bold" family="Waltograph UI" pointSize="52"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How Do You Feel?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2v7-g4-lJg">
@@ -76,6 +76,7 @@
                     <tabBarItem key="tabBarItem" title="Main" image="tab-emotion" id="Lv1-Wo-iUh"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="HowDoYouFeelLabel" destination="2v7-g4-lJg" id="JQV-l7-r3Q"/>
                         <outlet property="leftSideBar" destination="179-Nb-zGd" id="qjA-Q7-25t"/>
                         <outlet property="rightSideBar" destination="Ygf-aV-4or" id="sb0-8M-3VN"/>
                         <segue destination="lIG-Xs-VPa" kind="show" identifier="SplashToMain" id="BTB-RF-MI0"/>
@@ -213,6 +214,7 @@
                         <outlet property="placeLabel" destination="ise-N9-O8A" id="EMU-18-RZH"/>
                         <outlet property="timeLabel" destination="Cfh-HN-NwM" id="Nw5-Rm-bfU"/>
                         <outlet property="timeView" destination="byH-h6-4Cc" id="Eqk-A5-FSm"/>
+                        <outlet property="titleLabel" destination="Dp7-S1-lgg" id="9ZJ-91-jn5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fr5-fb-RUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,6 +337,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Journal" image="tab-journal" id="XoG-hP-ydF"/>
                     <connections>
+                        <outlet property="TitleLabel" destination="ne0-Lj-uxS" id="AKr-6t-iHC"/>
                         <outlet property="bottomMapLayoutConstraint" destination="fmR-gg-vU5" id="dAs-v6-HPl"/>
                         <outlet property="myTableView" destination="FL2-d2-J4Z" id="8ie-81-2MI"/>
                     </connections>
@@ -427,6 +430,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Mantras" image="tab-mantra" id="Gdw-WO-lx5"/>
                     <connections>
+                        <outlet property="TitleLabel" destination="4QP-7H-ksf" id="pwc-DC-z3u"/>
                         <outlet property="collectionView" destination="Blf-7F-Ca1" id="UyW-6v-DwX"/>
                     </connections>
                 </viewController>

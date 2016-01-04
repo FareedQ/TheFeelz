@@ -24,13 +24,12 @@ extension JournalVC: UITableViewDataSource, UITableViewDelegate  {
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if arrayOfQuestions[indexPath.row].type == QuestionTypes.RadioButton {
-            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("RadioButtonQuestion", forIndexPath: indexPath) as? RadioButtonwCell {
-                tempCell.backgroundColor = Feelz.sharedInstance.getBrightColour()
-                tempCell.radioButtons.tintColor = Feelz.sharedInstance.getDarkColour()
+            if var tempCell = myTableView.dequeueReusableCellWithIdentifier("RadioButtonQuestion", forIndexPath: indexPath) as? RadioButtonwCell {
+                setupRadioButtonCell(&tempCell, indexPath: indexPath)
             }
         } else if arrayOfQuestions[indexPath.row].type == QuestionTypes.TextField {
-            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("TextFieldQuestion", forIndexPath: indexPath) as? TextFieldCell {
-                tempCell.backgroundColor = Feelz.sharedInstance.getBrightColour()
+            if var tempCell = myTableView.dequeueReusableCellWithIdentifier("TextFieldQuestion", forIndexPath: indexPath) as? TextFieldCell {
+                setupTextFieldCell(&tempCell, indexPath: indexPath)
             }
         }
     }
@@ -39,23 +38,32 @@ extension JournalVC: UITableViewDataSource, UITableViewDelegate  {
         
         var returnCell = UITableViewCell()
         if arrayOfQuestions[indexPath.row].type == .RadioButton {
-            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("RadioButtonQuestion", forIndexPath: indexPath) as? RadioButtonwCell {
-                tempCell.questionLabel?.text = arrayOfQuestions[indexPath.row].statement
-                tempCell.backgroundColor = Feelz.sharedInstance.getBrightColour()
-                
-                tempCell.loadSelections(arrayOfQuestions[indexPath.row].segements)
-                
+            if var tempCell = myTableView.dequeueReusableCellWithIdentifier("RadioButtonQuestion", forIndexPath: indexPath) as? RadioButtonwCell {
+                setupRadioButtonCell(&tempCell, indexPath: indexPath)
                 returnCell = tempCell
             }
         } else if arrayOfQuestions[indexPath.row].type == .TextField {
-            if let tempCell = myTableView.dequeueReusableCellWithIdentifier("TextFieldQuestion", forIndexPath: indexPath) as? TextFieldCell {
-                tempCell.questionLabel?.text = arrayOfQuestions[indexPath.row].statement
-                tempCell.backgroundColor = Feelz.sharedInstance.getBrightColour()
-                tempCell.inputTextFeild.delegate = self
+            if var tempCell = myTableView.dequeueReusableCellWithIdentifier("TextFieldQuestion", forIndexPath: indexPath) as? TextFieldCell {
+                setupTextFieldCell(&tempCell, indexPath: indexPath)
                 returnCell = tempCell
             }
         }
         return returnCell
+    }
+    
+    func setupRadioButtonCell(inout tempCell:RadioButtonwCell, indexPath:NSIndexPath){
+        tempCell.questionLabel?.text = arrayOfQuestions[indexPath.row].statement
+        tempCell.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
+        tempCell.questionLabel.textColor = Feelz.sharedInstance.getFontColour()
+        tempCell.radioButtons.tintColor = Feelz.sharedInstance.getFontColour()
+        tempCell.loadSelections(arrayOfQuestions[indexPath.row].segements)
+    }
+    
+    func setupTextFieldCell(inout tempCell:TextFieldCell, indexPath:NSIndexPath){
+        tempCell.questionLabel?.text = arrayOfQuestions[indexPath.row].statement
+        tempCell.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
+        tempCell.questionLabel.textColor = Feelz.sharedInstance.getFontColour()
+        tempCell.inputTextFeild.delegate = self
     }
     
 }

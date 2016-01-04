@@ -12,6 +12,7 @@ import MapKit
 
 class MeditateVC: UIViewController {
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var timeLabel: UILabel!
@@ -73,14 +74,15 @@ class MeditateVC: UIViewController {
     
     
     func setupViewToLookPretty(){
-        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
+        view.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
         mapView.clipsToBounds = true
         mapView.layer.cornerRadius = 10
         mapView.layer.borderWidth = 3
         timeView.layer.cornerRadius = 10
         timeView.layer.borderWidth = 3
-        placeLabel.textColor = UIColor.whiteColor()
-        timeLabel.textColor = UIColor.whiteColor()
+        placeLabel.textColor = Feelz.sharedInstance.getLinkColour()
+        timeLabel.textColor = Feelz.sharedInstance.getLinkColour()
+        titleLabel.textColor = Feelz.sharedInstance.getFontColour()
     }
 
 }

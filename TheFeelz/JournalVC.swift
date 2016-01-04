@@ -10,6 +10,7 @@ import UIKit
 
 class JournalVC: UIViewController {
 
+    @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var bottomMapLayoutConstraint: NSLayoutConstraint!
     
@@ -38,7 +39,8 @@ class JournalVC: UIViewController {
     }
     
     func setupViewToLookPretty(){
-        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
-        myTableView.backgroundColor = Feelz.sharedInstance.getBrightColour()
+        view.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
+        myTableView.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
+        TitleLabel.textColor = Feelz.sharedInstance.getFontColour()
     }
 }

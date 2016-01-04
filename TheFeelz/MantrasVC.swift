@@ -10,6 +10,7 @@ import UIKit
 
 class MantrasVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
     let manatraMemes = ["PM1", "PM2", "PM3", "PM4"]
@@ -17,9 +18,15 @@ class MantrasVC: UIViewController, UICollectionViewDataSource, UICollectionViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupViewToLookPretty()
+        setupGestureRecongizers()
+    }
+    
+    func setupGestureRecongizers(){
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: "likeImage:")
         gestureRecognizer.numberOfTapsRequired = 2
         self.view.addGestureRecognizer(gestureRecognizer)
+        
     }
     
     func likeImage(sender: UITapGestureRecognizer){
@@ -67,7 +74,7 @@ class MantrasVC: UIViewController, UICollectionViewDataSource, UICollectionViewD
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        checkBackground()
+        setupViewToLookPretty()
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -80,8 +87,9 @@ class MantrasVC: UIViewController, UICollectionViewDataSource, UICollectionViewD
         return manatraMemes.count
     }
     
-    func checkBackground(){
-        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
-        collectionView.backgroundColor = Feelz.sharedInstance.getBrightColour()
+    func setupViewToLookPretty(){
+        view.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
+        collectionView.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
+        TitleLabel.textColor = Feelz.sharedInstance.getFontColour()
     }
 }

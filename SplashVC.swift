@@ -12,6 +12,7 @@ class SplashVC: UIViewController {
     
     weak var myCarouselSubVC:CarouselSubVC!
     
+    @IBOutlet weak var HowDoYouFeelLabel: UILabel!
     @IBOutlet weak var rightSideBar: UIView!
     @IBOutlet weak var leftSideBar: UIView!
     override func viewDidLoad() {
@@ -37,8 +38,9 @@ class SplashVC: UIViewController {
     }
     
     func setupViewToLookPretty(){
-        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
-        leftSideBar.backgroundColor = Feelz.sharedInstance.getBrightColour()
-        rightSideBar.backgroundColor = Feelz.sharedInstance.getBrightColour()
+        view.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
+        leftSideBar.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
+        rightSideBar.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
+        HowDoYouFeelLabel.textColor = Feelz.sharedInstance.getFontColour()
     }
 }

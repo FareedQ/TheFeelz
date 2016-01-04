@@ -45,7 +45,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
         
         getContent(Feelz.sharedInstance.getSelectedEmotion())
         
-        checkBackground()
+        setupViewToLookPretty()
         
     }
     
@@ -115,7 +115,7 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
             
             getContent(Feelz.sharedInstance.getSelectedEmotion())
             
-            checkBackground()
+            setupViewToLookPretty()
             break
         default:
             break
@@ -261,8 +261,14 @@ class EmotionVC: UIViewController, UIGestureRecognizerDelegate, UITextFieldDeleg
         mySelectionSubVC.img4.frame = originalFrameArray[4]
     }
     
-    func checkBackground(){
-        view.backgroundColor = Feelz.sharedInstance.getBrightColour()
+    func setupViewToLookPretty(){
+        view.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
+        titleLabel.textColor = Feelz.sharedInstance.getFontColour()
+        emotionTitleLabel.textColor = Feelz.sharedInstance.getFontColour()
+        dictionaryOutputLabel.textColor = Feelz.sharedInstance.getFontColour()
+        for synonym in synonymButtonArray {
+            synonym.setTitleColor(Feelz.sharedInstance.getLinkColour(), forState: .Normal)
+        }
     }
     
     @IBAction func synonymButton1(sender: UIButton) {

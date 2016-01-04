@@ -25,32 +25,20 @@ public class Feelz: NSObject {
     struct Emotion {
         var title = String()
         var imageTitle = String()
-        var brightColour = UIColor()
-        var darkColour = UIColor()
-        var textColour = UIColor()
+        var backgroundColour = UIColor()
+        var fontColour = UIColor()
+        var linkColour = UIColor()
     }
     
-    let anger = Emotion(title: "Angry", imageTitle: "Anger", brightColour: UIColorFromRGB("F40009"), darkColour: UIColorFromRGB("480002"), textColour: UIColorFromRGB("FCF0E6"))
+    let anger = Emotion(title: "Angry", imageTitle: "Anger", backgroundColour: UIColorFromRGB("F40009"), fontColour: UIColorFromRGB("480002"), linkColour: UIColorFromRGB("FCF0E6"))
     
-    let disgust = Emotion(title: "Disgust", imageTitle: "Disgust", brightColour: UIColorFromRGB("23F307"), darkColour: UIColorFromRGB("0F2D07"), textColour: UIColorFromRGB("70B451"))
-    //Disgust Bright 23F307
-    //Disgust Dark 0F2D07
-    //Disgust Text 70B451
+    let disgust = Emotion(title: "Disgust", imageTitle: "Disgust", backgroundColour: UIColorFromRGB("70B451"), fontColour: UIColorFromRGB("0F2D07"), linkColour: UIColorFromRGB("23F307"))
     
-    let fear = Emotion(title: "Fear", imageTitle: "Fear", brightColour: UIColorFromRGB("C472FC"), darkColour: UIColorFromRGB("20023E"), textColour: UIColorFromRGB("DCBADC"))
-    //Fear Bright C472FC
-    //Fear Dark 20023E
-    //Fear Text DCBADC
+    let fear = Emotion(title: "Fear", imageTitle: "Fear", backgroundColour: UIColorFromRGB("C472FC"), fontColour: UIColorFromRGB("20023E"), linkColour: UIColorFromRGB("DCBADC"))
     
-    let joy = Emotion(title: "Happy", imageTitle: "Joy", brightColour: UIColorFromRGB("F6DC49"), darkColour: UIColorFromRGB("D9890E"), textColour: UIColorFromRGB("0F70F2"))
-    //Joy Bright F6DC49
-    //Joy Dark D9890E
-    //Joy Text 0F70F2
+    let joy = Emotion(title: "Happy", imageTitle: "Joy", backgroundColour: UIColorFromRGB("F6DC49"), fontColour: UIColorFromRGB("0F70F2"), linkColour: UIColorFromRGB("D9890E"))
     
-    let sadness = Emotion(title: "Sad", imageTitle: "Sadness", brightColour: UIColorFromRGB("49C2F7"), darkColour: UIColorFromRGB("0A2363"), textColour: UIColorFromRGB("B7D1E0"))
-    //Sadness Dark 0A2363
-    //Sadness Bright 49C2F7
-    //Sadness text B7D1E0
+    let sadness = Emotion(title: "Sad", imageTitle: "Sadness", backgroundColour: UIColorFromRGB("49C2F7"), fontColour: UIColorFromRGB("0A2363"), linkColour: UIColorFromRGB("B7D1E0"))
     
     override init(){
         super.init()
@@ -83,16 +71,16 @@ public class Feelz: NSObject {
         return emotionsArray[index].imageTitle
     }
     
-    func getBrightColour() -> UIColor {
-        return emotionsArray[index].brightColour
+    func getBackgroundColour() -> UIColor {
+        return emotionsArray[index].backgroundColour
     }
     
-    func getDarkColour() -> UIColor {
-        return emotionsArray[index].darkColour
+    func getFontColour() -> UIColor {
+        return emotionsArray[index].fontColour
     }
     
-    func getTextColour() -> UIColor {
-        return emotionsArray[index].textColour
+    func getLinkColour() -> UIColor {
+        return emotionsArray[index].linkColour
     }
     
     func incrementIndex(){
