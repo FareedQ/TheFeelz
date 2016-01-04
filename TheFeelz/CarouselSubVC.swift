@@ -33,8 +33,11 @@ class CarouselSubVC: UIViewController {
         setupSelectorImageViewsWithConstraints()
         spaceOutSelectorsThroughConstraints()
         loadImagesToSelectors()
-        mySplashVC.checkBackground()
+        addGestureRecongizers()
         
+    }
+    
+    func addGestureRecongizers(){
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "doPanGesture:")
         self.view.addGestureRecognizer(panGestureRecognizer)
         
@@ -61,7 +64,7 @@ class CarouselSubVC: UIViewController {
             
         case .Ended:
             adjustSelectionImagesBasedOnPosition(currentPosition, width: view.bounds.width)
-            mySplashVC.checkBackground()
+            mySplashVC.setupViewToLookPretty()
             break
             
         default:

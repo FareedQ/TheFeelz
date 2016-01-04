@@ -16,6 +16,7 @@ class SplashVC: UIViewController {
     @IBOutlet weak var leftSideBar: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewToLookPretty()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -35,7 +36,7 @@ class SplashVC: UIViewController {
         }
     }
     
-    func checkBackground(){
+    func setupViewToLookPretty(){
         view.backgroundColor = Feelz.sharedInstance.getBrightColour()
         leftSideBar.backgroundColor = Feelz.sharedInstance.getBrightColour()
         rightSideBar.backgroundColor = Feelz.sharedInstance.getBrightColour()
