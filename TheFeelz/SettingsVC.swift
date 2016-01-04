@@ -30,18 +30,22 @@ class SettingsVC: UIViewController {
         
         if let wakeTime = User.sharedInstance.wakeTime {
             wakeTitleLabel.text = "I wake up at " + displayTime(wakeTime)
+            wakeDatePicker.date = wakeTime
         } else {
             User.sharedInstance.wakeTime = returnAnNSDateForTodayAt8am()
             guard let wakeTime = User.sharedInstance.wakeTime else { return }
             wakeTitleLabel.text = "I wake up at " + displayTime(wakeTime)
+            wakeDatePicker.date = wakeTime
         }
         
         if let sleepTime = User.sharedInstance.sleepTime {
             sleepTitleLabel.text = "I go to sleep at " + displayTime(sleepTime)
+            sleepDatePicker.date = sleepTime
         } else {
             User.sharedInstance.sleepTime = returnAnNSDateForTodayAt10pm()
             guard let sleepTime = User.sharedInstance.sleepTime else { return }
             sleepTitleLabel.text = "I go to sleep at " + displayTime(sleepTime)
+            sleepDatePicker.date = sleepTime
         }
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: "tapGesture:")
