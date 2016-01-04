@@ -30,7 +30,7 @@ class MeditateVC: UIViewController {
     
     //Variables for Locations Extention
     let locationManager = CLLocationManager()
-    let zoomRadius:CLLocationDistance = 1000
+    let zoomRadius:CLLocationDistance = 500
     
     //Variables for MapView Extention
     var pinPlaced = false
