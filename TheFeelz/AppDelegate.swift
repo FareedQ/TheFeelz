@@ -26,13 +26,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loadFromLocalNotification()
     }
     
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        loadFromLocalNotification()
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, withResponseInfo responseInfo: [NSObject : AnyObject], completionHandler: () -> Void) {
+        loadFromLocalNotification()
+    }
     
     func applicationWillTerminate(application: UIApplication) {
         User.sharedInstance.save()
-    }
-    
-    func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings) {
-        print(notificationSettings)
     }
     
     func loadFromLocalNotification(){
