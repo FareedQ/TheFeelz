@@ -18,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: .Alert, categories: nil))
         
+        
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+        setupANotification()
+        
         return true
         
     }
@@ -36,17 +40,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(application: UIApplication) {
         User.sharedInstance.save()
-    }
-    
-    func loadFromLocalNotification(){
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let initialViewController = storyboard.instantiateViewControllerWithIdentifier("SplashVC")
-        
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
     }
 
 }

@@ -136,16 +136,38 @@ class SettingsVC: UIViewController {
         sleepViewHeightConstraint.constant = 185
     }
     
+    @IBAction func setupAlertButton(sender: UIButton) {
+        setupTimeBasedNotification()
+    }
+    
     func setupTimeBasedNotification(){
         
-//        let formatter = NSDateFormatter()
-//        formatter.timeStyle = NSDateFormatterStyle.ShortStyle
-//        let localNotification = UILocalNotification()
-//        localNotification.alertTitle = "Notification"
-//        localNotification.alertBody = "Time Notification at \(formatter.stringFromDate(datePicker.date))"
-//        localNotification.fireDate = datePicker.date
-//        
-//        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        let formatter = NSDateFormatter()
+        formatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        let localNotification = UILocalNotification()
+        localNotification.alertTitle = "Notification"
+        localNotification.alertBody = "How are you feeling?"
+        localNotification.fireDate = getARandomTimeToAlertTomorrow()
+        
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+    }
+    
+    func getARandomTimeToAlertTomorrow() -> NSDate {
+        let calendar = NSCalendar.currentCalendar()
+        let NewDate = calendar.components([.Hour, .Minute, .Day], fromDate: NSDate())
+        
+        guard let givenWakeTime = User.sharedInstance.sleepTime else { return NSDate() }
+        let wakeTime = calendar.components([.Hour, .Minute, .Day], fromDate: givenWakeTime)
+        guard let givenSleepTime = User.sharedInstance.sleepTime else { return NSDate() }
+        let sleepTime = calendar.components([.Hour, .Minute, .Day], fromDate: givenSleepTime)
+        
+        NewDate.day++
+        NewDate.hour = Int(arc4random_uniform(UInt32(sleepTime.hour - wakeTime.hour)) + UInt32(sleepTime.hour))
+        NewDate.minute = Int(arc4random_uniform(UInt32(sleepTime.minute - wakeTime.minute)) + UInt32(sleepTime.minute))
+        
+        guard let setupTime = calendar.dateFromComponents(NewDate) else {return NSDate()}
+        
+        return setupTime
     }
     
     @IBAction func sleepDatePickerAction(sender: UIDatePicker) {

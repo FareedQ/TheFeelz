@@ -26,7 +26,7 @@
         <!--Splash-->
         <scene sceneID="ePP-gj-aJX">
             <objects>
-                <viewController id="fbe-va-PVV" userLabel="Splash" customClass="SplashVC" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashVC" title="SplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fbe-va-PVV" userLabel="Splash" customClass="SplashVC" customModule="TheFeelz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ukn-t5-9I8"/>
                         <viewControllerLayoutGuide type="bottom" id="BNP-g8-0bK"/>
@@ -533,6 +533,13 @@
                                     <constraint firstAttribute="height" id="yDz-7c-hy9"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hz-l2-l39">
+                                <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="setupAlertButton:" destination="yJB-l6-pwA" eventType="touchUpInside" id="CII-H7-0Qn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -763,7 +770,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbs-fu-d3k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="2353"/>
+            <point key="canvasLocation" x="332" y="2349"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="GI1-X5-hez">
