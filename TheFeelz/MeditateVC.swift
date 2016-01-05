@@ -27,6 +27,7 @@ class MeditateVC: UIViewController {
     //Variables for Sounds Extention
     var meditatePin: AVAudioPlayer?
     var meditatePlayer: AVAudioPlayer?
+    @IBOutlet weak var gongsSwitch: UISwitch!
     
     //Variables for Locations Extention
     let locationManager = CLLocationManager()

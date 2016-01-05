@@ -230,6 +230,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Meditate" image="tab-meditate" id="lJo-If-2ra"/>
                     <connections>
+                        <outlet property="gongsSwitch" destination="cDt-3P-yfz" id="X9Y-4I-Zfm"/>
                         <outlet property="mapView" destination="ubc-3j-Ldg" id="i8y-ol-eE5"/>
                         <outlet property="placeLabel" destination="ise-N9-O8A" id="EMU-18-RZH"/>
                         <outlet property="timeDisplayLabel" destination="aOB-wM-knM" id="PFu-PZ-NVa"/>

@@ -22,44 +22,56 @@ extension MeditateVC {
         if timeLabel.frame.contains(touchPosition){
             meditationSelection = .Time
             meditationSelectionAnimationSwitch()
+            removePin()
         }
         
         if placeLabel.frame.contains(touchPosition){
             meditationSelection = .Place
             meditationSelectionAnimationSwitch()
+            gongsSwitch.on = false
+            meditatePlayer?.pause()
         }
         
         if mapView.frame.contains(touchPosition) && meditationSelection == .Place {
             if pinPlaced {
-                //removed annotation pin and circle
-                mapView.removeAnnotation(meditationAlertPoint)
-                mapView.removeOverlay(overlayCircle)
-                
-                //Reset Music
-                meditatePin?.pause()
-                meditatePin?.stop()
-                meditatePin?.currentTime = 0
-                
-                //set flag
-                pinPlaced = false
+                removePin()
             } else {
-                let touchConvertedToMapPosition = mapView.convertPoint(touchPosition, toCoordinateFromView: view)
-                
-                //add annotation pin
-                meditationAlertPoint.coordinate = touchConvertedToMapPosition
-                mapView.addAnnotation(meditationAlertPoint)
-                
-                //add circle
-                overlayCircle = MKCircle(centerCoordinate: touchConvertedToMapPosition, radius: 25 as CLLocationDistance)
-                mapView.addOverlay(overlayCircle)
-                
-                //Begin meditation music
-                meditatePin?.play()
-                
-                //set flag
-                pinPlaced = true
+                addPin(touchPosition)
             }
         }
+    }
+    
+    func removePin(){
+        //removed annotation pin and circle
+        mapView.removeAnnotation(meditationAlertPoint)
+        mapView.removeOverlay(overlayCircle)
+        
+        //Reset Music
+        meditatePin?.pause()
+        meditatePin?.stop()
+        meditatePin?.currentTime = 0
+        
+        //set flag
+        pinPlaced = false
+    }
+    
+    func addPin(touchPosition:CGPoint){
+        let touchConvertedToMapPosition = mapView.convertPoint(touchPosition, toCoordinateFromView: view)
+        
+        //add annotation pin
+        meditationAlertPoint.coordinate = touchConvertedToMapPosition
+        mapView.addAnnotation(meditationAlertPoint)
+        
+        //add circle
+        overlayCircle = MKCircle(centerCoordinate: touchConvertedToMapPosition, radius: 25 as CLLocationDistance)
+        mapView.addOverlay(overlayCircle)
+        
+        //Begin meditation music
+        meditatePin?.play()
+        
+        //set flag
+        pinPlaced = true
+        
     }
     
     func meditationSelectionAnimationSwitch(){
