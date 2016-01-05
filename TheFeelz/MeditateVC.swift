@@ -37,6 +37,11 @@ class MeditateVC: UIViewController {
     var overlayCircle = MKCircle()
     let meditationAlertPoint = MKPointAnnotation()
     
+    //Variables for Timer
+    var myTimer = NSTimer()
+    var timerCounter = 0
+    @IBOutlet weak var timeDisplayLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -65,7 +70,28 @@ class MeditateVC: UIViewController {
         }
     }
     
+    @IBAction func timerSwitch(sender: UISwitch) {
+        if sender.on {
+            myTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimerCount", userInfo: nil, repeats: true)
+        } else {
+            myTimer.invalidate()
+        }
+    }
     
+    @IBAction func resetCounter(sender: AnyObject) {
+        timerCounter = 0
+        timeDisplayLabel.text = "0:00"
+    }
+    
+    func updateTimerCount() {
+        timerCounter++
+        let minutes = Int(timerCounter/60)
+        if timerCounter%60 < 10 {
+            timeDisplayLabel.text = "\(minutes):0\(timerCounter%60)"
+        } else {
+            timeDisplayLabel.text = "\(minutes):\(timerCounter%60)"
+        }
+    }
     
     @IBAction func VolumeSilder(sender: UISlider) {
         adjustVolume(sender.value)

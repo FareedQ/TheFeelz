@@ -149,6 +149,7 @@
 		014FE35F1C33135800A4CFEF /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				014FE35D1C33130D00A4CFEF /* Splash */,
 				0126993B1C249509009E538D /* JournalVC.swift */,
 				01A2AC631C32E1A40086FFBF /* Journal-TextField&Keyboard.swift */,
 				01A2AC611C32E1120086FFBF /* Journal-TableView.swift */,
@@ -213,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				0174E83C1C23382000589507 /* AppDelegate.swift */,
-				014FE35D1C33130D00A4CFEF /* Splash */,
 				014FE35E1C33132C00A4CFEF /* Emotion */,
 				014FE35F1C33135800A4CFEF /* Journal */,
 				014FE3601C33137300A4CFEF /* Mantras */,
