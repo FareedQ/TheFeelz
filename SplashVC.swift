@@ -15,6 +15,7 @@ class SplashVC: UIViewController {
     @IBOutlet weak var HowDoYouFeelLabel: UILabel!
     @IBOutlet weak var rightSideBar: UIView!
     @IBOutlet weak var leftSideBar: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewToLookPretty()
@@ -38,9 +39,6 @@ class SplashVC: UIViewController {
     }
     
     func setupViewToLookPretty(){
-        view.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
-        leftSideBar.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
-        rightSideBar.backgroundColor = Feelz.sharedInstance.getBackgroundColour()
-        HowDoYouFeelLabel.textColor = Feelz.sharedInstance.getFontColour()
+        titleLabel.textColor = Feelz.sharedInstance.getBackgroundColour()
     }
 }
