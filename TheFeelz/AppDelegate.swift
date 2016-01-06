@@ -40,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(application: UIApplication) {
         User.sharedInstance.save()
+        Feelz.sharedInstance.save()
     }
 
 }

@@ -97,6 +97,15 @@ public class Feelz: NSObject {
         }
     }
     
+    func save(){
+        
+        let URL = "ThisIsNotGoingAnywhere.com"
+        let JSONDictionary = ["SelectedEmotion":"\(index)"]
+        
+        post(JSONDictionary, url:URL)
+        
+    }
+    
     // This code snippit was taken from http://jamesonquave.com/blog/making-a-post-request-in-swift/
     // In order to allow the Feelz object to post it's data to an API using JSON
     // The work I've done here is to make it modern for Swift 2.0
