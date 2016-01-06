@@ -24,17 +24,22 @@ class User: NSObject {
     //User settings
     var sleepTime:NSDate?
     var wakeTime:NSDate?
+    var userName:String?
+    var password:String?
     
     func save(){
         defaults.setValue(sleepTime, forKey: "sleepTime")
         defaults.setValue(wakeTime, forKey: "wakeTime")
+        defaults.setValue(userName, forKey: "userName")
+        defaults.setValue(password, forKey: "password")
         defaults.synchronize()
     }
     
     func load() {
         if let object = defaults.objectForKey("sleepTime") as? NSDate { sleepTime = object }
         if let object = defaults.objectForKey("wakeTime") as? NSDate { wakeTime = object }
-        
+        if let object = defaults.objectForKey("userName") as? String { userName = object }
+        if let object = defaults.objectForKey("password") as? String { password = object }
     }
 
     

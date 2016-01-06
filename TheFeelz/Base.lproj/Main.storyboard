@@ -553,6 +553,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="UserNameChanged:" destination="yJB-l6-pwA" eventType="editingDidEnd" id="Gjj-iL-p7x"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kNf-mE-cqo">
                                 <rect key="frame" x="112" y="151" width="188" height="30"/>
@@ -561,6 +564,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="PasswordChanged:" destination="yJB-l6-pwA" eventType="editingDidEnd" id="r7e-wR-ePM"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup Online Account:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wxt-IZ-F37">
                                 <rect key="frame" x="16" y="89" width="183" height="21"/>
@@ -628,6 +634,7 @@
                         <outlet property="sleepTitleLabel" destination="yNN-GE-jDF" id="50t-KF-tyF"/>
                         <outlet property="sleepView" destination="eqa-mX-co1" id="l3I-tk-f9y"/>
                         <outlet property="sleepViewHeightConstraint" destination="yDz-7c-hy9" id="Ma9-ma-dhh"/>
+                        <outlet property="userNameTextField" destination="gdp-rl-UXs" id="Lj1-S3-BhV"/>
                         <outlet property="wakeDatePicker" destination="wdW-2z-fbG" id="m5w-vp-UGN"/>
                         <outlet property="wakeTitleLabel" destination="s0d-nh-x4n" id="sNf-ze-cMZ"/>
                         <outlet property="wakeView" destination="tyi-vh-B28" id="1T5-aQ-hAv"/>

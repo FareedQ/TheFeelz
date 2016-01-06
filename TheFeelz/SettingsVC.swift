@@ -18,6 +18,7 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var sleepTitleLabel: UILabel!
     @IBOutlet weak var sleepView: UIView!
     @IBOutlet weak var sleepViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     var sleepHidden = true
@@ -29,6 +30,37 @@ class SettingsVC: UIViewController {
         hideSleepDP()
         hideWakeDP()
         
+        setupPreloadedTimes()
+        setupPreloadedTextFields()
+        
+        setupGestureRecongizers()
+        
+        passwordTextField.font = UIFont(name: "OpenSans", size: 17)
+        userNameTextField.font = UIFont(name: "OpenSans", size: 17)
+    }
+    
+    func setupGestureRecongizers(){
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: "tapGesture:")
+        self.view.addGestureRecognizer(gestureRecognizer)
+    }
+    
+    func setupPreloadedTextFields(){
+        if let userName = User.sharedInstance.userName {
+            userNameTextField.text = userName
+        } else {
+            User.sharedInstance.userName = ""
+            userNameTextField.text = ""
+        }
+        
+        if let password = User.sharedInstance.password {
+            passwordTextField.text = password
+        } else {
+            User.sharedInstance.password = ""
+            passwordTextField.text = ""
+        }
+    }
+    
+    func setupPreloadedTimes(){
         if let wakeTime = User.sharedInstance.wakeTime {
             wakeTitleLabel.text = "I wake up at " + displayTime(wakeTime)
             wakeDatePicker.date = wakeTime
@@ -48,9 +80,6 @@ class SettingsVC: UIViewController {
             sleepTitleLabel.text = "I go to sleep at " + displayTime(sleepTime)
             sleepDatePicker.date = sleepTime
         }
-        
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: "tapGesture:")
-        self.view.addGestureRecognizer(gestureRecognizer)
     }
     
     func returnAnNSDateForTodayAt10pm() -> NSDate {
@@ -199,6 +228,7 @@ class SettingsVC: UIViewController {
         return returnString
         
     }
+    
     @IBAction func passwordButton(sender: UIButton) {
         if sender.titleLabel?.text == "Show Password" {
             sender.setTitle("Hide Passowrd", forState: .Normal)
@@ -210,4 +240,13 @@ class SettingsVC: UIViewController {
             passwordTextField.font = UIFont(name: "OpenSans", size: 17)
         }
     }
+    
+    @IBAction func UserNameChanged(sender: UITextField) {
+        User.sharedInstance.userName = sender.text
+    }
+    
+    @IBAction func PasswordChanged(sender: UITextField) {
+        User.sharedInstance.password = sender.text
+    }
+    
 }
