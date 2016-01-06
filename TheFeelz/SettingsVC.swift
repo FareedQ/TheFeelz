@@ -18,6 +18,7 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var sleepTitleLabel: UILabel!
     @IBOutlet weak var sleepView: UIView!
     @IBOutlet weak var sleepViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     var sleepHidden = true
     var wakeHidden = true
@@ -197,5 +198,16 @@ class SettingsVC: UIViewController {
         
         return returnString
         
+    }
+    @IBAction func passwordButton(sender: UIButton) {
+        if sender.titleLabel?.text == "Show Password" {
+            sender.setTitle("Hide Passowrd", forState: .Normal)
+            passwordTextField.secureTextEntry = false
+            passwordTextField.font = UIFont(name: "OpenSans", size: 17)
+        } else {
+            sender.setTitle("Show Password", forState: .Normal)
+            passwordTextField.secureTextEntry = true
+            passwordTextField.font = UIFont(name: "OpenSans", size: 17)
+        }
     }
 }
