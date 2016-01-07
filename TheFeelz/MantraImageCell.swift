@@ -15,7 +15,6 @@ class MantraImageCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         likeImage.alpha = 0
-        likeImage.transform = CGAffineTransformMakeScale(0.3, 0.3)
     }
     
     func showImage(){

@@ -30,28 +30,30 @@ class MantrasVC: UIViewController, UICollectionViewDataSource, UICollectionViewD
     }
     
     func likeImage(sender: UITapGestureRecognizer){
-        let locationInView = sender.locationInView(collectionView)
-        guard let indexPath = collectionView.indexPathForItemAtPoint(locationInView) else {return}
+        let locationInView = sender.locationInView(view)
+        let locationInCollectionView = sender.locationInView(collectionView)
+        guard let indexPath = collectionView.indexPathForItemAtPoint(locationInCollectionView) else {return}
         
         guard let selectedCell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as? MantraImageCell else { return }
         
-        let myImage = getImage(selectedCell)
+        let myImage = getImage(selectedCell, yPositionOfTouch:locationInView.y)
         animateLike(myImage)
 
         
     }
     
     //I really wanted to use the image inside the cell and animate it, but it seems like I am running into problems accessing it. Instead I copy the image and place it on the top view and manipulate it from there.
-    func getImage(selectedCell:MantraImageCell) -> UIImageView {
+    func getImage(selectedCell:MantraImageCell, yPositionOfTouch:CGFloat) -> UIImageView {
         let myImage = selectedCell.likeImage
         myImage.alpha = 1
+        myImage.transform = CGAffineTransformMakeScale(0.3, 0.3)
         myImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(myImage)
         
         let horizontalConstraint = NSLayoutConstraint(item: myImage, attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterX, multiplier: 1, constant: 0)
         view.addConstraint(horizontalConstraint)
         
-        let verticalConstraint = NSLayoutConstraint(item: myImage, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.CenterY, multiplier: 1, constant: 100)
+        let verticalConstraint = NSLayoutConstraint(item: myImage, attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal, toItem: view, attribute: NSLayoutAttribute.Top, multiplier: 1, constant: yPositionOfTouch)
         view.addConstraint(verticalConstraint)
         
         return myImage
