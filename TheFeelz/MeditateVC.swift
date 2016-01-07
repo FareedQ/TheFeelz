@@ -17,6 +17,7 @@ class MeditateVC: UIViewController {
     @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var placeLabel: UILabel!
+    @IBOutlet weak var timeDisplayLabel: UILabel!
     
     var meditationSelection:meditationType = .Time
     enum meditationType {
@@ -27,7 +28,6 @@ class MeditateVC: UIViewController {
     //Variables for Sounds Extention
     var meditatePin: AVAudioPlayer?
     var meditatePlayer: AVAudioPlayer?
-    @IBOutlet weak var gongsSwitch: UISwitch!
     
     //Variables for Locations Extention
     let locationManager = CLLocationManager()
@@ -39,9 +39,9 @@ class MeditateVC: UIViewController {
     let meditationAlertPoint = MKPointAnnotation()
     
     //Variables for Timer
+    var timerStarted = false
     var myTimer = NSTimer()
     var timerCounter = 0
-    @IBOutlet weak var timeDisplayLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,24 +62,21 @@ class MeditateVC: UIViewController {
         setupViewToLookPretty()
         
     }
-
-    @IBAction func musicSwitch(sender: UISwitch){
-        if sender.on {
-            meditatePlayer?.play()
-        } else {
-            meditatePlayer?.pause()
-        }
-    }
     
-    @IBAction func timerSwitch(sender: UISwitch) {
-        if sender.on {
-            myTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimerCount", userInfo: nil, repeats: true)
-        } else {
+    @IBAction func startButtonClicked(sender: UIButton) {
+        if timerStarted {
             myTimer.invalidate()
+            meditatePlayer?.pause()
+            sender.setImage(UIImage(named: "metallic-play"), forState: .Normal)
+        } else {
+            myTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "updateTimerCount", userInfo: nil, repeats: true)
+            meditatePlayer?.play()
+            sender.setImage(UIImage(named: "metallic-pause"), forState: .Normal)
         }
+        timerStarted = !timerStarted
     }
     
-    @IBAction func resetCounter(sender: AnyObject) {
+    @IBAction func resetButtonClicked(sender: UIButton) {
         timerCounter = 0
         timeDisplayLabel.text = "0:00"
     }

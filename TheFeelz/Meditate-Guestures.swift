@@ -28,7 +28,6 @@ extension MeditateVC {
         if placeLabel.frame.contains(touchPosition){
             meditationSelection = .Place
             meditationSelectionAnimationSwitch()
-            gongsSwitch.on = false
             meditatePlayer?.pause()
         }
         
