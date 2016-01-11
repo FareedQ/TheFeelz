@@ -131,6 +131,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="byH-h6-4Cc">
                                 <rect key="frame" x="16" y="138" width="288" height="361"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOB-wM-knM">
+                                        <rect key="frame" x="20" y="140" width="248" height="213"/>
+                                        <color key="backgroundColor" red="1" green="0.96065624273921912" blue="0.87948795769406962" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="213" id="2ne-F0-3vH"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="119"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="McP-Gu-94H">
                                         <rect key="frame" x="167" y="20" width="74" height="75"/>
                                         <state key="normal" image="metallic-reset"/>
@@ -153,15 +163,6 @@
                                             <action selector="VolumeSilder:" destination="NnC-xJ-5uC" eventType="valueChanged" id="fgl-78-Yzj"/>
                                         </connections>
                                     </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOB-wM-knM">
-                                        <rect key="frame" x="20" y="140" width="248" height="213"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="213" id="2ne-F0-3vH"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="119"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbi-Q6-ThR">
                                         <rect key="frame" x="47" y="20" width="74" height="73"/>
                                         <state key="normal" image="metallic-play"/>
@@ -170,7 +171,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.96065624273921912" blue="0.87948795769406962" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="j0N-4r-ZJ8" firstAttribute="leading" secondItem="byH-h6-4Cc" secondAttribute="leading" constant="20" id="0NU-nc-t70"/>
                                     <constraint firstAttribute="bottom" secondItem="aOB-wM-knM" secondAttribute="bottom" constant="8" id="2zI-Iz-Y9U"/>
@@ -296,6 +297,7 @@
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ukH-Xj-ZxP">
                                                     <rect key="frame" x="28" y="37" width="272" height="30"/>
+                                                    <color key="backgroundColor" red="1" green="0.96065624273921912" blue="0.87948795769406962" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -465,6 +467,8 @@
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="wdW-2z-fbG">
                                         <rect key="frame" x="0.0" y="0.0" width="336" height="0.0"/>
+                                        <color key="backgroundColor" red="1" green="0.96065624270000005" blue="0.87948795769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="0.96065624270000005" blue="0.87948795769999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <date key="date" timeIntervalSinceReferenceDate="472083503.39941001">
                                             <!--2015-12-17 22:18:23 +0000-->
                                         </date>
@@ -473,7 +477,7 @@
                                         </connections>
                                     </datePicker>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.96065624270000005" blue="0.87948795769999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="wdW-2z-fbG" firstAttribute="centerX" secondItem="tyi-vh-B28" secondAttribute="centerX" id="KeY-eI-ZWF"/>
                                     <constraint firstItem="wdW-2z-fbG" firstAttribute="width" secondItem="tyi-vh-B28" secondAttribute="width" id="Mqb-fC-MKx"/>
@@ -493,6 +497,8 @@
                                 <subviews>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="1B4-Yl-bdT">
                                         <rect key="frame" x="0.0" y="-25" width="328" height="235"/>
+                                        <color key="backgroundColor" red="1" green="0.96065624270000005" blue="0.87948795769999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="0.96065624270000005" blue="0.87948795769999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <date key="date" timeIntervalSinceReferenceDate="472161994.67215198">
                                             <!--2015-12-18 20:06:34 +0000-->
                                         </date>
@@ -501,7 +507,7 @@
                                         </connections>
                                     </datePicker>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="1" green="0.96065624270000005" blue="0.87948795769999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="1B4-Yl-bdT" firstAttribute="height" secondItem="eqa-mX-co1" secondAttribute="height" constant="50" id="230-dc-2st"/>
                                     <constraint firstItem="1B4-Yl-bdT" firstAttribute="width" secondItem="eqa-mX-co1" secondAttribute="width" id="4bP-2D-pUn"/>
@@ -564,7 +570,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.96065624273921912" blue="0.87948795769406962" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vXA-CQ-d11" firstAttribute="top" secondItem="kNf-mE-cqo" secondAttribute="bottom" constant="4" id="0nk-Q4-NbQ"/>
                             <constraint firstItem="xCp-WG-Aft" firstAttribute="top" secondItem="8CE-Gp-4iV" secondAttribute="bottom" constant="12" id="1Bd-G9-Cfs"/>

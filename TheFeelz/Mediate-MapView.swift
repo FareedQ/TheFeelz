@@ -29,5 +29,7 @@ extension MeditateVC: MKMapViewDelegate {
     func mapViewDidFailLoadingMap(mapView: MKMapView, withError error: NSError) {
         alertMessage("The map did not properly load. You may not be connected to the internet. The app will still function but not at full capacity.", thisViewController: self)
     }
+    
+    mapv
 
 }

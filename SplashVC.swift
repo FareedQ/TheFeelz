@@ -25,7 +25,7 @@ class SplashVC: UIViewController {
         super.viewDidAppear(animated)
         
         if(UIApplication.sharedApplication().currentUserNotificationSettings()?.types.rawValue == 0){
-            alertMessage("This app requires notifications to be allowed to fully function properly. Please log into your setting and turn on notification for this app to recive its full capabilites.", thisViewController: self)
+            alertMessage("This app requires notifications to be allowed to fully function properly. Please log into your system setting and turn on notification for this app to recive its full capabilites.", thisViewController: self)
         }
     }
     

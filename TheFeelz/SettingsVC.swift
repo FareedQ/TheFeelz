@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsVC: UIViewController {
+class SettingsVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var sleepDatePicker: UIDatePicker!
     @IBOutlet weak var wakeDatePicker: UIDatePicker!
@@ -36,7 +36,9 @@ class SettingsVC: UIViewController {
         setupGestureRecongizers()
         
         passwordTextField.font = UIFont(name: "OpenSans", size: 17)
+        passwordTextField.delegate = self
         userNameTextField.font = UIFont(name: "OpenSans", size: 17)
+        userNameTextField.delegate = self
     }
     
     func setupGestureRecongizers(){
@@ -247,6 +249,11 @@ class SettingsVC: UIViewController {
     
     @IBAction func PasswordChanged(sender: UITextField) {
         User.sharedInstance.password = sender.text
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
     }
     
 }
