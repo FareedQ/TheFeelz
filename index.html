@@ -3,32 +3,50 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <meta name="viewport" content="width=640">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
 
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
     <title>The Feelz by FareedQ</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>The Feelz</h1>
-        <h2>Bitmaker Student Final Project</h2>
-        <a href="https://github.com/FareedQ/TheFeelz" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+    <a id="forkme_banner" href="https://github.com/FareedQ/TheFeelz">View on GitHub</a>
+    <div class="shell">
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>The Feelz</h1>
+            <h2>Bitmaker Student Final Project</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/FareedQ/TheFeelz/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/FareedQ/TheFeelz/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
 <a id="welcome-to-the-feelz" class="anchor" href="#welcome-to-the-feelz" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to The Feelz.</h1>
 
 <p>This is an Emotional Intelligence trainer that I developed at BitMaker in 2015. It was developed to demonstrate my skills as a coder at that time. It was not maintained after the demonstration the final demonstration and was never intended to be taken to the app store. <em>but did inspire future apps</em></p>
@@ -38,41 +56,25 @@
 <h2>
 <a id="areas-of-interest" class="anchor" href="#areas-of-interest" aria-hidden="true"><span class="octicon octicon-link"></span></a>Areas of Interest</h2>
 
-<h3>
-<a id="carouselsubvc" class="anchor" href="#carouselsubvc" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/FareedQ/TheFeelz/blob/master/TheFeelz/CarouselSubVC.swift">CarouselSubVC</a>
-</h3>
+<p><a href="https://github.com/FareedQ/TheFeelz/blob/master/TheFeelz/CarouselSubVC.swift">CarouselSubVC</a> - This code area creates the selection carousel that loads when the app launches. This had all it's subviews and constraints implemented programmatically, this is because I thought it looked cooler than having a bunch of IBOutlets in the code. It instantiates 7 images on the screen. All the images are spaced out at half the size of the container view from the image's centre to their neighbouring image's centre. This makes it seem like only seven images are on the screen. A pan gesture recognizer allows the images to move. The image in the centre is recorded as the current selection. Based on where in the containing view the touch began and where the touch ended, will affect the what the final selection became. Behind the visible view the images are rotating in an array.  </p>
 
-<ul>
-<li>This code area creates the selection carousel that loads when the app launches. This had all it's subviews and constraints implemented programmatically, this is because I thought it looked cooler than having a bunch of IBOutlets in the code. It instantiates 7 images on the screen. All the images are spaced out at half the size of the container view from the image's centre to their neighbouring image's centre. This makes it seem like only seven images are on the screen. A pan gesture recognizer allows the images to move. The image in the centre is recorded as the current selection. Based on where in the containing view the touch began and where the touch ended, will affect the what the final selection became. Behind the visible view the images are rotating in an array.<br>
-</li>
-</ul>
+<p><a href="https://github.com/FareedQ/TheFeelz/blob/master/TheFeelz/Feelz.swift">Feelz</a> - Is a singleton data object that housed the current state of the user and the theme of the application. The application was designed to only have one existence of feeling throughout the user's experience and if the user changed their feeling then the app would change throughout. It also show a snippet of code for throw a JSON file at an API - the original intent of the project was to marry a Meteor Web Portal.</p>
+      </section>
 
-<h3>
-<a id="feelz" class="anchor" href="#feelz" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="https://github.com/FareedQ/TheFeelz/blob/master/TheFeelz/Feelz.swift">Feelz</a>
-</h3>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/FareedQ">FareedQ</a> can be found on <a href="https://github.com/FareedQ/TheFeelz">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
 
-<ul>
-<li>Is a singleton data object that housed the current state of the user and the theme of the application. The application was designed to only have one existence of feeling throughout the user's experience and if the user changed their feeling then the app would change throughout. It also show a snippet of code for throw a JSON file at an API - the original intent of the project was to marry a Meteor Web Portal.</li>
-</ul>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/FareedQ/TheFeelz/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/FareedQ/TheFeelz/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/FareedQ/TheFeelz"></a> is maintained by <a href="https://github.com/FareedQ">FareedQ</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
     </div>
 
-  
+    
   </body>
 </html>
